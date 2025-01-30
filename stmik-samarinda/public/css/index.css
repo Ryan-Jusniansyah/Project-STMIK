@@ -1,3 +1,7 @@
+*{
+    font-family: "Poppins", serif;
+}
+
 body{
     background-color: #F9F2E2 !important;
 }
@@ -129,4 +133,23 @@ body{
     height: 50px;
     background: linear-gradient(to right, #f39c12 10%, transparent 90%);
     padding: 5px 5px 5px 20px;
+.line{
+    width: 11rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 10px auto;
+}
+
+.borderLuar{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+    width: 70%;
+    height: 50rem;
+    border-radius: 10px;
+}
+
+.judul1{
+    margin-top: 3rem;
+    margin-left: 8rem;
 }
