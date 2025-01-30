@@ -17,7 +17,7 @@
           <div class="collapse navbar-collapse ms-auto justify-content-center" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item fw-500 text-color">
-                <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                <a class="nav-link" aria-current="page" href="#">Beranda</a>
               </li>
               <li class="nav-item text-color">
                 <a class="nav-link" href="#">Profil</a>
