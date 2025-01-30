@@ -10,4 +10,9 @@ class PendaftaranController extends Controller{
         $title = 'Identitas Data Diri & Program Studi';
         return view('pendaftaran1', compact('title'));
     }
+
+    public function uploadberkas(){
+        $title = 'Upload Berkas Pendaftaran';
+        return view('uploadberkas', compact('title'));
+    }
 }
