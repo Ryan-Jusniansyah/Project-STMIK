@@ -9,3 +9,11 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('index');
 });
+
+Route::get('/berita', function () {
+    return view('halamanBerita');
+});
+
+Route::get('/uploadberkas', function () {
+    return view('uploadberkas');
+});

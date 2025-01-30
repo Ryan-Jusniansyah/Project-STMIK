@@ -1,3 +1,7 @@
+*{
+    font-family: "Poppins", serif;
+}
+
 body{
     background-color: #F9F2E2 !important;
 }
@@ -20,4 +24,37 @@ body{
 
 .text-color{
     color: #740001 !important
+}
+
+.line{
+    width: 11rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 10px auto;
+}
+
+.line2{
+    width: 5rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 10px auto;
+}
+
+.borderLuar{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+    width: 70%;
+    height: 50rem;
+    border-radius: 10px;
+}
+
+.judul1{
+    margin-top: 3rem;
+
+}
+
+.uploadberkas{
+    margin-top: 1rem;
+    padding: 05rem;
 }
