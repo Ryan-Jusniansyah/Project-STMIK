@@ -7,5 +7,9 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return view('index');
+    return view('index', ['title' => 'Beranda']);
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard', ['title' => 'Dashboard']);
 });
