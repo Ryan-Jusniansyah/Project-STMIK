@@ -1,60 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title }}</title>
-    {{-- <title>@yield('title')</title> --}}
-    {{-- <x-title>{{ $title }}</x-title> --}}
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg fixed-top shadow">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>@yield('title', 'default title')</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      </head>
+<body>
+    <header class="header py-3">
         <div class="container-fluid">
-            <img src="img/logo.png" alt="STMIK Samarinda Logo" width="6%">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse ms-auto justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item fw-500 text-color">
-                <a class="nav-link" aria-current="page" href="#">Beranda</a>
-              </li>
-              <li class="nav-item text-color">
-                <a class="nav-link" href="#">Profil</a>
-              </li>
-              <li class="nav-item text-color">
-                <a class="nav-link" href="#">Akademik</a>
-              </li>
-              <li class="nav-item text-color">
-                <a class="nav-link" href="#">Fakultas</a>
-              </li>
-              <li class="nav-item text-color">
-                <a class="nav-link" href="#">Biaya Pendaftaran</a>
-              </li>
-            </ul>
+            <div class="row row-cols-1">
+                <div class="col text-center">
+                    <img src="img/logo.png" alt="Logo STMIK Samarinda" width="25%">
+                </div>
+                <div class="col text-center fs-2 fw-bold">Pendaftaran Mahasiswa Baru</div>
+                <div class="col text-center fs-5">Tahun Ajaran 2025/2026</div>
+            </div>
+            <div class="line"></div>
         </div>
-        <form class="d-flex">
-            <button class="btn btn-primary border-0 text-color fw-bold" type="submit">Daftar Sekarang!</button>
-          </form>
-        </div>
-      </nav>
+    </header>
 
-      {{ $slot }}
-      <footer class="footer text-white py-5">
+    {{ $slot }}
+
+    <footer class="footer text-white py-5">
         <div class="container">
           <div class="row">
             <!-- Logo and Address -->
             <div class="col-md-4 text-center text-md-end">
                 <img src="img/logo.png" alt="STMIK Samarinda Logo" width="100%">
-
             </div>
             
             <!-- Social Media Links -->
             <div class="col-md-4 text-center mb-3 mt-3">
-              <p>Social Media</p>
+              <p class="text-center">Social Media</p>
               <div>
                 <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>

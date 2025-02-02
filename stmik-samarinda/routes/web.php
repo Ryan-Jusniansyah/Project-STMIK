@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PendaftaranController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -13,3 +14,12 @@ Route::get('/home', function () {
 Route::get('/dashboard', function () {
     return view('dashboard', ['title' => 'Dashboard']);
 });
+
+Route::get('/berita', function () {
+    return view('halamanBerita');
+});
+
+Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
+
+Route::get('/uploadberkas', [PendaftaranController::class, 'uploadberkas']);
+
