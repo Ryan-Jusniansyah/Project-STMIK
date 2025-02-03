@@ -19,6 +19,10 @@ Route::get('/berita', function () {
     return view('halamanBerita');
 });
 
+Route::get('/dashboard-berita', function () {
+    return view('dashboard_berita');
+});
+
 Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
 
 Route::get('/uploadberkas', [PendaftaranController::class, 'uploadberkas']);
