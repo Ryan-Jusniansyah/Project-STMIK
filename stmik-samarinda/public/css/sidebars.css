@@ -135,6 +135,7 @@ main {
 .active-custom {
     color: #740001;
     background-color: #FEC538;
+    /* font-weight: bold; */
 }
 
 .active-custom:hover {
