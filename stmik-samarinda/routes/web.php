@@ -27,3 +27,6 @@ Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
 
 Route::get('/uploadberkas', [PendaftaranController::class, 'uploadberkas']);
 
+Route::get('/dashboard-Data', function () {
+    return view('dashboardDataMahasiswa');
+});
