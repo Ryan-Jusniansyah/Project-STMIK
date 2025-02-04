@@ -20,6 +20,6 @@ Route::get('/berita', function () {
 });
 
 Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
+Route::post('/pendaftaran1', [PendaftaranController::class, 'store']);
 
 Route::get('/uploadberkas', [PendaftaranController::class, 'uploadberkas']);
-
