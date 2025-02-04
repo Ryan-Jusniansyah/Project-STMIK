@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('berkas_pendaftaran', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('mahasiswa_id')->constrained(
-                table: 'mahasiswa',
-                indexName: 'berkas_mahasiswa_id'
+
+            $table->foreignId('pendaftaran')->constrained(
+                table: 'pendaftaran',
+                indexName: 'berkas_pendaftaran_id'
             );
             $table->string('ijazah_sma');
             $table->string('skhu');
@@ -25,6 +26,7 @@ return new class extends Migration
             $table->string('bukti_pembayaran');
             $table->string('surat_keterangan_sehat');
             $table->string('surat_keterangan_bebas_narkoba');
+
             $table->timestamps();
         });
     }

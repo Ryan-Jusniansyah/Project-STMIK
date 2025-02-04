@@ -15,4 +15,8 @@ class PendaftaranController extends Controller{
         $title = 'Upload Berkas Pendaftaran';
         return view('uploadberkas', compact('title'));
     }
+
+    public function store() {
+        return request()->all();
+    }
 }
