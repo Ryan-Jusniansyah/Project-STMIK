@@ -176,3 +176,8 @@ th{
   color: white;
   outline-color: #00CE18;
 }
+
+.container-berita {
+  max-width: 800px;
+  margin-top: 20px;
+}

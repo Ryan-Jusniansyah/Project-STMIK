@@ -27,6 +27,10 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/form-berita', function () {
+    return view('form-berita');
+});
+
 Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
 Route::post('/pendaftaran1', [PendaftaranController::class, 'store']);
 
