@@ -1,0 +1,55 @@
+.gariscard {
+    width: 16rem;
+    height: 1px;
+    background-color: gray;
+    margin-bottom: 10px;
+    margin-top: -5px;
+}
+
+.judul {
+    color: #740001;
+    margin-left: 15px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.row {
+    margin-left: 5px;
+    margin-right: -5px;
+}
+
+.btnadd {
+    margin-right: 38px;
+    color: white;
+    background-color: #740001;
+}
+
+.btnadd:hover {
+    color: white;
+    background-color: #740001;
+    opacity: 90%;
+}
+
+.btn-custom-search {
+    color: white;
+    border: 1px solid #740001;
+    background-color: #740001;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-search:hover {
+    color: white;
+    background-color: #740001;
+    opacity: 90%;
+}
