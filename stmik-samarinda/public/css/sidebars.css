@@ -1,3 +1,7 @@
+*{
+  font-family: "Poppins", serif;
+}
+
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -116,7 +120,6 @@ main {
   -webkit-overflow-scrolling: touch;
 }
 
-
 .bd-mode-toggle {
   z-index: 1500;
 }
@@ -146,4 +149,30 @@ main {
 
 .icon svg {
   fill: white;
+  margin-top: 20px;
+}
+
+.jumlah{
+  color: #FEC538;
+  font-size: 45px;
+  margin-top: 20px;
+}
+
+.second-text {
+  font-size: 25px;
+  margin-top: -20px;
+}
+
+.title{
+  color: #740001;
+}
+
+th{
+  background-color: #740001 !important;
+  color: white !important;
+}
+
+.btn-outlined-check{
+  color: white;
+  outline-color: #00CE18;
 }

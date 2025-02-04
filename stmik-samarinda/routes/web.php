@@ -23,7 +23,11 @@ Route::get('/dashboard-berita', function () {
     return view('dashboard_berita');
 });
 
+Route::get('/login', function () {
+    return view('login');
+});
+
 Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
+Route::post('/pendaftaran1', [PendaftaranController::class, 'store']);
 
 Route::get('/uploadberkas', [PendaftaranController::class, 'uploadberkas']);
-
