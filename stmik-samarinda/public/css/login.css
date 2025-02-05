@@ -1,0 +1,27 @@
+*{
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: #740001;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    justify-content: center;
+    background: #F9F2E2;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.btn{
+    background-color: #740001;
+    color: #F9F2E2;
+}
