@@ -16,7 +16,13 @@ class PendaftaranController extends Controller{
         return view('uploadberkas', compact('title'));
     }
 
-    public function store() {
-        return request()->all();
+    public function pendaftaran2(){
+        $title = 'Identitas SMA/SMK Sederajat';
+        return view('pendaftaran2', compact('title'));
+    }
+
+    public function pendaftaran3(){
+        $title = 'Identitas Orang Tua/Wali';
+        return view('pendaftaran3', compact('title'));
     }
 }
