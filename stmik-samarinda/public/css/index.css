@@ -1,19 +1,19 @@
-*{
+* {
     font-family: "Poppins", serif;
 }
 
-body{
-    background-color: #F9F2E2 !important;
+body {
+    background-color: #f9f2e2 !important;
 }
 
 .title {
-    border-bottom: 2px solid #740001;   
+    border-bottom: 2px solid #740001;
     display: inline-block;
     padding-bottom: 5px;
 }
 
 .academic-section {
-    background-image: url('../img/bgAkademik.png');
+    background-image: url("../img/bgAkademik.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -24,7 +24,7 @@ body{
 }
 
 .facilities-section {
-    background-image: url('../img/bgFasilitas.png');
+    background-image: url("../img/bgFasilitas.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -52,7 +52,7 @@ body{
 }
 
 .biayaPendaftaran {
-    background-image: url('../img/bgBiaya.png');
+    background-image: url("../img/bgBiaya.png");
     background-repeat: no-repeat;
     background-position: center center;
     /* background-attachment: fixed; */
@@ -78,7 +78,7 @@ body{
 
 .price-box {
     background-color: #800000;
-    color: #FEC538;
+    color: #fec538;
     font-size: 26px;
     font-weight: bold;
     text-align: center;
@@ -116,40 +116,40 @@ body{
 }
 
 .navbar {
-    background-color: #F9F2E2 !important;
+    background-color: #f9f2e2 !important;
 }
 
 .carousel {
     margin-top: 70px;
 }
 
-.footer{
+.footer {
     background-color: #740001;
 }
 
-.btn-primary{
-    background-color: #FEC538 !important
+.btn-primary {
+    background-color: #fec538 !important;
 }
 
-.text-color{
-    color: #740001 !important
+.text-color {
+    color: #740001 !important;
 }
 
-.line{
+.line {
     width: 11rem;
     height: 2.5px;
     background-color: #740001;
     margin: 10px auto;
 }
 
-.line2{
+.line2 {
     width: 5rem;
     height: 2.5px;
     background-color: #740001;
     margin: 10px auto;
 }
 
-.borderLuar{
+.borderLuar {
     margin: 0 auto;
     margin-bottom: 2rem;
     border: 1px solid #000;
@@ -158,13 +158,31 @@ body{
     border-radius: 10px;
 }
 
-.judul1{
-    margin-top: 3rem;
-
+.borderLuar1 {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+    width: 70%;
+    height: 55rem;
+    border-radius: 10px;
 }
 
-.uploadberkas{
+.judul1 {
+    margin-top: 3rem;
+}
+
+.uploadberkas {
     margin-top: 1rem;
     padding: 05rem;
 }
 
+.judul5 {
+    margin-top: 3rem;
+}
+
+.line6 {
+    width: 5rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 10px auto;
+}
