@@ -1,7 +1,7 @@
 @section('title', $title)
 <x-layoutform>
     <div class="container-fluid">
-        <div class="borderLuar1">
+        <div class="borderLuar3">
             <div class="programstudi text-center">
                 <h4 class="judul5">Dokumen</h4>
             </div>

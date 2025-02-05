@@ -167,6 +167,15 @@ body {
     border-radius: 10px;
 }
 
+.borderLuar3 {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+    width: 70%;
+    height: 55rem;
+    border-radius: 10px;
+}
+
 .judul1 {
     margin-top: 3rem;
 }
