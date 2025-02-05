@@ -191,7 +191,7 @@ body{
     margin-bottom: 2rem;
     border: 1px solid #000;
     width: 70%;
-    height: 50rem;
+    height: 42rem;
     border-radius: 10px;
 }
 
@@ -252,4 +252,106 @@ body{
 .uploadberkas{
     margin-top: 1rem;
     padding: 5rem;
+}
+
+.next{
+    text-decoration: none;
+    color: white;
+}
+
+/* Identitas Sekolah */
+.juduls1{
+    margin-top: 3rem;
+    margin-left: 21.5rem;
+}
+
+.lines1{
+    width: 11.5rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 0.7rem auto;
+}
+
+.idsekolah{
+    margin-top: 2rem;
+    padding: 0 8rem;
+}
+
+/* Identitas Orang tua */
+.borderLuar2{
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+    width: 70%;
+    height: 163rem;
+    border-radius: 10px;
+}
+
+.idayah{
+    margin-top: 2rem;
+    padding: 0 8rem;
+}
+
+.idibu{
+    margin-top: 5rem;
+    padding: 0 8rem;
+}
+
+.alamatortu{
+    margin-top: 5rem;
+    padding: 0 8rem;
+}
+
+.idwali{
+    margin-top: 5rem;
+    padding: 0 8rem;
+}
+
+.juduls2{
+    margin-top: 3rem;
+    margin-left: 23rem;
+}
+
+.juduls3{
+    margin-top: 3rem;
+}
+
+.lines2{
+    width: 8rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 0.7rem auto;
+}
+
+.lines3{
+    width: 11rem;
+    height: 2.5px;
+    background-color: #740001;
+}
+
+.lines4{
+    width: 9.5rem;
+    height: 2.5px;
+    background-color: #740001;
+}
+
+.lines5{
+    width: 9.5rem;
+    height: 2.5px;
+    background-color: #740001;
+}
+
+.lines6{
+    width: 18rem;
+    height: 2.5px;
+    background-color: #740001;
+}
+
+.ket1{
+    margin-top: 1.5rem;
+}
+
+.wajib1{
+    margin-left: 1rem;
+
 }
