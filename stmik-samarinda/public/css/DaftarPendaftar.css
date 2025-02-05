@@ -1,9 +1,52 @@
+/* Sidebar and General Styles */
 .bg-sidebar {
     background-color: #740001;
     min-height: 100vh;
     transition: all 0.3s ease;
 }
 
+/* Top Navbar Styles */
+.top-navbar {
+    background-color: #740001;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Navigation Active State */
 .active-custom {
     color: #740001;
     background-color: #FEC538;
@@ -34,6 +77,19 @@
     top: 1rem;
     right: 1rem;
     z-index: 1030;
+    width: 30px;
+    height: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.mobile-nav-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: #740001;
+    transition: all 0.3s ease;
 }
 
 .navbar-toggler {
@@ -113,22 +169,39 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 0;
+    border: none !important;
 }
 
-.table thead th {
-    background-color: #740001;
-    color: white;
+.table thead {
+    background-color: #740001 !important;
+    color: white !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.table thead tr {
+    background-color: #740001 !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.table thead tr th {
+    background-color: #740001 !important;
+    color: white !important;
+    border: none !important;
     padding: 12px;
-    white-space: nowrap;
-    border: 1px solid #000000;
     text-align: center;
     vertical-align: middle;
+    white-space: nowrap;
+    margin: 0 !important;
 }
 
 .table tbody td {
     padding: 12px;
     vertical-align: middle;
-    border: 1px solid #000000;
+    border: 1px solid #ddd;
     text-align: center;
 }
 
@@ -173,38 +246,45 @@ main {
     fill: #740001;
 }
 
-/* Mobile Styles */
+/* Remove border and margin on table header */
+.table thead th:first-child,
+.table thead th:last-child {
+    border: none !important;
+}
+
+.table thead th + th {
+    border-left: none !important;
+}
+
+/* Ensure no gaps */
+.table {
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+}
+
+.table-container {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Responsive Sidebar Styles */
 @media (max-width: 991.98px) {
-    .sidebar-wrapper {
+    .bg-sidebar {
         position: fixed;
         top: 0;
         left: -280px;
+        width: 280px;
         height: 100vh;
         z-index: 1040;
         transition: left 0.3s ease;
     }
 
-    .sidebar-wrapper.show {
+    .bg-sidebar.show {
         left: 0;
     }
 
-    .bg-sidebar {
-        height: 100vh;
-    }
-
-    .overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1035;
-    }
-
-    .overlay.show {
-        display: block;
+    .mobile-nav-toggle {
+        display: flex;
     }
 
     .search-wrapper {
@@ -250,6 +330,22 @@ main {
     .table {
         min-width: 800px;
     }
+
+    /* Overlay effect when sidebar is open */
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1035;
+    }
+
+    .overlay.show {
+        display: block;
+    }
 }
 
 /* Small devices (tablets) */
@@ -287,6 +383,10 @@ main {
     .search-input:focus {
         width: 300px;
     }
+
+    .bg-sidebar {
+        transform: translateX(0) !important;
+    }
 }
 
 /* Improve touch targets on mobile */
@@ -297,5 +397,37 @@ main {
 
     .nav-link {
         padding: 12px 16px;
+    }
+}
+
+/* Additional Responsive Fixes */
+@media (max-width: 575.98px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+
+    .search-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .table {
+        font-size: 14px;
+    }
+    
+    .table th, .table td {
+        padding: 8px;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .table thead th {
+        font-size: 14px;
+        padding: 8px;
     }
 }

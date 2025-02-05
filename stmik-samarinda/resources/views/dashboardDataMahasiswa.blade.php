@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="{{ asset('css/DaftarPendaftar.css') }}">
 </head>
 <body>
+<button class="mobile-nav-toggle d-lg-none" aria-label="Toggle navigation">
+    <svg class="hamburger-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
 <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="bootstrap" viewBox="0 0 118 94">
           <title>Bootstrap</title>
@@ -36,7 +41,6 @@
 </svg>
     
 <main class="d-flex">
-    <!-- Sidebar -->
     <div class="d-flex flex-nowrap">
         <div class="d-flex flex-column flex-shrink-0 p-3 bg-sidebar" style="width: 280px;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none mx-auto">
@@ -236,5 +240,11 @@
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+        document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+            document.querySelector('.bg-sidebar').style.left = 
+                document.querySelector('.bg-sidebar').style.left === '0px' ? '-280px' : '0px';
+        });
+    </script>
 </body>
 </html>
