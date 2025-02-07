@@ -2,7 +2,8 @@
 <x-layoutform>
     <div class="container-fluid">
         <div class="borderLuar">
-            <form action="post">
+            <form action="" method="POST">
+                @csrf
                 <div class="programstudi">
                     <h4 class="judul1">Program Studi</h4>
                     <div class="line2"></div>
@@ -48,8 +49,8 @@
                                 <label for="Piljk" class="select-label">Jenis Kelamin *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-jk" name='pilihanjk'>
                                     <option selected>Pilih Jenis Kelamin</option>
-                                    <option value="1">Laki-Laki</option>
-                                    <option value="2">Perempuan</option>
+                                    <option value="Laki-laki">Laki-Laki</option>
+                                    <option value="Perempuan">Perempuan</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
@@ -134,7 +135,12 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="email" class="form-label">Email *</label>
-                                <input type="email" class="form-control" name="Email" id="Email" placeholder="Contoh: user@gmail.com (aktif)">
+                                <input type="email" class="form-control @error('Email') is-invalid @enderror" name="Email" id="Email" placeholder="Contoh: user@gmail.com (aktif)">
+                                @error('Email')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
                         </div>
                     </div>
@@ -169,7 +175,7 @@
                     <div class="row justify-content-end me-5 mt-5">
                         <div class="col-3">
                             <a href="#" class="btn btn-secondary">Previous</a>
-                            <button type="submit" class="btn btn-primary"><a href="pendaftaran2" class="next">Next</a></button>
+                            <button type="submit" class="btn btn-warning"><a href="/pendaftaran2" class="next">Next</a></button>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,8 @@
 <x-layoutform>
     <div class="container-fluid">
         <div class="borderLuar1">
-            <form action="post">
+            <form action="" method="POST">
+                @csrf
                 <div class="sekolah">
                     <h4 class="juduls1">Identitas SMA/SMK Sederajat</h4>
                     <div class="lines1"></div>
@@ -20,11 +21,11 @@
                                 <label for="tahunlulus" class="select-label">Tahun Lulus *</label>
                                 <select class="form-select mt-2" aria-label="Tahun-Lulus" name="Tahunlulus">
                                     <option selected>Pilih Tahun Lulus</option>
-                                    <option value="1">2025</option>
-                                    <option value="2">2024</option>
-                                    <option value="3">2023</option>
-                                    <option value="4">2022</option>
-                                    <option value="5">2021</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2021">2021</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
@@ -52,7 +53,7 @@
                     <div class="row justify-content-end me-5 mt-5">
                         <div class="col-3">
                             <a href="#" class="btn btn-secondary">Previous</a>
-                            <button type="submit" class="btn btn-primary"><a href="pendaftaran3" class="next">Next</a></button>
+                            <button type="submit" class="btn btn-warning"><a href="pendaftaran3" class="next">Next</a></button>
                         </div>
                     </div>
                 </div>

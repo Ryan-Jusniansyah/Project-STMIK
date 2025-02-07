@@ -2,7 +2,8 @@
 <x-layoutform>
     <div class="container-fluid">
         <div class="borderLuar2">
-            <form action="post">
+            <form action="" method="POST">
+                @csrf
                 <div class="ortu">
                     <h4 class="juduls2">Identitas Orang Tua/Wali</h4>
                     <div class="lines2"></div>
@@ -328,7 +329,7 @@
                     <div class="row justify-content-end me-5 mt-5">
                         <div class="col-3">
                             <a href="#" class="btn btn-secondary">Previous</a>
-                            <button type="submit" class="btn btn-primary"><a href="pendaftaran2" class="next">Next</a></button>
+                            <button type="submit" class="btn btn-warning"><a href="pendaftaran2" class="next">Next</a></button>
                         </div>
                     </div>
                 </div>
