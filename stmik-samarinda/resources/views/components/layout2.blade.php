@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse flex-grow-1 justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active fw-500 text-color text-center" href="#">Beranda</a>
+              <a class="nav-link active fw-500 text-color text-center" href="home ">Beranda</a>
             </li>
           </ul>
         </div>

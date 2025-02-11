@@ -43,13 +43,13 @@
 <main class="d-flex">
     <div class="d-flex flex-nowrap">
         <div class="d-flex flex-column flex-shrink-0 p-3 bg-sidebar" style="width: 280px;">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none mx-auto">
-                <img src="img/logo.png" width="200px" alt="Logo" class="img-fluid">
-            </a>
+        <a href="home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none mx-auto">
+    <img src="img/logo.png" width="200px" alt="Logo" class="img-fluid">
+</a>
             <hr>
             <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item">
-                    <a href="#" class="nav-link text-white">
+                    <a href="dashboard" class="nav-link text-white">
                         <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"/></svg>
                         Dashboard
                     </a>
@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link text-white">
+                    <a href="dashboard-berita" class="nav-link text-white">
                         <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
                         Berita
                     </a>
