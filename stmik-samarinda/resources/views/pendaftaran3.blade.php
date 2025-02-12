@@ -329,7 +329,7 @@
                     <div class="row justify-content-end me-5 mt-5">
                         <div class="col-3">
                             <a href="#" class="btn btn-secondary">Previous</a>
-                            <button type="submit" class="btn btn-warning"><a href="pendaftaran2" class="next">Next</a></button>
+                            <button type="submit" class="btn btn-warning text-white">Next</button>
                         </div>
                     </div>
                 </div>

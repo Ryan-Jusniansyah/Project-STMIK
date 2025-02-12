@@ -21,15 +21,15 @@ class PendaftaranController extends Controller{
         return view('uploadberkas', compact('title'));
     }
 
-    public function pendaftaran2(){
-        $title = 'Identitas SMA/SMK Sederajat';
-        return view('pendaftaran2', compact('title'));
-    }
+    // public function pendaftaran2(){
+    //     $title = 'Identitas SMA/SMK Sederajat';
+    //     return view('pendaftaran2', compact('title'));
+    // }
 
-    public function pendaftaran3(){
-        $title = 'Identitas Orang Tua/Wali';
-        return view('pendaftaran3', compact('title'));
-    }
+    // public function pendaftaran3(){
+    //     $title = 'Identitas Orang Tua/Wali';
+    //     return view('pendaftaran3', compact('title'));
+    // }
 
     public function store1(Request $request) {
         $validatedData = $request->validate([
@@ -71,68 +71,69 @@ class PendaftaranController extends Controller{
         return redirect('/pendaftaran2');
     }
 
-    public function store2(Request $request) {
-        $validatedData = $request->validate([
-            'Namasekolah' => 'required',
-            'JurusanSekolah' => 'required',
-            'Tahunlulus' => 'required',
-            'AlamatSekolah' => 'required',
-            'KabupatenKota' => 'required',
-            'ProvinsiSekolah' => 'required',
-            'NegaraSekolah' => 'required',
-        ]);
+    // public function store2(Request $request) {
+    //     $validatedData = $request->validate([
+    //         'Namasekolah' => 'required',
+    //         'JurusanSekolah' => 'required',
+    //         'Tahunlulus' => 'required',
+    //         'AlamatSekolah' => 'required',
+    //         'KabupatenKota' => 'required',
+    //         'ProvinsiSekolah' => 'required',
+    //         'NegaraSekolah' => 'required',
+    //     ]);
 
-        $validatedData['pendaftaran_id'] = session('pendaftar_id');
+    //     $validatedData['pendaftaran_id'] = session('pendaftar_id');
 
-        SekolahAsal::create($validatedData);
+    //     SekolahAsal::create($validatedData);
 
-        return redirect('/pendaftaran3');
-    }
+    //     return redirect('/pendaftaran3');
+    // }
 
-    public function store3(Request $request) {
-        $validatedData = $request->validate([
-            'NamaAyah' => 'required',
-            'NIKayah' => 'required',
-            'Tempatlayah' => 'required',
-            'tgllayah' => 'required',
-            'PilihanagamaA' => 'required',
-            'PilihanpendtA' => 'required',
-            'PilihanpekerA' => 'required',
-            'PilihanpenghasilanA' => 'required',
-            'nohpayah' => 'required',
-            'PilihanstatA' => 'required',
-            'NamaIbu' => 'required',
-            'NIKibu' => 'required',
-            'Tempatlibu' => 'required',
-            'tgllibu' => 'required',
-            'PilihanagamaI' => 'required',
-            'PilihanpendtI' => 'required',
-            'PilihanpekerI' => 'required',
-            'PilihanpenghasilanI' => 'required',
-            'nohpibu' => 'required',
-            'PilihanstatI' => 'required',
-            'NamaWali' => 'required',
-            'NIKWali' => 'required',
-            'Tempatlwali' => 'required',
-            'PilihanagamaW' => 'required',
-            'PilihanpendtW' => 'required',
-            'PilihanpekerW' => 'required',
-            'PilihanpenghasilanW' => 'required',
-            'nohpwali' => 'required',
-            'Alamatjalan' => 'required',
-            'rt-rwortu' => 'required',
-            'Kodepos-ortu' => 'required',
-            'd-kelurahanortu' => 'required',
-            'Kecamatan-ortu' => 'required',
-            'kabupatenortu' => 'required',
-            'Provinsiortu' => 'required',
-            'nohportu' => 'required',
-        ]);
+    // public function store3(Request $request) {
+    //     $validatedData = $request->validate([
+    //         'NamaAyah' => 'required',
+    //         'NIKayah' => 'required',
+    //         'Tempatlayah' => 'required',
+    //         'tgllayah' => 'required',
+    //         'PilihanagamaA' => 'required',
+    //         'PilihanpendtA' => 'required',
+    //         'PilihanpekerA' => 'required',
+    //         'PilihanpenghasilanA' => 'required',
+    //         'nohpayah' => 'required',
+    //         'PilihanstatA' => 'required',
+    //         'NamaIbu' => 'required',
+    //         'NIKibu' => 'required',
+    //         'Tempatlibu' => 'required',
+    //         'tgllibu' => 'required',
+    //         'PilihanagamaI' => 'required',
+    //         'PilihanpendtI' => 'required',
+    //         'PilihanpekerI' => 'required',
+    //         'PilihanpenghasilanI' => 'required',
+    //         'nohpibu' => 'required',
+    //         'PilihanstatI' => 'required',
+    //         'NamaWali' => 'required',
+    //         'NIKWali' => 'required',
+    //         'Tempatlwali' => 'required',
+    //         'PilihanagamaW' => 'required',
+    //         'PilihanpendtW' => 'required',
+    //         'PilihanpekerW' => 'required',
+    //         'PilihanpenghasilanW' => 'required',
+    //         'nohpwali' => 'required',
+    //         'Alamatjalan' => 'required',
+    //         'rt-rwortu' => 'required',
+    //         'Kodepos-ortu' => 'required',
+    //         'd-kelurahanortu' => 'required',
+    //         'Kecamatan-ortu' => 'required',
+    //         'kabupatenortu' => 'required',
+    //         'Provinsiortu' => 'required',
+    //         'nohportu' => 'required',
+    //     ]);
 
-        $validatedData['pendaftaran_id'] = session('pendaftar_id');
+    //     $validatedData['pendaftaran_id'] = session('pendaftar_id');
 
-        OrangTua::create($validatedData);
+    //     OrangTua::create($validatedData);
 
-        return redirect('/uploadberkas');
-    }
+    //     session()->forget(['pendaftar_id']);
+    //     return redirect('/uploadberkas');
+    // }
 }

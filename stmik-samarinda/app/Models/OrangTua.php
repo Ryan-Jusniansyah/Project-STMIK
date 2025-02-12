@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class OrangTua extends Model
 {
+    protected $table = 'orang_tua';
     protected $guarded = [];
 
     public function pendaftar(): BelongsTo
