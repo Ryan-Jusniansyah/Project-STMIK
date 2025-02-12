@@ -35,7 +35,8 @@
             </ul>
         </div>
         <form class="d-flex">
-            <button class="btn btn-primary border-0 text-color fw-bold" type="submit">Daftar Sekarang!</button>
+            <!-- <button class="btn btn-primary border-0 text-color fw-bold" type="submit">Daftar Sekarang!</button> -->
+            <a href="pendaftaran1" class="btn btn-primary border-0 text-color fw-bold">Daftar Sekarang!</a>
           </form>
         </div>
       </nav>
