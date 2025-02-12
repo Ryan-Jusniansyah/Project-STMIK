@@ -41,8 +41,24 @@ return new class extends Migration
             $table->string('nohpibu');
             $table->string('PilihanstatI');
             
-            // $table->string('NamaIbu');
-            // $table->string('NIKibu');
+            $table->string('NamaWali');
+            $table->string('NIKWali');
+            $table->string('Tempatlwali');
+            $table->date('tgllwali');
+            $table->string('PilihanagamaW');
+            $table->string('PilihanpendtW');
+            $table->string('PilihanpekerW');
+            $table->string('PilihanpenghasilanW');
+            $table->string('nohpwali');
+            
+            $table->string('Alamatjalan');
+            $table->string('rt-rwortu');
+            $table->string('Kodepos-ortu');
+            $table->string('d-kelurahanortu');
+            $table->string('Kecamatan-ortu');
+            $table->string('kabupatenortu');
+            $table->string('Provinsiortu');
+            $table->string('nohportu');
 
             $table->timestamps();
         });

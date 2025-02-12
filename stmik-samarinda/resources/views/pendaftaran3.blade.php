@@ -179,23 +179,23 @@
                         <div class="row row-cols-2 mt-3">
                         <div class="col">
                                 <label for="NamaI" class="form-label">Nama *</label>
-                                <input type="text" class="form-control" name="NamaIbu" id="NamaIbu" placeholder="Masukkan Nama Lengkap">
+                                <input type="text" class="form-control" name="NamaWali" id="NamaIbu" placeholder="Masukkan Nama Lengkap">
                             </div>
                             <div class="col">
                                 <label for="nikI" class="form-label">NIK *</label>
-                                <input type="number" class="form-control" name="NIKibu" id="NIKibu" placeholder="Contoh : 64XXXXXXXXXXXXXX">
+                                <input type="number" class="form-control" name="NIKWali" id="NIKibu" placeholder="Contoh : 64XXXXXXXXXXXXXX">
                             </div>
                             <div class="col pt-3">
                                 <label for="TempatI" class="form-label">Tempat Lahir *</label>
-                                <input type="text" class="form-control" name="Tempatlibu" id="Tempatlibu" placeholder="Kota Asal">
+                                <input type="text" class="form-control" name="Tempatlwali" id="Tempatlibu" placeholder="Kota Asal">
                             </div>
                             <div class="col pt-3">
                                 <label for="tgllI" class="form-label">Tanggal Lahir *</label>
-                                <input type="date" class="form-control" name="tgllibu" id="tgllibu" placeholder="DD/MM/YYYY">
+                                <input type="date" class="form-control" name="tgllwali" id="tgllibu" placeholder="DD/MM/YYYY">
                             </div>
                             <div class="col pt-3">
                                 <label for="agamaI" class="select-label">Agama *</label>
-                                <select class="form-select mt-2" aria-label="Pilihan-agamaI" name="PilihanagamaI">
+                                <select class="form-select mt-2" aria-label="Pilihan-agamaI" name="PilihanagamaW">
                                     <option selected>Pilih Agama Anda</option>
                                     <option value="1">Islam</option>
                                     <option value="2">Kristen</option>
@@ -207,7 +207,7 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="pendtI" class="select-label">Pendidikan Terakhir *</label>
-                                <select class="form-select mt-2" aria-label="Pilihan-pendtI" name="PilihanpendtI">
+                                <select class="form-select mt-2" aria-label="Pilihan-pendtI" name="PilihanpendtW">
                                     <option selected>Pilih Pendidikan Terakhir</option>
                                     <option value="1">Pascasarjana (S2/S3)</option>
                                     <option value="2">Sarjana (S1)</option>
@@ -219,7 +219,7 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="pekerI" class="select-label">Pekerjaan *</label>
-                                <select class="form-select mt-2" aria-label="Pilihan-pekerI" name="PilihanpekerI">
+                                <select class="form-select mt-2" aria-label="Pilihan-pekerI" name="PilihanpekerW">
                                     <option selected>Pilih Pekerjaan Orang Tua</option>
                                     <option value="1">PNS</option>
                                     <option value="2">Karyawan Swasta</option>
@@ -231,7 +231,7 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="penghasilanI" class="select-label">Penghasilan *</label>
-                                <select class="form-select mt-2" aria-label="Pilihan-penghasilanI" name="PilihanpenghasilanI">
+                                <select class="form-select mt-2" aria-label="Pilihan-penghasilanI" name="PilihanpenghasilanW">
                                     <option selected>Pilih Penghasilan</option>
                                     <option value="1">Kurang dari Rp1.000.000</option>
                                     <option value="2">Rp1.000.000 - Rp3.000.000</option>
@@ -244,7 +244,7 @@
                             </div>
                             <div class="col-md pt-3">
                                 <label for="nohpI" class="form-label">Handphone/Telp.Rumah</label>
-                                <input type="number" class="form-control" name="nohpibu" id="nohpibu" placeholder="Contoh : +6280000000000">
+                                <input type="number" class="form-control" name="nohpwali" id="nohpibu" placeholder="Contoh : +6280000000000">
                             </div>
                         </div>
                     </div>

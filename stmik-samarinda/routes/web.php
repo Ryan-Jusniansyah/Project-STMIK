@@ -1,7 +1,10 @@
 <?php
 
-use App\Http\Controllers\PendaftaranController;
+use App\Models\Pendaftaran;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PendaftaranController;
+use App\Http\Controllers\DashboardDataMahasiswaController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,9 +14,7 @@ Route::get('/home', function () {
     return view('index', ['title' => 'Beranda']);
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard', ['title' => 'Dashboard']);
-});
+Route::get('/dashboard', [DashboardController::class, 'index']);
 
 Route::get('/berita', function () {
     return view('halamanBerita');
@@ -50,6 +51,4 @@ Route::post('/pendaftaran2', [PendaftaranController::class, 'store2']);
 Route::get('/pendaftaran3', [PendaftaranController::class, 'pendaftaran3']);
 Route::post('/pendaftaran3', [PendaftaranController::class, 'store3']);
 
-Route::get('/dashboard-Data', function () {
-    return view('dashboardDataMahasiswa');
-});
+Route::get('/dashboard-Data', [DashboardDataMahasiswaController::class, 'index']);

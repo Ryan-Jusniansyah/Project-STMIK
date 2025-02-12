@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\OrangTua;
 use Illuminate\Http\Request;
 use App\Models\Pendaftaran;
 use App\Models\SekolahAsal;
@@ -53,7 +54,7 @@ class PendaftaranController extends Controller{
             'Provinsi' => 'required',
             'Negara' => 'required',
             'notelp-hp' => 'required',
-            'Email' => 'email:dns|unique:pendaftaran',
+            'Email' => 'required|email:dns|unique:pendaftaran',
             'Namaperu' => 'nullable',
             'Alamatperu' => 'nullable',
             'Telp-perusahaan' => 'nullable',
@@ -64,7 +65,10 @@ class PendaftaranController extends Controller{
 
         // dd($validatedData);
 
-        Pendaftaran::create($validatedData);
+        $pendaftar = Pendaftaran::create($validatedData);
+
+        session(['pendaftar_id' => $pendaftar->id]);
+        return redirect('/pendaftaran2');
     }
 
     public function store2(Request $request) {
@@ -78,16 +82,57 @@ class PendaftaranController extends Controller{
             'NegaraSekolah' => 'required',
         ]);
 
-        $validatedData['pendaftaran_id'] = 1;
+        $validatedData['pendaftaran_id'] = session('pendaftar_id');
 
         SekolahAsal::create($validatedData);
+
+        return redirect('/pendaftaran3');
     }
 
     public function store3(Request $request) {
         $validatedData = $request->validate([
             'NamaAyah' => 'required',
             'NIKayah' => 'required',
-            'NIKayah' => 'required',
+            'Tempatlayah' => 'required',
+            'tgllayah' => 'required',
+            'PilihanagamaA' => 'required',
+            'PilihanpendtA' => 'required',
+            'PilihanpekerA' => 'required',
+            'PilihanpenghasilanA' => 'required',
+            'nohpayah' => 'required',
+            'PilihanstatA' => 'required',
+            'NamaIbu' => 'required',
+            'NIKibu' => 'required',
+            'Tempatlibu' => 'required',
+            'tgllibu' => 'required',
+            'PilihanagamaI' => 'required',
+            'PilihanpendtI' => 'required',
+            'PilihanpekerI' => 'required',
+            'PilihanpenghasilanI' => 'required',
+            'nohpibu' => 'required',
+            'PilihanstatI' => 'required',
+            'NamaWali' => 'required',
+            'NIKWali' => 'required',
+            'Tempatlwali' => 'required',
+            'PilihanagamaW' => 'required',
+            'PilihanpendtW' => 'required',
+            'PilihanpekerW' => 'required',
+            'PilihanpenghasilanW' => 'required',
+            'nohpwali' => 'required',
+            'Alamatjalan' => 'required',
+            'rt-rwortu' => 'required',
+            'Kodepos-ortu' => 'required',
+            'd-kelurahanortu' => 'required',
+            'Kecamatan-ortu' => 'required',
+            'kabupatenortu' => 'required',
+            'Provinsiortu' => 'required',
+            'nohportu' => 'required',
         ]);
+
+        $validatedData['pendaftaran_id'] = session('pendaftar_id');
+
+        OrangTua::create($validatedData);
+
+        return redirect('/uploadberkas');
     }
 }

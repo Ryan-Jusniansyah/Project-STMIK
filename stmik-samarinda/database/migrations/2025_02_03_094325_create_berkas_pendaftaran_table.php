@@ -18,14 +18,15 @@ return new class extends Migration
                 table: 'pendaftaran',
                 indexName: 'berkas_pendaftaran_id'
             );
-            $table->string('ijazah_sma');
-            $table->string('skhu');
-            $table->string('kk');
-            $table->string('ktp');
-            $table->string('pas_foto');
-            $table->string('bukti_pembayaran');
-            $table->string('surat_keterangan_sehat');
-            $table->string('surat_keterangan_bebas_narkoba');
+            $table->string('IjazahSMA');
+            $table->string('SKHU');
+            $table->string('FotocopyKK');
+            $table->string('FotocopyKTP');
+            $table->string('PasFoto');
+            $table->string('BuktiPembayaran');
+            $table->string('SuratKetSehat');
+            $table->string('SuratKetBebasNarkoba');
+            $table->string('SuratPernyataan');
 
             $table->timestamps();
         });
