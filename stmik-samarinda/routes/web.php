@@ -7,6 +7,7 @@ use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\DashboardDataMahasiswaController;
 use App\Http\Controllers\OrangTuaController;
 use App\Http\Controllers\SekolahAsalController;
+use App\Http\Controllers\UploadBerkasController;
 use App\Models\SekolahAsal;
 
 Route::get('/', function () {
@@ -46,7 +47,9 @@ Route::get('/form-berita', function () {
 Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
 Route::post('/pendaftaran1', [PendaftaranController::class, 'store1']);
 
-Route::get('/uploadberkas', [PendaftaranController::class, 'uploadberkas']);
+// Route::get('/uploadberkas', [PendaftaranController::class, 'uploadberkas']);
+Route::get('/uploadberkas', [UploadBerkasController::class, 'create']);
+Route::post('/uploadberkas', [UploadBerkasController::class, 'store']);
 
 // Route::get('/pendaftaran2', [PendaftaranController::class, 'pendaftaran2']);
 // Route::post('/pendaftaran2', [PendaftaranController::class, 'store2']);
