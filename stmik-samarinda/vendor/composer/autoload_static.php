@@ -322,13 +322,13 @@ class ComposerStaticInite5fbbe6137dc77bcd5b6646b5dd75b52
         ),
         'Spatie\\LaravelIgnition\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/laravel-ignition',
-            1 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
+            0 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
+            1 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/laravel-ignition',
         ),
         'Spatie\\Ignition\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
-            1 => __DIR__ . '/..' . '/spatie/ignition/src',
+            0 => __DIR__ . '/..' . '/spatie/ignition/src',
+            1 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
         ),
         'Spatie\\FlareClient\\' => 
         array (
@@ -541,13 +541,22 @@ class ComposerStaticInite5fbbe6137dc77bcd5b6646b5dd75b52
 
     public static $classMap = array (
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
+        'App\\Http\\Controllers\\DashboardDataMahasiswaController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardDataMahasiswaController.php',
         'App\\Http\\Controllers\\PendaftaranController' => __DIR__ . '/../..' . '/app/Http/Controllers/PendaftaranController.php',
+        'App\\Models\\OrangTua' => __DIR__ . '/../..' . '/app/Models/OrangTua.php',
+        'App\\Models\\Pendaftaran' => __DIR__ . '/../..' . '/app/Models/Pendaftaran.php',
+        'App\\Models\\Prodi' => __DIR__ . '/../..' . '/app/Models/Prodi.php',
+        'App\\Models\\SekolahAsal' => __DIR__ . '/../..' . '/app/Models/SekolahAsal.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\View\\Components\\Footer' => __DIR__ . '/../..' . '/app/View/Components/Footer.php',
         'App\\View\\Components\\Layout' => __DIR__ . '/../..' . '/app/View/Components/Layout.php',
         'App\\View\\Components\\Navbar' => __DIR__ . '/../..' . '/app/View/Components/Navbar.php',
+        'App\\View\\Components\\Title' => __DIR__ . '/../..' . '/app/View/Components/Title.php',
         'App\\View\\Components\\layoutform' => __DIR__ . '/../..' . '/app/View/Components/layoutform.php',
+        'App\\View\\Components\\sidebar' => __DIR__ . '/../..' . '/app/View/Components/sidebar.php',
+        'App\\View\\Components\\sidebardashboard' => __DIR__ . '/../..' . '/app/View/Components/sidebardashboard.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',

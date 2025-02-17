@@ -55,7 +55,7 @@ Route::post('/uploadberkas', [UploadBerkasController::class, 'store']);
 Route::get('/pendaftaran2', [SekolahAsalController::class, 'create']);
 Route::post('/pendaftaran2', [SekolahAsalController::class, 'store']);
 
-// Route::get('/pendaftaran3', [PendaftaranController::class, 'pendaftaran3']);
+// Route::get('/pendaftaran3', [PendaftaranController::class, 'pendaftaran3']); 
 // Route::post('/pendaftaran3', [PendaftaranController::class, 'store3']);
 Route::get('/pendaftaran3', [OrangTuaController::class, 'create']);
 Route::post('/pendaftaran3', [OrangTuaController::class, 'store']);
