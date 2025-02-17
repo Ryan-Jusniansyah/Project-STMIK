@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardBeritaController;
 use App\Models\Pendaftaran;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
@@ -32,9 +33,7 @@ Route::get('/Dosen_STMIK', function() {
     return view('nama_dosen');
 });
 
-Route::get('/dashboard-berita', function () {
-    return view('dashboard_berita');
-});
+Route::get('/dashboard-berita', [DashboardBeritaController::class, 'index']);
 
 Route::get('/login', function () {
     return view('login');
