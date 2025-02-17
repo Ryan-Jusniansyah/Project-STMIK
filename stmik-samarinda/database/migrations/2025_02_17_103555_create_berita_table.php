@@ -13,14 +13,9 @@ return new class extends Migration
     {
         Schema::create('berita', function (Blueprint $table) {
             $table->id();
-
-            $table->foreignId('user_id')->constrained(
-                table: 'users',
-                indexName: 'user_berita_id'
-            );
-            
             $table->string('title');
-            $table->text('body');
+            $table->string('foto');
+            $table->string('description');
 
             $table->timestamps();
         });

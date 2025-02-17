@@ -7,6 +7,7 @@ use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\DashboardDataMahasiswaController;
 use App\Http\Controllers\OrangTuaController;
 use App\Http\Controllers\SekolahAsalController;
+use App\Http\Controllers\BeritaController;
 use App\Models\SekolahAsal;
 
 Route::get('/', function () {
@@ -59,3 +60,6 @@ Route::get('/pendaftaran3', [OrangTuaController::class, 'create']);
 Route::post('/pendaftaran3', [OrangTuaController::class, 'store']);
 
 Route::get('/dashboard-Data', [DashboardDataMahasiswaController::class, 'index']);
+
+Route::post('/form-berita', [BeritaController::class, 'store']);
+Route::get('/dashboard-berita', [BeritaController::class, 'index']);

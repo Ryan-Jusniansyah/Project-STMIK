@@ -18,7 +18,7 @@
           <div class="container py-5 text-center">
             <!-- Logo -->
             <div class="logo justify-content-center" >
-              <img src="img/logo.png" alt="STMIK Samarinda Logo" width="40%">
+              <img id="profil" src="img/logo.png" alt="STMIK Samarinda Logo" width="40%">
             </div>
         
             <!-- Title -->
@@ -28,8 +28,8 @@
         
             <!-- Buttons -->
             <div class="d-flex justify-content-center ms-auto mb-4 mt-4">
-              <a href="#" class="btn btn-primary border-0 text-color me-2">Dosen</a>
-              <a href="#" class="btn btn-primary border-0 text-color">Visi & Misi</a>
+              <a href="Dosen_STMIK" class="btn btn-primary border-0 text-color me-2">Dosen</a>
+              <a href="visimisi" class="btn btn-primary border-0 text-color">Visi & Misi</a>
             </div>
         
             <!-- Description -->
@@ -43,7 +43,7 @@
     </div>
 
     <div class="container my-5">
-      <h2 class="title fw-bold ms auto mb-5">Akademik dan Fasilitas</h2>
+      <h2 class="title fw-bold ms auto mb-5" id="Akademik">Akademik dan Fasilitas</h2>
         <div class="row g-4">
             <!-- Akademik Section -->
             <div class="col-md-6">
@@ -94,7 +94,7 @@
     </div>
 
     <div class="container my-5">
-      <h2 class="title fw-bold ms-auto mb-0">Biaya Pendaftaran</h2>
+      <h2 class="title fw-bold ms-auto mb-0" id="Biaya">Biaya Pendaftaran</h2>
     </div>
     <div class="biayaPendaftaran container my-5 shadow" style="border-radius: 10px;">
         <div class="mt-4">
@@ -115,7 +115,7 @@
     </div>
 
     <div class="container my-5">
-      <h2 class="title fw-bold ms auto mb-4">Berita STMIK</h2>
+      <h2 class="title fw-bold ms auto mb-4" id="Berita">Berita STMIK</h2>
         <div class="row g-4">
             <!-- berita section 1 -->
             <div class="col-md-4">

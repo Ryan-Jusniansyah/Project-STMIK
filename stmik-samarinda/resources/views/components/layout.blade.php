@@ -21,16 +21,16 @@
                 <a class="nav-link" aria-current="page" href="#">Beranda</a>
               </li>
               <li class="nav-item text-color">
-                <a class="nav-link" href="#">Profil</a>
+                <a class="nav-link" href="#profil">Profil</a>
               </li>
               <li class="nav-item text-color">
-                <a class="nav-link" href="#">Akademik</a>
+                <a class="nav-link" href="#Akademik">Akademik</a>
               </li>
               <li class="nav-item text-color">
-                <a class="nav-link" href="#">Fakultas</a>
+                <a class="nav-link" href="#Biaya">Biaya Pendaftaran</a>
               </li>
               <li class="nav-item text-color">
-                <a class="nav-link" href="#">Biaya Pendaftaran</a>
+                <a class="nav-link" href="#Berita">Berita</a>
               </li>
             </ul>
         </div>
