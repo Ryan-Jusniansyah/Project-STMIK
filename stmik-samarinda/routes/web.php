@@ -63,3 +63,6 @@ Route::get('/dashboard-Data', [DashboardDataMahasiswaController::class, 'index']
 
 Route::post('/form-berita', [BeritaController::class, 'store']);
 Route::get('/dashboard-berita', [BeritaController::class, 'index']);
+Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
+Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
+Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
