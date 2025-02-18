@@ -1,4 +1,5 @@
 <x-sidebar>
+  <link rel="stylesheet" href="css/modal.css">
   <div class="container mt-3">
     <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-between align-items-stretch">
       <div class="col">
@@ -59,6 +60,729 @@
           <button class="btn btn-outline-secondary" type="button">🔍</button>
         </div>
       </div>
+
+      {{-- Modal 1--}}
+      <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel">Detail Informasi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <img src="img/fotoProfil.jpg" style="width: 150px" alt="">
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <h2>Identitas Peserta</h2>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Nama Lengkap</strong>
+                </div>
+                <div class="col-8">
+                  : Audrey Mckinney
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>NIK</strong>
+                </div>
+                <div class="col-8">
+                  : 00909099827878979827
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>NPWP</strong>
+                </div>
+                <div class="col-8">
+                  : 081234567890
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>NISN</strong>
+                </div>
+                <div class="col-8">
+                  : 784783729037029379023
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Jenis Kelamin</strong>
+                </div>
+                <div class="col-8">
+                  : Laki-Laki
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Tempat Lahir</strong>
+                </div>
+                <div class="col-8">
+                  : Semarang
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Tanggal Lahir</strong>
+                </div>
+                <div class="col-8">
+                  : 12 Desember 2003
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Berat/Tinggi Badan</strong>
+                </div>
+                <div class="col-8">
+                  : 80kg / 170cm
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Agama</strong>
+                </div>
+                <div class="col-8">
+                  : Islam
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Status Pernikahan</strong>
+                </div>
+                <div class="col-8">
+                  : Belum Menikah
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#detailModal2" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{-- Modal 2--}}
+      <div class="modal fade" id="detailModal2" tabindex="-1" aria-labelledby="detailModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel2">Detail Informasi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <h2>Alamat Lengkap</h2>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Tinggal Bersama</strong>
+                </div>
+                <div class="col-8">
+                  : Orang Tua
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Alamat</strong>
+                </div>
+                <div class="col-8">
+                  : Jalan Damai
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Kode Pos</strong>
+                </div>
+                <div class="col-8">
+                  : 7110056
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>RT/RW</strong>
+                </div>
+                <div class="col-8">
+                  : 01/02
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Desa/Kelurahan</strong>
+                </div>
+                <div class="col-8">
+                  : Kelurahan Air Hitam
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Kecamatan</strong>
+                </div>
+                <div class="col-8">
+                  : Samarinda Ulu
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Kabupaten</strong>
+                </div>
+                <div class="col-8">
+                  : Kutai Kartanegara
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Provinsi</strong>
+                </div>
+                <div class="col-8">
+                  : Kalimantan Timur
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Negara</strong>
+                </div>
+                <div class="col-8">
+                  : Zimbabwe
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Handphone/Telp.Rumah</strong>
+                </div>
+                <div class="col-8">
+                  : 08990011690
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Email</strong>
+                </div>
+                <div class="col-8">
+                  : joko@gmail.com
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#detailModal" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+              <button class="btn btn-primary" data-bs-target="#detailModal3" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      {{-- Modal 3--}}
+      <div class="modal fade" id="detailModal3" tabindex="-1" aria-labelledby="detailModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel3">Detail Informasi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <h2>Detail Pekerjaan</h2>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Nama Perusahaan</strong>
+                </div>
+                <div class="col-8">
+                  : PT. Pencari Cinta Sejati
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Alamat Perusahaan</strong>
+                </div>
+                <div class="col-8">
+                  : Jalan Damai
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>No Telepon Perusahaan</strong>
+                </div>
+                <div class="col-8">
+                  : 082132328382738
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Jabatan Saat Ini</strong>
+                </div>
+                <div class="col-8">
+                  : Bos Besar
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#detailModal2" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+              <button class="btn btn-primary" data-bs-target="#detailModal4" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{-- Modal 4--}}
+      <div class="modal fade" id="detailModal4" tabindex="-1" aria-labelledby="detailModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel4">Detail Informasi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <h2>Identitas SMA/SMK Sederajat</h2>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Nama Sekolah</strong>
+                </div>
+                <div class="col-8">
+                  : SMKN 2 Pinrang
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Jurusan Program</strong>
+                </div>
+                <div class="col-8">
+                  : TKJ
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Tahun Lulus</strong>
+                </div>
+                <div class="col-8">
+                  : 2022
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Alamat Sekolah</strong>
+                </div>
+                <div class="col-8">
+                  : Jalan Jalan
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Kabupaten</strong>
+                </div>
+                <div class="col-8">
+                  : Pinrang
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Provinsi</strong>
+                </div>
+                <div class="col-8">
+                  : Sulawesi Selatan
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>negara</strong>
+                </div>
+                <div class="col-8">
+                  : Indonesia
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#detailModal3" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+              <button class="btn btn-primary" data-bs-target="#detailModal5" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{-- Modal 5--}}
+      <div class="modal fade" id="detailModal5" tabindex="-1" aria-labelledby="detailModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel5">Detail Informasi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <h2>Identitas Ayah</h2>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Nama</strong>
+                </div>
+                <div class="col-8">
+                  : Levy Ackerman
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>NIK</strong>
+                </div>
+                <div class="col-8">
+                  : 000008937837837873
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Tempat Lahir</strong>
+                </div>
+                <div class="col-8">
+                  : Samarinda
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Tanggal Lahir</strong>
+                </div>
+                <div class="col-8">
+                  : 17 Agustus 1945
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Agama</strong>
+                </div>
+                <div class="col-8">
+                  : Islam
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Pendidikan Terakhir</strong>
+                </div>
+                <div class="col-8">
+                  : S1 Gamer Ganteng Idaman
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Pekerjaan</strong>
+                </div>
+                <div class="col-8">
+                  : Kapal Tongkang
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Penghasilan</strong>
+                </div>
+                <div class="col-8">
+                  : Rp 999.999.999,-
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>No Handphone</strong>
+                </div>
+                <div class="col-8">
+                  : 08990928738
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Status Kehidupan</strong>
+                </div>
+                <div class="col-8">
+                  : Meninggal
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#detailModal4" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+              <button class="btn btn-primary" data-bs-target="#detailModal6" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{-- Modal 6--}}
+      <div class="modal fade" id="detailModal6" tabindex="-1" aria-labelledby="detailModalLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel6">Detail Informasi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <h2>Identitas Ibu</h2>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Nama</strong>
+                </div>
+                <div class="col-8">
+                  : Mikasa Ackerman
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>NIK</strong>
+                </div>
+                <div class="col-8">
+                  : 000008937837837873
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Tempat Lahir</strong>
+                </div>
+                <div class="col-8">
+                  : Samarinda
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Tanggal Lahir</strong>
+                </div>
+                <div class="col-8">
+                  : 17 Agustus 1945
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Agama</strong>
+                </div>
+                <div class="col-8">
+                  : Islam
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Pendidikan Terakhir</strong>
+                </div>
+                <div class="col-8">
+                  : S1 Gamer Ganteng Idaman
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Pekerjaan</strong>
+                </div>
+                <div class="col-8">
+                  : Kapal Tongkang
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Penghasilan</strong>
+                </div>
+                <div class="col-8">
+                  : Rp 999.999.999,-
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>No Handphone</strong>
+                </div>
+                <div class="col-8">
+                  : 08990928738
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Status Kehidupan</strong>
+                </div>
+                <div class="col-8">
+                  : Hidup
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#detailModal5" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+              <button class="btn btn-primary" data-bs-target="#detailModal7" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{-- Modal 7--}}
+      <div class="modal fade" id="detailModal7" tabindex="-1" aria-labelledby="detailModalLabel7" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel7">Detail Informasi</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <h2>Alamat Orang Tua/Wali</h2>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Alamat Jalan</strong>
+                </div>
+                <div class="col-8">
+                  : Jalan in dhoe lu
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>RT/RW</strong>
+                </div>
+                <div class="col-8">
+                  : 01/02
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Kode Pos</strong>
+                </div>
+                <div class="col-8">
+                  : 0019199
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Desa/Kelurahan</strong>
+                </div>
+                <div class="col-8">
+                  : Karang Anyar
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Kecamatan/</strong>
+                </div>
+                <div class="col-8">
+                  : Konoha
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Kabupaten/Kota</strong>
+                </div>
+                <div class="col-8">
+                  : Bandung
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>Provinsi</strong>
+                </div>
+                <div class="col-8">
+                  : Jawir
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>No HP/Telp. Rumah</strong>
+                </div>
+                <div class="col-8">
+                  : 893903098309810
+                </div>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#detailModal6" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      {{-- Tabel --}}
       <table class="table table-bordered border-dark text-center">
         <thead class="table-head">
           <tr>
@@ -76,10 +800,10 @@
             <td>Audrey Mckinney</td>
             <td>Audrey Mckinney</td>
             <td>
-              <button class="btn btn-outline-info btn-sm">
+              <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
-                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
                 </svg>
               </button>
               <button class="btn btn-outline-success btn-sm">
