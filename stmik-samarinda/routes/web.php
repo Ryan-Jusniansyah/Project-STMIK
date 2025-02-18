@@ -34,9 +34,6 @@ Route::get('/Dosen_STMIK', function() {
     return view('nama_dosen', ['title' => 'Dosen STMIK']);
 });
 
-
-Route::get('/dashboard-berita', [DashboardBeritaController::class, 'index']);
-
 Route::get('/login', function () {
     return view('login', ['title' => 'Halaman Login']);
 });
