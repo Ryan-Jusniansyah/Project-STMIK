@@ -11,6 +11,7 @@ class DashboardDataMahasiswaController extends Controller
     {
         // return Pendaftaran::all();
         return view('dashboardDataMahasiswa', [
+            'title' => 'Data Mahasiswa',
             'mahasiswa' => Pendaftaran::all()
         ]);
     }

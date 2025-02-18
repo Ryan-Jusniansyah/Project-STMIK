@@ -1,4 +1,5 @@
 <x-sidebar>
+    <x-slot:title>{{ $title }}</x-slot:title>
     <div class="container mt-3">
         <div class="mb-4">
             <h2 class="text-maroon fw-bold mb-3 judul">Berita Acara</h2>

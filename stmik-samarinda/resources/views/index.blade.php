@@ -119,41 +119,45 @@
         <div class="row g-4">
             <!-- berita section 1 -->
             <div class="col-md-4">
-                <div class="berita shadow">
+              <a href="/berita" style="text-decoration: none;">
+              <div class="berita shadow">
                   <img src="img/berita.png" alt="Sistem Informasi" class="img-fluid my-3 rounded">
                   <h3 class="section-title" style="color: #740001;">Penerimaan Mahasiswa Baru STMIK Samarinda</h3>
                   <h6 style="color: #f39c12;">24 Januari 2025</h6>
-                    <p class="text-justify">
+                    <p class="text-justify" style="color: black;">
                         Sekolah Tinggi Manajamen Informatika  Dan Komputer Samarinda Telah Membuka Pendaftaran Untuk Mahasiswa Baru
                     </p>
                 </div>
+              </a>
             </div>
 
             <!-- berita section 2 -->
             <div class="col-md-4">
-                <div class="berita shadow">
+              <a href="/berita" style="text-decoration: none;">
+              <div class="berita shadow">
                   <img src="img/berita.png" alt="Sistem Informasi" class="img-fluid my-3 rounded">
                   <h3 class="section-title" style="color: #740001;">Penerimaan Mahasiswa Baru STMIK Samarinda</h3>
                   <h6 style="color: #f39c12;">24 Januari 2025</h6>
-                    <p class="text-justify">
+                    <p class="text-justify" style="color: black;">
                         Sekolah Tinggi Manajamen Informatika  Dan Komputer Samarinda Telah Membuka Pendaftaran Untuk Mahasiswa Baru
                     </p>
                 </div>
+              </a>
             </div>
 
             <!-- berita section 3 -->
             <div class="col-md-4">
-                <div class="berita shadow">
+              <a href="/berita" style="text-decoration: none;">
+              <div class="berita shadow">
                   <img src="img/berita.png" alt="Sistem Informasi" class="img-fluid my-3 rounded">
                   <h3 class="section-title" style="color: #740001;">Penerimaan Mahasiswa Baru STMIK Samarinda</h3>
                   <h6 style="color: #f39c12;">24 Januari 2025</h6>
-                    <p class="text-justify">
+                    <p class="text-justify" style="color: black;">
                         Sekolah Tinggi Manajamen Informatika  Dan Komputer Samarinda Telah Membuka Pendaftaran Untuk Mahasiswa Baru
                     </p>
                 </div>
+              </a>
             </div>
         </div>
     </div>
-    
-    
 </x-layout>

@@ -32,4 +32,9 @@ class Pendaftaran extends Model
     {
         return $this->hasOne(OrangTua::class);
     }
+
+    public function berkas(): HasOne
+    {
+        return $this->hasOne(Berkas::class);
+    }
 }

@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Models\OrangTua;
+use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 
 class OrangTuaController extends Controller
 {
     public function create(){
+        $pendaftaran_id = session('pendaftaran_id');
+
+        if (!$pendaftaran_id || Pendaftaran::where('id', $pendaftaran_id)->exists()) {
+            return redirect('/pendaftaran1');
+        }
+        
         $title = 'Identitas Orang Tua/Wali';
         return view('pendaftaran3', compact('title'));
     }
@@ -55,11 +62,11 @@ class OrangTuaController extends Controller
 
         $validatedData['pendaftaran_id'] = session('pendaftar_id');
 
-        OrangTua::create($validatedData);
-
-        session()->forget(['pendaftar_id']);
-
-        dd(session('pendaftar_id'));
+        // OrangTua::create($validatedData);
+        OrangTua::updateOrCreate(
+            ['pendaftaran_id' => $validatedData['pendaftaran_id']],
+            $validatedData
+        );
 
         return redirect('/uploadberkas');
     }
