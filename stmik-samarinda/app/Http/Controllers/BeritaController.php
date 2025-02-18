@@ -32,6 +32,7 @@ class BeritaController extends Controller
 
     public function index(){
         return view('dashboard_berita', [
+            'title' => 'Berita',
             'berita' => Berita::all()
         ]);
     }

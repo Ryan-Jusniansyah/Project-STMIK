@@ -1,4 +1,5 @@
 <x-sidebar>
+    <x-slot:title>Edit Berita</x-slot:title>
     <div class="container mt-3 ms-3 me-3">
         <h2 class="fw-bold mb-3" style="color: #740001;">Berita Acara</h2>
         <form action="{{ url('/form-berita/'.$berita->id) }}" method="POST" enctype="multipart/form-data">
