@@ -20,27 +20,27 @@ Route::get('/home', function () {
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
 Route::get('/berita', function () {
-    return view('halamanBerita');
+    return view('halamanBerita', ['title' => 'Halaman Berita']);
 });
 
 Route::get('/visimisi', function(){
-    return view('visi_misi');
+    return view('visi_misi', ['title' => 'Visi Misi']);
 });
 
 Route::get('/Dosen_STMIK', function() {
-    return view('nama_dosen');
+    return view('nama_dosen', ['title' => 'Dosen STMIK']);
 });
 
 Route::get('/dashboard-berita', function () {
-    return view('dashboard_berita');
+    return view('dashboard_berita', ['title' => 'Dashboard Berita']);
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('login', ['title' => 'Halaman Login']);
 });
 
 Route::get('/form-berita', function () {
-    return view('form-berita');
+    return view('form-berita', ['title' => 'Form Berita']);
 });
 
 Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
