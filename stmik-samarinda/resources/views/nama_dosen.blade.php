@@ -1,5 +1,5 @@
 <x-layout2>
-<title>Dosen STMIK Samarinda</title>
+    <x-slot:title>{{ $title }}</x-slot:title>
     <div class="container-fluid" style="margin-top: 120px; margin-bottom: 80px;">
         <div class="row">
             <div class="col-md-8 offset-md-2">
