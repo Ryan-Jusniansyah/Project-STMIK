@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('berkas_pendaftaran', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('pendaftaran')->constrained(
+            $table->foreignId('pendaftaran_id')->constrained(
                 table: 'pendaftaran',
-                indexName: 'berkas_pendaftaran_id'
+                indexName: 'berkas_pendaftar_id'
             );
+            
             $table->string('IjazahSMA');
             $table->string('SKHU');
             $table->string('FotocopyKK');

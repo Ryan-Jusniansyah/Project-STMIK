@@ -6,78 +6,85 @@
                 <h4 class="judul5">Dokumen</h4>
             </div>
             <div class="line6"></div>
-            <div class="uploadberkas">
-                <div class="upload">
-                    <div class="row cols-2">
-                        <div class="col">
-                            <label for="berkas1" class="form-label">Fotocopy Legalisir Ijazah SMA / Surat Keterangan Lulus</label>
-                            <input class="form-control" type="file" name="IjazahSMA" id="berkas1" title="File harus berformat PDF">
-                        </div>
-
-                        <div class="col">
-                            <label for="berkas2" class="form-label">Fotocopy Legalisir SKHU / Nilai UN</label>
-                            <input class="form-control" type="file" name="SKHU" id="berkas2" title="File harus berformat PDF">
-                        </div>
-                        <div class="mt-5"></div>
-
-                        <div class="col">
-                            <label for="berkas3" class="form-label">Fotocopy KK (Kartu Keluarga)</label>
-                            <input class="form-control" type="file" name="FotocopyKK" id="berkas3" title="File harus berformat PDF">
-                        </div>
-
-                        <div class="col">
-                            <label for="berkas4" class="form-label">Fotocopy KTP (Kartu Tanda Penduduk)</label>
-                            <input class="form-control" type="file" name="FotocopyKTP" id="berkas4" title="File harus berformat PDF">
-                        </div>
-
-                        <div class="mt-5"></div>
-
-                        <div class="col">
-                            <label for="berkas5" class="form-label">Pas Foto Warna latar merah (3x4)</label>
-                            <input class="form-control" type="file" name="PasFoto" id="berkas5" title="File harus berformat jpg/png">
-                        </div>
-
-                        <div class="col">
-                            <label for="berkas6" class="form-label">Bukti Pembayaran Pendaftaran</label>
-                            <input class="form-control" type="file" name="BuktiPembayaran" id="berkas6" title="File harus berformat PDF">
-                        </div>
-                        <div class="mt-5"></div>
-
-                        <div class="col">
-                            <label for="berkas7" class="form-label">Surat Keterangan Kesehatan</label>
-                            <input class="form-control" type="file" name="SuratKetSehat" id="berkas7" title="File harus berformat PDF">
-                        </div>
-
-                        <div class="col">
-                            <label for="berkas8" class="form-label">Surat Keterangan Bebas Narkoba</label>
-                            <input class="form-control" type="file" name="SuartKetBebasNarkoba" id="berkas8" title="File harus berformat PDF">
-                        </div>
-                        <div class="mt-5"></div>
-                        <div class="col align-self-start">
-                            <label for="berkas9" class="form-label">Surat pernyataan</label>
-                            <input class="form-control" type="file" name="SuratPernyataan" id="berkas7" title="File harus berformat PDF">
-                            <a href="#">Klik di sini untuk mengunduh surat pernyataan</a>
-                        </div>
-
-                        <div class="col">
+            <form action="" method="POST" enctype="multipart/form-data">
+            @csrf
+                <div class="uploadberkas">
+                    <div class="upload">
+                        <div class="row cols-2">
+                            <div class="col">
+                                <label for="berkas1" class="form-label">Fotocopy Legalisir Ijazah SMA / Surat Keterangan Lulus</label>
+                                <input class="form-control @error('IjazahSMA') is-invalid @enderror" type="file" name="IjazahSMA" id="berkas1" title="File harus berformat PDF">
+                            </div>
+    
+                            <div class="col">
+                                <label for="berkas2" class="form-label">Fotocopy Legalisir SKHU / Nilai UN</label>
+                                <input class="form-control @error('SKHU') is-invalid @enderror" type="file" name="SKHU" id="berkas2" title="File harus berformat PDF">
+                            </div>
+                            <div class="mt-5"></div>
+    
+                            <div class="col">
+                                <label for="berkas3" class="form-label">Fotocopy KK (Kartu Keluarga)</label>
+                                <input class="form-control @error('FotocopyKK') is-invalid @enderror" type="file" name="FotocopyKK" id="berkas3" title="File harus berformat PDF">
+                            </div>
+    
+                            <div class="col">
+                                <label for="berkas4" class="form-label">Fotocopy KTP (Kartu Tanda Penduduk)</label>
+                                <input class="form-control @error('FotocopyKTP') is-invalid @enderror" type="file" name="FotocopyKTP" id="berkas4" title="File harus berformat PDF">
+                            </div>
+    
+                            <div class="mt-5"></div>
+    
+                            <div class="col">
+                                <label for="berkas5" class="form-label">Pas Foto Warna latar merah (3x4)</label>
+                                <input class="form-control @error('PasFoto') is-invalid @enderror" type="file" name="PasFoto" id="berkas5" title="File harus berformat jpg/png">
+                            </div>
+    
+                            <div class="col">
+                                <label for="berkas6" class="form-label">Bukti Pembayaran Pendaftaran</label>
+                                <input class="form-control @error('BuktiPembayaran') is-invalid @enderror" type="file" name="BuktiPembayaran" id="berkas6" title="File harus berformat PDF">
+                            </div>
+                            <div class="mt-5"></div>
+    
+                            <div class="col">
+                                <label for="berkas7" class="form-label">Surat Keterangan Kesehatan</label>
+                                <input class="form-control @error('SuratKetSehat') is-invalid @enderror" type="file" name="SuratKetSehat" id="berkas7" title="File harus berformat PDF">
+                            </div>
                             
+                            <div class="col">
+                                <label for="berkas8" class="form-label">Surat Keterangan Bebas Narkoba</label>
+                                <input class="form-control @error('SuratKetBebasNarkoba') is-invalid @enderror" type="file" name="SuratKetBebasNarkoba" id="berkas8" title="File harus berformat PDF">
+                                {{-- @error('SuratKetBebasNarkoba')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror --}}
+                            </div>
+                            <div class="mt-5"></div>
+                            <div class="col align-self-start">
+                                <label for="berkas9" class="form-label">Surat pernyataan</label>
+                                <input class="form-control @error('SuratPernyataan') is-invalid @enderror" type="file" name="SuratPernyataan" id="berkas7" title="File harus berformat PDF">
+                                <a href="#">Klik di sini untuk mengunduh surat pernyataan</a>
+                            </div>
+    
+                            <div class="col">
+                                
+                            </div>
+    
                         </div>
-
-                    </div>
-
-                    <div class="row mt-5">
+    
+                        <div class="row mt-5">
+                            
+                            <div class="col text-end">
+                                <button type="button" class="btn btn-secondary">Previous</button>
+                                <button type="submit" class="btn btn-warning text-white">Next</button>
+                            </div>
+                        </div>
+    
                         
-                        <div class="col text-end">
-                            <button type="button" class="btn btn-secondary">Previous</button>
-                            <button type="button" class="btn btn-primary">Next</button>
-                            
-                        </div>
+    
                     </div>
-
-                    
-
-                </div>
-            </div> 
+                </div> 
+            </form>
         </div> 
     </div> 
 </x-layoutform>

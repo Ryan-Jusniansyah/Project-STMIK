@@ -10,7 +10,7 @@ class DashboardController extends Controller
     public function index ()
     {
         return view('dashboard', [
-            'title' => 'Dashboard',
+            'title' => 'Main',
             'mahasiswa' => Pendaftaran::all(),
         ]);
     }

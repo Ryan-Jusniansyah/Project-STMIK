@@ -11,7 +11,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="Ps" class="form-label">Program Studi *</label>
-                                <input type="text" class="form-control @error('Programstudi') is-invalid @enderror" name="Programstudi" id="Ps" placeholder="Sistem Informasi (Sarjana)" value="{{ old('Programstudi') }}">
+                                <input type="text" class="form-control @error('Programstudi') is-invalid @enderror" name="Programstudi" id="Ps" placeholder="Sistem Informasi (Sarjana)" value="{{ old('Programstudi') }}" required>
                                 {{-- @error('Programstudi')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -36,7 +36,7 @@
                         <div class="row row-cols-2">
                             <div class="col">
                                 <label for="Nama" class="form-label">Nama Lengkap *</label>
-                                <input type="text" class="form-control @error('Namalengkap') is-invalid @enderror" name="Namalengkap" id="NamaLengkap" placeholder="Masukkan Nama Lengkap" value="{{ old('Namalengkap') }}">
+                                <input type="text" class="form-control @error('Namalengkap') is-invalid @enderror" name="Namalengkap" id="NamaLengkap" placeholder="Masukkan Nama Lengkap" value="{{ old('Namalengkap') }}" required>
                                 {{-- @error('Namalengkap')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -45,7 +45,7 @@
                             </div>
                             <div class="col">
                                 <label for="NIK" class="form-label">NIK *</label>
-                                <input type="number" class="form-control @error('NIK') is-invalid @enderror" name="NIK" id="nik" placeholder="Masukkan NIK anda" value="{{ old('NIK') }}">
+                                <input type="number" class="form-control @error('NIK') is-invalid @enderror" name="NIK" id="nik" placeholder="Masukkan NIK anda" value="{{ old('NIK') }}" required>
                                 {{-- @error('NIK')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -264,7 +264,7 @@
                 <div class="simpan">
                     <div class="row justify-content-end me-5 mt-5">
                         <div class="col-3">
-                            <a href="#" class="btn btn-secondary">Previous</a>
+                            <a href="home" class="btn btn-secondary">Previous</a>
                             {{-- <button type="submit" class="btn btn-warning"><a href="/pendaftaran2" class="next">Next</a></button> --}}
                             <button type="submit" class="btn btn-warning text-white">Next</button>
                         </div>

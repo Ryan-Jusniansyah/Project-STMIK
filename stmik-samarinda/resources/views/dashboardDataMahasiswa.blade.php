@@ -1,4 +1,5 @@
 <x-sidebar>
+    <x-slot:title>{{ $title }}</x-slot:title>
     <!-- Main Content -->
     <div class="container mt-3">
         <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">

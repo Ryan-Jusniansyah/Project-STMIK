@@ -181,3 +181,36 @@ th{
   max-width: 800px;
   margin-top: 20px;
 }
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.search-input {
+  padding: 8px 12px 8px 40px; 
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+
+.search-input:focus {
+  border-color: #740001; 
+  outline: none;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .search-wrapper {
+    width: 100%;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+}

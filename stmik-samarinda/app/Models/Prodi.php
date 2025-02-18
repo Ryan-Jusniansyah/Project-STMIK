@@ -11,6 +11,8 @@ class Prodi extends Model
     //     'nama_prodi'
     // ];
 
+    protected $table = 'prodi';
+
     protected $guarded = [
         'id'
     ];
