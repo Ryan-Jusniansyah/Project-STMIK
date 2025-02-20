@@ -1,5 +1,19 @@
 <x-sidebar>
   <link rel="stylesheet" href="css/modal.css">
+<!-- Tambahkan di head -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
+
+<div id="pdf-container"></div>
+
+<script>
+  function downloadFile() {
+      var selectedFile = document.getElementById("fileSelector").value;
+      if (selectedFile) {
+          window.location.href = "/download/" + selectedFile;
+      }
+  }
+  </script>
+
   <x-slot:title>{{ $title }}</x-slot:title>
   <div class="container mt-3">
     <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-between align-items-stretch">
@@ -783,11 +797,55 @@
 
             </div>
             <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#detailModal8" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
               <button class="btn btn-secondary" data-bs-target="#detailModal6" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
             </div>
           </div>
         </div>
       </div>
+
+
+      {{-- Modal 8 --}}
+      <div class="modal fade" id="detailModal8" tabindex="-1" aria-labelledby="detailModalLabel8" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel8">Dokumen PDF</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-3">
+                <div class="col-4">
+                  <label for="pdfSelector" class="form-label"><strong>Pilih Dokumen</strong></label>
+                </div>
+                <div class="col-8">
+                  <select class="form-select" id="fileSelector" onchange="downloadFile()">
+                    <option value="" selected disabled>Pilih Dokumen</option>
+                    <option value="doc1.pdf">Fotocopy Legalisir Ijazah SMA / Surat Keterangan Lulus</option>
+                    <option value="fotoProfil.jpg">Fotocopy Legalisir SKHU / Nilai UN</option>
+                    <option value="dokumen3.pdf">Fotocopy KK (Kartu Keluarga)</option>
+                    <option value="dokumen3.pdf">Fotocopy KTP (Kartu Tanda Penduduk)</option>
+                    <option value="dokumen3.pdf">Pas Foto Warna latar merah (3x4)</option>
+                    <option value="dokumen3.pdf">Bukti Pembayaran Pendaftaran</option>
+                    <option value="dokumen3.pdf">Surat Keterangan Kesehatan</option>
+                    <option value="dokumen3.pdf">Surat Keterangan Bebas Narkoba</option>
+                </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <iframe id="pdfViewer" src="" width="100%" height="500px" style="border: none; display: none;"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#detailModal7" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
 
 
       {{-- Tabel --}}
@@ -802,6 +860,39 @@
           </tr>
         </thead>
         <tbody>
+<<<<<<< HEAD
+          @if ($mahasiswa->isEmpty())
+            <tr>
+              <td colspan="5">No data yet</td>
+            </tr>
+          @endif
+          @foreach ($mahasiswa as $mhs)
+            <tr>
+              <td>{{ $loop->iteration }}</td>
+              <td>{{ $mhs->Namalengkap }}</td>
+              <td>{{ $mhs->Email }}</td>
+              <td>{{ $mhs['notelp-hp'] }}</td>
+              <td>
+                <button class="btn btn-outline-info btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
+                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
+                  </svg>
+                </button>
+                <button class="btn btn-outline-success btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                  </svg>
+                </button>
+                <button class="btn btn-outline-danger btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+          @endforeach
+=======
           <tr>
             <td>1</td>
             <td>Audrey Mckinney</td>
@@ -850,6 +941,7 @@
               </button>
             </td>
           </tr>
+>>>>>>> 347849d76a5d7bd231fe387d201719ecf5dcc4a4
           <!-- Tambahkan baris lainnya sesuai kebutuhan -->
         </tbody>
       </table>
@@ -898,4 +990,8 @@
       </div>
     </div>
   </div>
+
+
+  
+  
 </x-sidebar>

@@ -65,9 +65,12 @@
               </li>
             </ul>
             <hr>
-            <div class="sign-out text-center">
-                <a href="" class="text-white text-decoration-none">Sign out</a>
-            </div>
+            <form action="/logout" method="POST">
+              @csrf
+              <div class="sign-out text-center">
+                <button type="submit" class="btn text-white">Sign out</button>
+              </div>
+            </form>
           </div>
       </div>
       

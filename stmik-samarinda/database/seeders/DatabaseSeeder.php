@@ -24,5 +24,12 @@ class DatabaseSeeder extends Seeder
         Prodi::create([
             'nama_prodi' => 'Sistem Informasi'
         ]);
+
+        User::create([
+            'name' => 'superadmin',
+            'email' => 'superadmin@gmail.com',
+            'password' => 'password',
+            'role' => 'admin',
+        ]);
     }
 }
