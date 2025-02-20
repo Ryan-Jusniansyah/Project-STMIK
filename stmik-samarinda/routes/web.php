@@ -8,6 +8,7 @@ use App\Http\Controllers\OrangTuaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\SekolahAsalController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\UploadBerkasController;
 use App\Http\Controllers\DashboardBeritaController;
 use App\Http\Controllers\DashboardDataMahasiswaController;
@@ -21,23 +22,23 @@ Route::get('/home', function () {
 });
 
 Route::get('/berita', function () {
-    return view('halamanBerita');
+    return view('halamanBerita', ['title' => 'Halaman Berita']);
 });
 
 Route::get('/visimisi', function(){
-    return view('visi_misi');
+    return view('visi_misi', ['title' => 'Visi Misi']);
 });
 
 Route::get('/Dosen_STMIK', function() {
-    return view('nama_dosen');
+    return view('nama_dosen', ['title' => 'Dosen STMIK']);
 });
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 
-Route::get('/form-berita', function () {
-    return view('form-berita');
-});
+// Route::get('/form-berita', function () {
+//     return view('form-berita', ['title' => 'Form Berita']);
+// });
 
 Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
 Route::post('/pendaftaran1', [PendaftaranController::class, 'store1']);
@@ -55,7 +56,16 @@ Route::post('/pendaftaran3', [OrangTuaController::class, 'store']);
 Route::middleware('auth')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index']);
     Route::get('/dashboard-Data', [DashboardDataMahasiswaController::class, 'index']);
-    Route::get('/dashboard-berita', [DashboardBeritaController::class, 'index']);
+    Route::get('/dashboard-berita', [BeritaController::class, 'index']);
+    
+    Route::get('/form-berita', function() {
+        abort(404);
+    });
+    
+    Route::post('/form-berita', [BeritaController::class, 'store']);
+    Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
+    Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
+    Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
 });
 
 Route::post('/logout', [LoginController::class, 'logout']);

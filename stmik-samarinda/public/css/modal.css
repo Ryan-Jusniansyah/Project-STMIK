@@ -1,0 +1,44 @@
+#detailModal2.fade {
+    transition: none !important;
+}
+
+#detailModal2.modal.fade .modal-dialog {
+    transition: none !important;
+    transform: none !important;
+}
+
+#detailModal3.fade {
+    transition: none !important;
+}
+
+#detailModal3.modal.fade .modal-dialog {
+    transition: none !important;
+    transform: none !important;
+}
+
+#detailModal4.fade {
+    transition: none !important;
+}
+
+#detailModal4.modal.fade .modal-dialog {
+    transition: none !important;
+    transform: none !important;
+}
+
+#detailModal5.fade {
+    transition: none !important;
+}
+
+#detailModal5.modal.fade .modal-dialog {
+    transition: none !important;
+    transform: none !important;
+}
+
+#detailModal6.fade {
+    transition: none !important;
+}
+
+#detailModal6.modal.fade .modal-dialog {
+    transition: none !important;
+    transform: none !important;
+}
