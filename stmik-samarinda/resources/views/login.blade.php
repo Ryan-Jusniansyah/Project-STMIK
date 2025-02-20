@@ -16,12 +16,21 @@
             <img src="img/logo.png" alt="STMIK Samarinda Logo" width="100%">
         </div>
         <h3 class="mb-3 fs-4" style="color: #740001;">Login Admin</h3>
-        <form>
+        @if (session()->has('loginError'))
+            {{ session('loginError') }}
+        @endif
+        <form method="POST">
+            @csrf
             <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Username" required>
+                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="Username" required autofocus>
+                @error('email')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
             </div>
             <div class="mb-3">
-                <input type="password" class="form-control" placeholder="Password" required>
+                <input type="password" name="password" class="form-control" placeholder="Password" required>
             </div>
             <button type="submit" class="btn w-50">LOGIN</button>
         </form>

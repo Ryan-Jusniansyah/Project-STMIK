@@ -71,6 +71,11 @@
           </tr>
         </thead>
         <tbody>
+          @if ($mahasiswa->isEmpty())
+            <tr>
+              <td colspan="5">No data yet</td>
+            </tr>
+          @endif
           @foreach ($mahasiswa as $mhs)
             <tr>
               <td>{{ $loop->iteration }}</td>
