@@ -10,6 +10,9 @@
             </div>
             <div class="mb-3 d-flex">
                 <input type="file" name="foto" class="form-control me-2">
+                @if($berita->foto)
+                    <p class="mt-2">File saat ini: <strong>{{ $berita->foto }}</strong></p>
+                @endif
             </div>
             <div class="mb-3">
                 <textarea class="form-control" rows="5" name="description" placeholder="Description">{{ $berita->description }}</textarea>

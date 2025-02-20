@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardBeritaController;
-use App\Models\Pendaftaran;
+use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PendaftaranController;
@@ -17,14 +17,19 @@ Route::get('/', function () {
 });
 
 Route::get('/home', function () {
-    return view('index', ['title' => 'Beranda']);
+    return view('index', [
+        'title' => 'Beranda',
+        'berita' => Berita::all()
+    ]);
 });
+
+// Route::get('/home', [BeritaController::class, 'index1']);
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
 
-Route::get('/berita', function () {
-    return view('halamanBerita', ['title' => 'Halaman Berita']);
-});
+// Route::get('/berita', function () {
+//     return view('halamanBerita', ['title' => 'Halaman Berita']);
+// });
 
 Route::get('/visimisi', function(){
     return view('visi_misi', ['title' => 'Visi Misi']);
@@ -69,3 +74,4 @@ Route::get('/dashboard-berita', [BeritaController::class, 'index']);
 Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
 Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
 Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
+Route::get('/berita/{id}', [BeritaController::class, 'show']);

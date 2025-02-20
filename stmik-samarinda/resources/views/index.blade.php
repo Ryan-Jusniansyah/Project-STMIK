@@ -117,47 +117,25 @@
     <div class="container my-5">
       <h2 class="title fw-bold ms auto mb-4" id="Berita">Berita STMIK</h2>
         <div class="row g-4">
+            @foreach ($berita as $item)
             <!-- berita section 1 -->
             <div class="col-md-4">
-              <a href="/berita" style="text-decoration: none;">
               <div class="berita shadow">
-                  <img src="img/berita.png" alt="Sistem Informasi" class="img-fluid my-3 rounded">
-                  <h3 class="section-title" style="color: #740001;">Penerimaan Mahasiswa Baru STMIK Samarinda</h3>
-                  <h6 style="color: #f39c12;">24 Januari 2025</h6>
+                @if($item->foto)
+                <img src="{{ asset('storage/images/'.$item->foto) }}" 
+     alt="{{ $item->title }}" 
+     class="img-fluid my-3 rounded" 
+     style="width: 100%; height: 300px; object-fit: cover;">
+                @endif
+                  <a href="{{ url('/berita/'.$item->id) }}" style="text-decoration:none;"><h3 class="section-title" style="color: #740001;">{{ $item->title }}</h3>
+                  <h6 style="color: #f39c12;">{{ $item->created_at->format('d M Y') }}</h6>
                     <p class="text-justify" style="color: black;">
-                        Sekolah Tinggi Manajamen Informatika  Dan Komputer Samarinda Telah Membuka Pendaftaran Untuk Mahasiswa Baru
+                        {{ Str::limit($item->description, 100) }}
                     </p>
-                </div>
-              </a>
+                  </a>
+              </div>
             </div>
-
-            <!-- berita section 2 -->
-            <div class="col-md-4">
-              <a href="/berita" style="text-decoration: none;">
-              <div class="berita shadow">
-                  <img src="img/berita.png" alt="Sistem Informasi" class="img-fluid my-3 rounded">
-                  <h3 class="section-title" style="color: #740001;">Penerimaan Mahasiswa Baru STMIK Samarinda</h3>
-                  <h6 style="color: #f39c12;">24 Januari 2025</h6>
-                    <p class="text-justify" style="color: black;">
-                        Sekolah Tinggi Manajamen Informatika  Dan Komputer Samarinda Telah Membuka Pendaftaran Untuk Mahasiswa Baru
-                    </p>
-                </div>
-              </a>
-            </div>
-
-            <!-- berita section 3 -->
-            <div class="col-md-4">
-              <a href="/berita" style="text-decoration: none;">
-              <div class="berita shadow">
-                  <img src="img/berita.png" alt="Sistem Informasi" class="img-fluid my-3 rounded">
-                  <h3 class="section-title" style="color: #740001;">Penerimaan Mahasiswa Baru STMIK Samarinda</h3>
-                  <h6 style="color: #f39c12;">24 Januari 2025</h6>
-                    <p class="text-justify" style="color: black;">
-                        Sekolah Tinggi Manajamen Informatika  Dan Komputer Samarinda Telah Membuka Pendaftaran Untuk Mahasiswa Baru
-                    </p>
-                </div>
-              </a>
-            </div>
+            @endforeach
         </div>
     </div>
 </x-layout>

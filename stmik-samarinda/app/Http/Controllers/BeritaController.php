@@ -37,6 +37,21 @@ class BeritaController extends Controller
         ]);
     }
 
+    public function index1(){
+        return view('index', [
+            'title' => 'Beranda',
+            'berita' => Berita::all()
+        ]);
+    }
+
+    public function show($id){
+        $berita = Berita::findOrFail($id);
+        return view('halamanBerita', [
+            'title' => $berita->title,
+            'berita' => $berita
+        ]);
+    }
+
     public function edit($id){
         $berita = Berita::findOrFail($id);
         return view('form-edit', compact('berita'));
