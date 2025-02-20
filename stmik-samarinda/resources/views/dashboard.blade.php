@@ -1,5 +1,19 @@
 <x-sidebar>
   <link rel="stylesheet" href="css/modal.css">
+<!-- Tambahkan di head -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
+
+<div id="pdf-container"></div>
+
+<script>
+  function downloadFile() {
+      var selectedFile = document.getElementById("fileSelector").value;
+      if (selectedFile) {
+          window.location.href = "/download/" + selectedFile;
+      }
+  }
+  </script>
+
   <x-slot:title>{{ $title }}</x-slot:title>
   <div class="container mt-3">
     <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-between align-items-stretch">
@@ -783,11 +797,55 @@
 
             </div>
             <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#detailModal8" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
               <button class="btn btn-secondary" data-bs-target="#detailModal6" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
             </div>
           </div>
         </div>
       </div>
+
+
+      {{-- Modal 8 --}}
+      <div class="modal fade" id="detailModal8" tabindex="-1" aria-labelledby="detailModalLabel8" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel8">Dokumen PDF</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-3">
+                <div class="col-4">
+                  <label for="pdfSelector" class="form-label"><strong>Pilih Dokumen</strong></label>
+                </div>
+                <div class="col-8">
+                  <select class="form-select" id="fileSelector" onchange="downloadFile()">
+                    <option value="" selected disabled>Pilih Dokumen</option>
+                    <option value="doc1.pdf">Fotocopy Legalisir Ijazah SMA / Surat Keterangan Lulus</option>
+                    <option value="fotoProfil.jpg">Fotocopy Legalisir SKHU / Nilai UN</option>
+                    <option value="dokumen3.pdf">Fotocopy KK (Kartu Keluarga)</option>
+                    <option value="dokumen3.pdf">Fotocopy KTP (Kartu Tanda Penduduk)</option>
+                    <option value="dokumen3.pdf">Pas Foto Warna latar merah (3x4)</option>
+                    <option value="dokumen3.pdf">Bukti Pembayaran Pendaftaran</option>
+                    <option value="dokumen3.pdf">Surat Keterangan Kesehatan</option>
+                    <option value="dokumen3.pdf">Surat Keterangan Bebas Narkoba</option>
+                </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <iframe id="pdfViewer" src="" width="100%" height="500px" style="border: none; display: none;"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#detailModal7" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
 
 
       {{-- Tabel --}}
@@ -898,4 +956,8 @@
       </div>
     </div>
   </div>
+
+
+  
+  
 </x-sidebar>
