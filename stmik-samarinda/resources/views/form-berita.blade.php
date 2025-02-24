@@ -2,7 +2,7 @@
     <x-slot:title>Berita</x-slot:title>
     <div class="container mt-3 ms-3 me-3">
         <h2 class="fw-bold mb-3" style="color: #740001;">Berita Acara</h2>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form action="/form-berita" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
                 <input type="text" name="title" class="form-control" placeholder="Title">

@@ -37,6 +37,12 @@ class BeritaController extends Controller
         ]);
     }
 
+    public function create(){
+        return view('form-berita', [
+            'title' => 'Berita',
+        ]);
+    }
+
     public function index1(){
         return view('index', [
             'title' => 'Beranda',

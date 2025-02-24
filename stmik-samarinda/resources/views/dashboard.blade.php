@@ -860,7 +860,6 @@
           </tr>
         </thead>
         <tbody>
-<<<<<<< HEAD
           @if ($mahasiswa->isEmpty())
             <tr>
               <td colspan="5">No data yet</td>
@@ -892,102 +891,9 @@
               </td>
             </tr>
           @endforeach
-=======
-          <tr>
-            <td>1</td>
-            <td>Audrey Mckinney</td>
-            <td>Audrey Mckinney</td>
-            <td>Audrey Mckinney</td>
-            <td>
-              <button class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
-                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
-                </svg>
-              </button>
-              <button class="btn btn-outline-success btn-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                  <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                </svg>
-              </button>
-              <button class="btn btn-outline-danger btn-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                </svg>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Savannah Howard</td>
-            <td>Savannah Howard</td>
-            <td>Savannah Howard</td>
-            <td>
-              <button class="btn btn-outline-info btn-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                  <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
-                  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
-                </svg>
-              </button>
-              <button class="btn btn-outline-success btn-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                  <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                </svg>
-              </button>
-              <button class="btn btn-outline-danger btn-sm">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                </svg>
-              </button>
-            </td>
-          </tr>
->>>>>>> 347849d76a5d7bd231fe387d201719ecf5dcc4a4
           <!-- Tambahkan baris lainnya sesuai kebutuhan -->
         </tbody>
       </table>
-      <div class="table-container">
-        <table class="table">
-          <thead>
-            <tr>
-              <th>NO</th>
-              <th>NAMA</th>
-              <th>EMAIL</th>
-              <th>NO TELEPON</th>
-              <th>AKSI</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach ($mahasiswa as $mhs)
-              <tr>
-                <td>{{ $loop->iteration }}</td>
-                <td>{{ $mhs->Namalengkap }}</td>
-                <td>{{ $mhs->Email }}</td>
-                <td>{{ $mhs['notelp-hp'] }}</td>
-                <td>
-                  <div class="action-buttons-container">
-                    <button class="action-button" title="View">
-                      <svg class="action-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="29" height="29" rx="3.5" fill="white" stroke="#09A0D5" />
-                        <path d="M18.5799 15C18.5799 16.98 16.9799 18.58 14.9999 18.58C13.0199 18.58 11.4199 16.98 11.4199 15C11.4199 13.02 13.0199 11.42 14.9999 11.42C16.9799 11.42 18.5799 13.02 18.5799 15Z" stroke="#09A0D5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M15.0001 23.27C18.5301 23.27 21.8201 21.19 24.1101 17.59C25.0101 16.18 25.0101 13.81 24.1101 12.4C21.8201 8.8 18.5301 6.72 15.0001 6.72C11.4701 6.72 8.18009 8.8 5.89009 12.4C4.99009 13.81 4.99009 16.18 5.89009 17.59C8.18009 21.19 11.4701 23.27 15.0001 23.27Z" stroke="#09A0D5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                    <button class="action-button" title="Delete">
-                      <svg class="action-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" y="0.5" width="29" height="29" rx="3.5" fill="white" stroke="#CE0002" />
-                        <path d="M6.5 21V10C6.5 6 7.5 5 11.5 5H18.5C22.5 5 23.5 6 23.5 10V20C23.5 20.14 23.5 20.28 23.49 20.42" stroke="#CE0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M9.35 18H23.5V21.5C23.5 23.43 21.93 25 20 25H10C8.07 25 6.5 23.43 6.5 21.5V20.85C6.5 19.28 7.78 18 9.35 18Z" stroke="#CE0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M11 10H19" stroke="#CE0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M11 13.5H16" stroke="#CE0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                      </svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            @endforeach
-          </tbody>
-        </table>
-      </div>
     </div>
   </div>
 

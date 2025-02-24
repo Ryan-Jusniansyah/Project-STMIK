@@ -11,7 +11,7 @@
                         <div style="width: 70%; background: linear-gradient(to right, #FEC538 20%, transparent 100%);">
                             <h2 class="p-2">{{ $berita['title'] }}</h2>
                         </div>
-                        <img src="{{ asset('storage/images/'.$berita->foto) }}" class="img-fluid mb-3" alt="{{ $berita  ->title }}">
+                        <img src="{{ asset('storage/images/'.$berita->foto) }}" class="img-fluid mb-3" alt="{{ $berita  ->title }}" style="width: 100%; height:500px; object-fit:cover;">
                         <p>{{ $berita->description }}</p>
                         <!-- <div class="text-right">
                             <a href="#" class="btn btn-primary">Daftar Sekarang</a>
