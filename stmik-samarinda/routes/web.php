@@ -58,9 +58,9 @@ Route::middleware('auth')->group(function() {
     Route::get('/dashboard-Data', [DashboardDataMahasiswaController::class, 'index']);
     Route::get('/dashboard-berita', [BeritaController::class, 'index']);
     
-    Route::get('/form-berita', function() {
-        abort(404);
-    });
+    // Route::get('/form-berita', function() {
+    //     abort(404);
+    // });
     
     Route::post('/form-berita', [BeritaController::class, 'store']);
     Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
