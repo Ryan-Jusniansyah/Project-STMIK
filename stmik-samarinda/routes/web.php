@@ -84,6 +84,8 @@ Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
 Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
 Route::get('/berita/{id}', [BeritaController::class, 'show']);
 
+Route::get('/dashboard-berita/search', [BeritaController::class, 'search'])->name('berita.search');
+
 Route::get('/download/{filename}', function ($filename) {
     $path = public_path('doc/' . $filename);
     
