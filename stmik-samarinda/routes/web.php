@@ -13,6 +13,7 @@ use App\Http\Controllers\SekolahAsalController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\UploadBerkasController;
 use App\Http\Controllers\DashboardDataMahasiswaController;
+use App\Http\Controllers\PDFDataMahasiswa;
 
 Route::get('/', function () {
     return view('welcome');
@@ -83,6 +84,8 @@ Route::get('/form-edit/{id}/edit', [BeritaController::class, 'edit']);
 Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
 Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
 Route::get('/berita/{id}', [BeritaController::class, 'show']);
+
+Route::get('/download-pdf/{id}', [PDFDataMahasiswa::class, 'downloadPDF'])->name('mahasiswa.download');
 
 Route::get('/download/{filename}', function ($filename) {
     $path = public_path('doc/' . $filename);

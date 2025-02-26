@@ -12,7 +12,7 @@ class BeritaController extends Controller
         $validatedData = $request->validate([
             'title' => 'required',
             'foto' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'description' => 'required'
+            'description' => 'required|string'
         ]);
 
         if($request->hasFile('foto')){

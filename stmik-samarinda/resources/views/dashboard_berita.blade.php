@@ -38,7 +38,7 @@
                             </div>
                         </div>
                         <h5 class="card-title text-start">{{ $news->title }}</h5>
-                        <p class="card-text text-align-start text-muted small flex-grow-1">{{ $news->description }}</p>
+                        <p class="card-text text-align-start text-muted small flex-grow-1">{{ Str::limit($news->description, 100) }}</p>
                         <div class="gariscard"></div>
                         <p class="card-text text-start text-muted small">{{ $news->created_at->format('d M Y') }}</p>
                     </div>
