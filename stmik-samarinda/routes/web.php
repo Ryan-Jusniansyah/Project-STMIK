@@ -13,6 +13,7 @@ use App\Http\Controllers\SekolahAsalController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\UploadBerkasController;
 use App\Http\Controllers\DashboardDataMahasiswaController;
+use App\Http\Controllers\PDFDataMahasiswa;
 
 Route::get('/', function () {
     return view('welcome');
@@ -85,9 +86,18 @@ Route::middleware('auth')->group(function() {
     Route::get('/dashboard-berita', [BeritaController::class, 'index']);
     Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
     Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
+    
+    Route::post('/form-berita', [BeritaController::class, 'store']);
+    Route::get('/form-edit/{id}/edit', [BeritaController::class, 'edit']);
+    Route::put('/form-edit/{id}', [BeritaController::class, 'update']);
     Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
     Route::get('/berita/{id}', [BeritaController::class, 'show']);
+
+    Route::get('/form-berita', [BeritaController::class, 'create']);
 });
+
+Route::get('/download-pdf/{id}', [PDFDataMahasiswa::class, 'downloadPDF'])->name('mahasiswa.download');
+Route::get('/dashboard-berita/search', [BeritaController::class, 'search'])->name('berita.search');
 
 Route::get('/download/{filename}', function ($filename) {
     $path = public_path('doc/' . $filename);

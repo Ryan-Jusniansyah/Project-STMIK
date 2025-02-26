@@ -285,40 +285,29 @@
                                 <input type="number" class="form-control"  name="nohportu" id="nohportu" placeholder="Cohtoh : +628XXXXXXXXXXX">
                             </div>
                             <div class="col pt-3">
-                                <label for="infor" class="form-label">Mengetahui informasi tentang STMIK Samarinda dari?</label>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="brosur" id="brosur">
-                                    <label class="form-check-label" for="brosur">
-                                        Brosur/Pamplef/Poster
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="keluarga" id="keluarga">
-                                    <label class="form-check-label" for="keluarga">
-                                        Keluarga/Teman/Instansi
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" value="medsos" id="medsos">
-                                    <label class="form-check-label" for="medsos">
-                                        Media Sosial
-                                    </label>
-                                </div>
+                                <label for="Informasi" class="select-label">Mengetahui informasi tentang STMIK Samarinda dari? *</label>
+                                <select class="form-select mt-2" aria-label="Pilihan-Informasi" name="PilihanInformasi">
+                                    <option selected>Pilih Informasi</option>
+                                    <option value="1">Brosur/Pamflet/Poster</option>
+                                    <option value="2">Keluarga/Teman/Instansi</option>
+                                    <option value="3">Media Sosial</option>
+                                    <option value="4">Brosur/Pamflet/Poster & Keluarga/Teman/Instansi</option>
+                                    <option value="5">Brosul/Pamflet/Poster & Media Sosial</option>
+                                    <option value="6">Keluarga/Teman/Instansi & Media Sosial</option>
+                                    <option value="7">Ketiganya</option>
+                                </select>
                             </div>
                             <div class="col pt-3">
-                                <label for="prostudi" class="form-label">Program Studi lain yang anda minati: *maks 2 pilihan</label>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" value="IT" id="Informatika">
-                                    <label for="Informatika" class="form-check-label">Informatika</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" value="BD" id="BisnisDigital">
-                                    <label for="BisnisDigital" class="form-check-label">Bisnis Digital</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" value="Manajemen" id="manajemen">
-                                    <label for="manajemen" class="form-check-label">Manajemen</label>
-                                </div>
+                                <label for="pilprostu" class="select-label">Program Studi lain yang anda minati: *maks 2 pilihan</label>
+                                <select class="form-select mt-2" aria-label="Pilihan-prostu" name="Pilihanprostu">
+                                    <option selected>Pilih Program Studi</option>
+                                    <option value="1">Informatika</option>
+                                    <option value="2">Bisnis Digital</option>
+                                    <option value="3">Manajemen</option>
+                                    <option value="4">Informatika & Bisnis Digital</option>
+                                    <option value="5">Informatika & Manajemen</option>
+                                    <option value="6">Bisnis Digital & Manajemen</option>
+                                </select>
                             </div>
                         </div>
                         <h6 class="ket1">Keterangan: </h6>
