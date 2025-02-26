@@ -1,4 +1,5 @@
 <x-sidebar>
+    <<link rel="stylesheet" href="{{ asset('css/dashboard_berita.css') }}">
     <x-slot:title>{{ $title }}</x-slot:title>
     <div class="container mt-3">
         <div class="mb-4">
