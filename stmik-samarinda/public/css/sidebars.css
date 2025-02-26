@@ -214,3 +214,13 @@ th{
     width: 100%;
   }
 }
+
+.btn-custom-search {
+  background-color: #740001; /* ganti dengan warna yang Anda inginkan */
+  color: white; /* warna teks */
+  border: none;
+}
+
+.btn-custom-search:hover {
+  background-color: #740001; /* warna saat hover */
+}
