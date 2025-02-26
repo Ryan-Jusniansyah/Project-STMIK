@@ -1,19 +1,8 @@
+@isset($mhs)
+    @dd($mhs)
+@endisset
 <x-sidebar>
   <link rel="stylesheet" href="css/modal.css">
-<!-- Tambahkan di head -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
-
-<div id="pdf-container"></div>
-
-<script>
-  function downloadFile() {
-      var selectedFile = document.getElementById("fileSelector").value;
-      if (selectedFile) {
-          window.location.href = "/download/" + selectedFile;
-      }
-  }
-  </script>
-
   <x-slot:title>{{ $title }}</x-slot:title>
   <div class="container mt-3">
     <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-between align-items-stretch">
@@ -109,7 +98,7 @@
                 <div class="col-4">
                   <strong>Nama Lengkap</strong>
                 </div>
-                <div class="col-8">
+                <div id="nama" class="col-8">
                   : Audrey Mckinney
                 </div>
               </div>
@@ -118,7 +107,7 @@
                 <div class="col-4">
                   <strong>NIK</strong>
                 </div>
-                <div class="col-8">
+                <div id="nik" class="col-8">
                   : 00909099827878979827
                 </div>
               </div>
@@ -127,7 +116,7 @@
                 <div class="col-4">
                   <strong>NPWP</strong>
                 </div>
-                <div class="col-8">
+                <div id="npwp" class="col-8">
                   : 081234567890
                 </div>
               </div>
@@ -136,7 +125,7 @@
                 <div class="col-4">
                   <strong>NISN</strong>
                 </div>
-                <div class="col-8">
+                <div id="nisn" class="col-8">
                   : 784783729037029379023
                 </div>
               </div>
@@ -145,7 +134,7 @@
                 <div class="col-4">
                   <strong>Jenis Kelamin</strong>
                 </div>
-                <div class="col-8">
+                <div id="jk" class="col-8">
                   : Laki-Laki
                 </div>
               </div>
@@ -154,7 +143,7 @@
                 <div class="col-4">
                   <strong>Tempat Lahir</strong>
                 </div>
-                <div class="col-8">
+                <div id="tempat" class="col-8">
                   : Semarang
                 </div>
               </div>
@@ -163,7 +152,7 @@
                 <div class="col-4">
                   <strong>Tanggal Lahir</strong>
                 </div>
-                <div class="col-8">
+                <div id="tgl" class="col-8">
                   : 12 Desember 2003
                 </div>
               </div>
@@ -172,7 +161,7 @@
                 <div class="col-4">
                   <strong>Berat/Tinggi Badan</strong>
                 </div>
-                <div class="col-8">
+                <div id="bbtb" class="col-8">
                   : 80kg / 170cm
                 </div>
               </div>
@@ -181,7 +170,7 @@
                 <div class="col-4">
                   <strong>Agama</strong>
                 </div>
-                <div class="col-8">
+                <div id="agama" class="col-8">
                   : Islam
                 </div>
               </div>
@@ -797,55 +786,11 @@
 
             </div>
             <div class="modal-footer">
-              <button class="btn btn-primary" data-bs-target="#detailModal8" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
               <button class="btn btn-secondary" data-bs-target="#detailModal6" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
             </div>
           </div>
         </div>
       </div>
-
-
-      {{-- Modal 8 --}}
-      <div class="modal fade" id="detailModal8" tabindex="-1" aria-labelledby="detailModalLabel8" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="detailModalLabel8">Dokumen PDF</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <div class="row mb-3">
-                <div class="col-4">
-                  <label for="pdfSelector" class="form-label"><strong>Pilih Dokumen</strong></label>
-                </div>
-                <div class="col-8">
-                  <select class="form-select" id="fileSelector" onchange="downloadFile()">
-                    <option value="" selected disabled>Pilih Dokumen</option>
-                    <option value="doc1.pdf">Fotocopy Legalisir Ijazah SMA / Surat Keterangan Lulus</option>
-                    <option value="fotoProfil.jpg">Fotocopy Legalisir SKHU / Nilai UN</option>
-                    <option value="dokumen3.pdf">Fotocopy KK (Kartu Keluarga)</option>
-                    <option value="dokumen3.pdf">Fotocopy KTP (Kartu Tanda Penduduk)</option>
-                    <option value="dokumen3.pdf">Pas Foto Warna latar merah (3x4)</option>
-                    <option value="dokumen3.pdf">Bukti Pembayaran Pendaftaran</option>
-                    <option value="dokumen3.pdf">Surat Keterangan Kesehatan</option>
-                    <option value="dokumen3.pdf">Surat Keterangan Bebas Narkoba</option>
-                </select>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12">
-                  <iframe id="pdfViewer" src="" width="100%" height="500px" style="border: none; display: none;"></iframe>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-secondary" data-bs-target="#detailModal7" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
 
 
       {{-- Tabel --}}
@@ -872,25 +817,32 @@
               <td>{{ $mhs->Email }}</td>
               <td>{{ $mhs['notelp-hp'] }}</td>
               <td>
-                <div class="action-buttons-container">
-                  <button class="action-button" title="View">
-                    <svg class="action-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="0.5" width="29" height="29" rx="3.5" fill="white" stroke="#09A0D5" />
-                      <path d="M18.5799 15C18.5799 16.98 16.9799 18.58 14.9999 18.58C13.0199 18.58 11.4199 16.98 11.4199 15C11.4199 13.02 13.0199 11.42 14.9999 11.42C16.9799 11.42 18.5799 13.02 18.5799 15Z" stroke="#09A0D5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M15.0001 23.27C18.5301 23.27 21.8201 21.19 24.1101 17.59C25.0101 16.18 25.0101 13.81 24.1101 12.4C21.8201 8.8 18.5301 6.72 15.0001 6.72C11.4701 6.72 8.18009 8.8 5.89009 12.4C4.99009 13.81 4.99009 16.18 5.89009 17.59C8.18009 21.19 11.4701 23.27 15.0001 23.27Z" stroke="#09A0D5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </button>
-                  <button class="action-button" title="Delete">
-                    <svg class="action-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="0.5" y="0.5" width="29" height="29" rx="3.5" fill="white" stroke="#CE0002" />
-                      <path d="M6.5 21V10C6.5 6 7.5 5 11.5 5H18.5C22.5 5 23.5 6 23.5 10V20C23.5 20.14 23.5 20.28 23.49 20.42" stroke="#CE0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M9.35 18H23.5V21.5C23.5 23.43 21.93 25 20 25H10C8.07 25 6.5 23.43 6.5 21.5V20.85C6.5 19.28 7.78 18 9.35 18Z" stroke="#CE0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M11 10H19" stroke="#CE0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M11 13.5H16" stroke="#CE0002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </button>
-                </div>
-                {{-- <button class="btn btn-outline-info btn-sm">
+                <a href="javascript:void(0)" data-url="{{ route('dashboard.show'), $mhs->id }}" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                  </svg>
+                </a>
+                {{-- <a href="/dashboard/{{ $mhs->id }}">test</a> --}}
+                {{-- <button class="btn btn-detail btn-outline-info btn-sm" data-id="{{ $mhs->id }}" data-bs-toggle="modal" data-bs-target="#detailModal">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+                  </svg>
+                </button> --}}
+                <button class="btn btn-outline-success btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                  </svg>
+                </button>
+                <button class="btn btn-outline-danger btn-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                  </svg>
+                </button>
+              </td>
+              {{-- <td>
+                <button class="btn btn-outline-info btn-sm">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                     <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
                     <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
@@ -905,8 +857,8 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
                     <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
                   </svg>
-                </button> --}}
-              </td>
+                </button>
+              </td> --}}
             </tr>
           @endforeach
           <!-- Tambahkan baris lainnya sesuai kebutuhan -->
@@ -915,7 +867,22 @@
     </div>
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.btn-detail').click(function() {
+            var id = $(this).data('id');
+            $.ajax({
+                url: '/dashboard/' + id,
+                type: 'GET',
+                success: function(data) {
+                    $('#nama').text(data.nama);
+                    // $('#detail-nama').text(data.nama);
+                    // $('#detail-email').text(data.email);
+                }
+            });
+        });
+    });
+  </script>
 
-  
-  
 </x-sidebar>

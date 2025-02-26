@@ -18,4 +18,8 @@ class DashboardController extends Controller
             'mahasiswa' => Pendaftaran::all(),
         ]);
     }
+
+    public function show(Pendaftaran $pendaftaran) {
+        return $pendaftaran;
+    }
 }

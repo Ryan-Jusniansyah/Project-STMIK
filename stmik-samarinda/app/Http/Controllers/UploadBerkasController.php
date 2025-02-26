@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class UploadBerkasController extends Controller
 {
     public function create(){
-        $pendaftaran_id = session('pendaftaran_id');
+        $pendaftaran_id = session('pendaftar_id');
 
-        if (!$pendaftaran_id || Pendaftaran::where('id', $pendaftaran_id)->exists()) {
+        if (!$pendaftaran_id || !Pendaftaran::where('id', $pendaftaran_id)->exists()) {
             return redirect('/pendaftaran1');
         }
         

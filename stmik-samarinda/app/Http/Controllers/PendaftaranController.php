@@ -68,6 +68,7 @@ class PendaftaranController extends Controller{
         $pendaftar = Pendaftaran::create($validatedData);
 
         session(['pendaftar_id' => $pendaftar->id]);
+        // dd(redirect('/pendaftaran2'));
         return redirect('/pendaftaran2');
     }
 }

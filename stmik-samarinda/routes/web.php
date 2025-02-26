@@ -69,19 +69,25 @@ Route::middleware('auth')->group(function() {
     // Route::get('/form-berita', function() {
     //     abort(404);
     // });
+
+    Route::get('dashboard/{id}', function($id) {
+        $data = Pendaftaran::find($id);
+        // return view('dashboard', ['title' => 'Main', 'mhs' => $mhs]);
+        return response()->json($data);
+    })->name('dashboard.show');
+    
+    // Route::post('/form-berita', [BeritaController::class, 'store']);
+    // Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
+    // Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
+    // Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
     
     Route::post('/form-berita', [BeritaController::class, 'store']);
+    Route::get('/dashboard-berita', [BeritaController::class, 'index']);
     Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
     Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
     Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
+    Route::get('/berita/{id}', [BeritaController::class, 'show']);
 });
-
-Route::post('/form-berita', [BeritaController::class, 'store']);
-Route::get('/dashboard-berita', [BeritaController::class, 'index']);
-Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
-Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
-Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
-Route::get('/berita/{id}', [BeritaController::class, 'show']);
 
 Route::get('/download/{filename}', function ($filename) {
     $path = public_path('doc/' . $filename);
