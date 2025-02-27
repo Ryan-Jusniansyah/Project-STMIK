@@ -11,7 +11,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="Ps" class="form-label">Program Studi *</label>
-                                <input type="text" class="form-control @error('Programstudi') is-invalid @enderror" name="Programstudi" id="Ps" placeholder="Sistem Informasi (Sarjana)" value="{{ old('Programstudi') }}" required>
+                                <input type="text" class="form-control @error('Programstudi') is-invalid @enderror" name="Programstudi" id="Ps" placeholder="Sistem Informasi (Sarjana)" value="Sistem Informasi (Sarjana)" readonly>
                                 {{-- @error('Programstudi')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -20,7 +20,7 @@
                             </div>
                             <div class="col">
                                 <label for="Pilkelas" class="select-label">Pilihan Kelas *</label>
-                                <select class="form-select mt-2" aria-label="Pilihan-Kelas" name="Pilihankelas">
+                                <select class="form-select mt-2 @error('Pilkelas') is-invalid @enderror" aria-label="Pilihan-Kelas" name="Pilihankelas">
                                     <option selected>Masukkan Pilihan Kelas</option>
                                     <option value="1">Pagi (Offline)</option>
                                     <option value="2">Malam (Online)</option>
@@ -36,7 +36,7 @@
                         <div class="row row-cols-2">
                             <div class="col">
                                 <label for="Nama" class="form-label">Nama Lengkap *</label>
-                                <input type="text" class="form-control @error('Namalengkap') is-invalid @enderror" name="Namalengkap" id="NamaLengkap" placeholder="Masukkan Nama Lengkap" value="{{ old('Namalengkap') }}" required>
+                                <input type="text" class="form-control @error('Namalengkap') is-invalid @enderror" name="Namalengkap" id="NamaLengkap" placeholder="Masukkan Nama Lengkap" value="{{ old('Namalengkap') }}">
                                 {{-- @error('Namalengkap')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -45,7 +45,7 @@
                             </div>
                             <div class="col">
                                 <label for="NIK" class="form-label">NIK *</label>
-                                <input type="number" class="form-control @error('NIK') is-invalid @enderror" name="NIK" id="nik" placeholder="Masukkan NIK anda" value="{{ old('NIK') }}" required>
+                                <input type="number" class="form-control @error('NIK') is-invalid @enderror" name="NIK" id="nik" placeholder="Masukkan NIK anda" value="{{ old('NIK') }}">
                                 {{-- @error('NIK')
                                     <div class="invalid-feedback">
                                         {{ $message }}
@@ -226,11 +226,11 @@
                             <div class="col pt-3">
                                 <label for="email" class="form-label">Email *</label>
                                 <input type="email" class="form-control @error('Email') is-invalid @enderror" name="Email" id="Email" placeholder="Contoh: user@gmail.com (aktif)" value="{{ old('Email') }}">
-                                @error('Email')
+                                {{-- @error('Email')
                                     <div class="invalid-feedback">
                                         {{ $message }}
                                     </div>
-                                @enderror
+                                @enderror --}}
                             </div>
                         </div>
                     </div>

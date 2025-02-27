@@ -13,19 +13,19 @@
                         <div class="row row-cols-2 mt-3">
                             <div class="col">
                                 <label for="NamaA" class="form-label">Nama *</label>
-                                <input type="text" class="form-control" name="NamaAyah" id="NamaAyah" placeholder="Masukkan Nama Lengkap">
+                                <input type="text" class="form-control  @error('NamaAyah') is-invalid @enderror" name="NamaAyah" value="{{ old('NamaAyah') }}" id="NamaAyah" placeholder="Masukkan Nama Lengkap">
                             </div>
                             <div class="col">
                                 <label for="nikA" class="form-label">NIK *</label>
-                                <input type="number" class="form-control" name="NIKayah" id="NIKayah" placeholder="Contoh : 64XXXXXXXXXXXXXX">
+                                <input type="number" class="form-control @error('NIKayah') is-invalid @enderror" name="NIKayah" value="{{ old('NIKayah') }}" id="NIKayah" placeholder="Contoh : 64XXXXXXXXXXXXXX">
                             </div>
                             <div class="col pt-3">
                                 <label for="TempatA" class="form-label">Tempat Lahir *</label>
-                                <input type="text" class="form-control" name="Tempatlayah" id="Tempatlayah" placeholder="Kota Asal">
+                                <input type="text" value="{{ old('Tempatlayah') }}" class="form-control @error('Tempatlayah') is-invalid @enderror" name="Tempatlayah" id="Tempatlayah" placeholder="Kota Asal">
                             </div>
                             <div class="col pt-3">
                                 <label for="tgllA" class="form-label">Tanggal Lahir *</label>
-                                <input type="date" class="form-control" name="tgllayah" id="tgllayah" placeholder="DD/MM/YYYY">
+                                <input type="date" class="form-control @error('tgllayah') is-invalid @enderror" name="tgllayah" value="{{ old('tgllayah') }}" id="tgllayah" placeholder="DD/MM/YYYY">
                             </div>
                             <div class="col pt-3">
                                 <label for="agamaA" class="select-label">Agama *</label>
@@ -78,7 +78,7 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="nohpA" class="form-label">Handphone/Telp.Rumah *</label>
-                                <input type="number" class="form-control" name="nohpayah" id="nohpayah" placeholder="Contoh : +6280000000000">
+                                <input type="number" class="form-control @error('nohpayah') is-invalid @enderror" value="{{ old('nohpayah') }}" name="nohpayah" id="nohpayah" placeholder="Contoh : +6280000000000">
                             </div>
                             <div class="col pt-3">
                                 <label for="statA" class="select-label">Status Kehidupan *</label>
@@ -96,19 +96,19 @@
                         <div class="row row-cols-2 mt-3">
                             <div class="col">
                                 <label for="NamaI" class="form-label">Nama *</label>
-                                <input type="text" class="form-control" name="NamaIbu" id="NamaIbu" placeholder="Masukkan Nama Lengkap">
+                                <input type="text" class="form-control @error('NamaIbu') is-invalid @enderror" name="NamaIbu" value="{{ old('NamaIbu') }}" id="NamaIbu" placeholder="Masukkan Nama Lengkap">
                             </div>
                             <div class="col">
                                 <label for="nikI" class="form-label">NIK *</label>
-                                <input type="number" class="form-control" name="NIKibu" id="NIKibu" placeholder="Contoh : 64XXXXXXXXXXXXXX">
+                                <input type="number" class="form-control @error('NIKibu') is-invalid @enderror" value="{{ old('NIKibu') }}" name="NIKibu" id="NIKibu" placeholder="Contoh : 64XXXXXXXXXXXXXX">
                             </div>
                             <div class="col pt-3">
                                 <label for="TempatI" class="form-label">Tempat Lahir *</label>
-                                <input type="text" class="form-control" name="Tempatlibu" id="Tempatlibu" placeholder="Kota Asal">
+                                <input type="text" class="form-control @error('Tempatlibu') is-invalid @enderror" name="Tempatlibu" value="{{ old('Tempatlibu') }}" id="Tempatlibu" placeholder="Kota Asal">
                             </div>
                             <div class="col pt-3">
                                 <label for="tgllI" class="form-label">Tanggal Lahir *</label>
-                                <input type="date" class="form-control" name="tgllibu" id="tgllibu" placeholder="DD/MM/YYYY">
+                                <input type="date" class="form-control @error('tgllibu') is-invalid @enderror" value="{{ old('tgllibu') }}" name="tgllibu" id="tgllibu" placeholder="DD/MM/YYYY">
                             </div>
                             <div class="col pt-3">
                                 <label for="agamaI" class="select-label">Agama *</label>
@@ -161,7 +161,7 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="nohpI" class="form-label">Handphone/Telp.Rumah</label>
-                                <input type="number" class="form-control" name="nohpibu" id="nohpibu" placeholder="Contoh : +6280000000000">
+                                <input type="number" class="form-control @error('nohpibu') is-invalid @enderror" name="nohpibu" value="{{ old('nohpibu') }}" id="nohpibu" placeholder="Contoh : +6280000000000">
                             </div>
                             <div class="col pt-3">
                                 <label for="statI" class="select-label">Status Kehidupan *</label>
@@ -179,19 +179,19 @@
                         <div class="row row-cols-2 mt-3">
                         <div class="col">
                                 <label for="NamaI" class="form-label">Nama *</label>
-                                <input type="text" class="form-control" name="NamaWali" id="NamaIbu" placeholder="Masukkan Nama Lengkap">
+                                <input type="text" class="form-control @error('NamaWali') is-invalid @enderror" value="{{ old('NamaWali') }}" name="NamaWali" id="NamaIbu" placeholder="Masukkan Nama Lengkap">
                             </div>
                             <div class="col">
                                 <label for="nikI" class="form-label">NIK *</label>
-                                <input type="number" class="form-control" name="NIKWali" id="NIKibu" placeholder="Contoh : 64XXXXXXXXXXXXXX">
+                                <input type="number" class="form-control @error('NIKWali') is-invalid @enderror" name="NIKWali" value="{{ old('NIKWali') }}" id="NIKibu" placeholder="Contoh : 64XXXXXXXXXXXXXX">
                             </div>
                             <div class="col pt-3">
                                 <label for="TempatI" class="form-label">Tempat Lahir *</label>
-                                <input type="text" class="form-control" name="Tempatlwali" id="Tempatlibu" placeholder="Kota Asal">
+                                <input type="text" class="form-control @error('Tempatlwali') is-invalid @enderror" value="{{ old('Tempatlwali') }}" name="Tempatlwali" id="Tempatlibu" placeholder="Kota Asal">
                             </div>
                             <div class="col pt-3">
                                 <label for="tgllI" class="form-label">Tanggal Lahir *</label>
-                                <input type="date" class="form-control" name="tgllwali" id="tgllibu" placeholder="DD/MM/YYYY">
+                                <input type="date" class="form-control @error('tgllwali') is-invalid @enderror" name="tgllwali" value="{{ old('tgllwali') }}" id="tgllibu" placeholder="DD/MM/YYYY">
                             </div>
                             <div class="col pt-3">
                                 <label for="agamaI" class="select-label">Agama *</label>
@@ -244,7 +244,7 @@
                             </div>
                             <div class="col-md pt-3">
                                 <label for="nohpI" class="form-label">Handphone/Telp.Rumah</label>
-                                <input type="number" class="form-control" name="nohpwali" id="nohpibu" placeholder="Contoh : +6280000000000">
+                                <input type="number" class="form-control @error('nohpwali') is-invalid @enderror" value="{{ old('nohpwali') }}" name="nohpwali" id="nohpibu" placeholder="Contoh : +6280000000000">
                             </div>
                         </div>
                     </div>
@@ -254,35 +254,35 @@
                         <div class="row row-cols-2 mt-3">
                             <div class="col">
                                 <label for="alamatjalan" class="form-label">Alamat Jalan, Nomor/Dusun *</label>
-                                <input type="text" class="form-control" name="Alamatjalan" id="Alamatjalan" placeholder="Masukkan Alamat Lengkap">
+                                <input type="text" class="form-control @error('Alamatjalan') is-invalid @enderror" name="Alamatjalan" value="{{ old('Alamatjalan') }}" id="Alamatjalan" placeholder="Masukkan Alamat Lengkap">
                             </div>
                             <div class="col">
                                 <label for="rt-rw-ortu" class="form-label">RT/RW *</label>
-                                <input type="text" class="form-control" name="rt-rwortu" id="rt-rwortu" placeholder="Contoh : 12/2">
+                                <input type="text" class="form-control @error('rt-rwortu') is-invalid @enderror" value="{{ old('rt-rwortu') }}" name="rt-rwortu" id="rt-rwortu" placeholder="Contoh : 12/2">
                             </div>
                             <div class="col pt-3">
                                 <label for="kodepos-ortu" class="form-label">Kode Pos *</label>
-                                <input type="number" class="form-control" name="Kodepos-ortu" id="Kodepos-ortu" placeholder="Contoh : 75117">
+                                <input type="number" class="form-control @error('Kodepos-ortu') is-invalid @enderror" name="Kodepos-ortu" value="{{ old('Kodepos-ortu') }}" id="Kodepos-ortu" placeholder="Contoh : 75117">
                             </div>
                             <div class="col pt-3">
                                 <label for="d-kelurahanortu" class="form-label">Desa/Kelurahan *</label>
-                                <input type="text" class="form-control" name="d-kelurahanortu" id="d-kelurahanortu" placeholder="Contoh : Karang Anyar">
+                                <input type="text" class="form-control @error('d-kelurahanortu') is-invalid @enderror" value="{{ old('d-kelurahanortu') }}" name="d-kelurahanortu" id="d-kelurahanortu" placeholder="Contoh : Karang Anyar">
                             </div>
                             <div class="col pt-3">
                                 <label for="kecamatan-ortu" class="form-label">Kecamatan *</label>
-                                <input type="text" class="form-control" name="Kecamatan-ortu" id="Kecamatan-ortu" placeholder="Contoh : Sungai Pinang">
+                                <input type="text" class="form-control @error('Kecamatan-ortu') is-invalid @enderror" name="Kecamatan-ortu" value="{{ old('Kecamatan-ortu') }}" id="Kecamatan-ortu" placeholder="Contoh : Sungai Pinang">
                             </div>
                             <div class="col pt-3">
                                 <label for="kabortu" class="form-label">Kabupaten/Kota *</label>
-                                <input type="text" class="form-control" name="kabupatenortu" id="kabupatenortu" placeholder="Contoh : Samarinda">
+                                <input type="text" class="form-control @error('kabupatenortu') is-invalid @enderror" value="{{ old('kabupatenortu') }}" name="kabupatenortu" id="kabupatenortu" placeholder="Contoh : Samarinda">
                             </div>
                             <div class="col pt-3">
                                 <label for="provortu" class="form-label">Provinsi *</label>
-                                <input type="text" class="form-control" name="Provinsiortu" id="Provinsiortu" placeholder="Contoh : Kalimantan Timur">
+                                <input type="text" class="form-control @error('Provinsiortu') is-invalid @enderror" name="Provinsiortu" value="{{ old('Provinsiortu') }}" id="Provinsiortu" placeholder="Contoh : Kalimantan Timur">
                             </div>
                             <div class="col pt-3">
                                 <label for="nohportu" class="form-label">Handphone/Telp.Rumah *</label>
-                                <input type="number" class="form-control"  name="nohportu" id="nohportu" placeholder="Cohtoh : +628XXXXXXXXXXX">
+                                <input type="number" class="form-control @error('nohportu') is-invalid @enderror" value="{{ old('nohportu') }}"  name="nohportu" id="nohportu" placeholder="Cohtoh : +628XXXXXXXXXXX">
                             </div>
                             <div class="col pt-3">
                                 <label for="Informasi" class="select-label">Mengetahui informasi tentang STMIK Samarinda dari? *</label>

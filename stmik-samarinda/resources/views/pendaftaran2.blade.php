@@ -11,11 +11,11 @@
                         <div class="row row-cols-2">
                             <div class="col">
                                 <label for="NamaS" class="form-label">Nama Sekolah *</label>
-                                <input type="text" class="form-control" name="Namasekolah" id="Namasekolah" placeholder="Contoh : SMA Negeri 1 Samarinda">
+                                <input type="text" value="{{ old('Namasekolah') }}" class="form-control  @error('Namasekolah') is-invalid @enderror" name="Namasekolah" id="Namasekolah" placeholder="Contoh : SMA Negeri 1 Samarinda">
                             </div>
                             <div class="col">
                                 <label for="jupro" class="form-label">Jurusan Sekolah *</label>
-                                <input type="text" class="form-control" name="JurusanSekolah" id="JurusanSekolah" placeholder="Contoh : IPA">
+                                <input type="text" value="{{ old('JurusanSekolah') }}" class="form-control  @error('JurusanSekolah') is-invalid @enderror" name="JurusanSekolah" id="JurusanSekolah" placeholder="Contoh : IPA">
                             </div>
                             <div class="col pt-3">
                                 <label for="tahunlulus" class="select-label">Tahun Lulus *</label>
@@ -30,19 +30,19 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="alamatS" class="form-label">Alamat Sekolah *</label>
-                                <input type="text" class="form-control" name="AlamatSekolah" id="AlamatSekolah" placeholder="Contoh : Jalan Piano">
+                                <input type="text" value="{{ old('AlamatSekolah') }}" class="form-control  @error('AlamatSekolah') is-invalid @enderror" name="AlamatSekolah" id="AlamatSekolah" placeholder="Contoh : Jalan Piano">
                             </div>
                             <div class="col pt-3">
                                 <label for="KabupatenKota" class="form-label">Kabupaten/Kota *</label>
-                                <input type="text" class="form-control" name="KabupatenKota" id="KabupatenKota" placeholder="Contoh : Kabupaten Kutai Kartanegara">
+                                <input type="text" value="{{ old('KabupatenKota') }}" class="form-control  @error('KabupatenKota') is-invalid @enderror" name="KabupatenKota" id="KabupatenKota" placeholder="Contoh : Kabupaten Kutai Kartanegara">
                             </div>
                             <div class="col pt-3">
                                 <label for="ProvinsiS" class="form-label">Provinsi *</label>
-                                <input type="text" class="form-control" name="ProvinsiSekolah" id="ProvinsiSekolah" placeholder="Contoh : Kalimantan Timur">
+                                <input type="text" value="{{ old('ProvinsiSekolah') }}" class="form-control  @error('ProvinsiSekolah') is-invalid @enderror" name="ProvinsiSekolah" id="ProvinsiSekolah" placeholder="Contoh : Kalimantan Timur">
                             </div>
                             <div class="col pt-3">
                                 <label for="NegaraS" class="form-label">Negara *</label>
-                                <input type="text" class="form-control" name="NegaraSekolah" id="NegaraSekolah" placeholder="Contoh : Indonesia">
+                                <input type="text" value="{{ old('NegaraSekolah') }}" class="form-control  @error('NegaraSekolah') is-invalid @enderror" name="NegaraSekolah" id="NegaraSekolah" placeholder="Contoh : Indonesia">
                             </div>
                         </div>
                     </div>

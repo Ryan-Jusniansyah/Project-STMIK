@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\OrangTua;
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class OrangTuaController extends Controller
 {
@@ -20,7 +21,9 @@ class OrangTuaController extends Controller
     }
 
     public function store(Request $request) {
-        $validatedData = $request->validate([
+        $input = $request->all();
+
+        $rules = [
             'NamaAyah' => 'required',
             'NIKayah' => 'required',
             'Tempatlayah' => 'required',
@@ -58,14 +61,64 @@ class OrangTuaController extends Controller
             'kabupatenortu' => 'required',
             'Provinsiortu' => 'required',
             'nohportu' => 'required',
+        ];
+
+        $messages = [
+            'required' => 'Kolom :attribute wajib diisi'
+        ];
+
+        $validator = Validator::make($input, $rules, $messages, [
+            'NamaAyah' => 'nama ayah',
+            'NIKayah' => 'NIK ayah',
+            'Tempatlayah' => 'tempat lahir ayah',
+            'tgllayah' => 'tanggal lahir ayah',
+            'PilihanagamaA' => 'agama ayah',
+            'PilihanpendtA' => 'pendidikan ayah',
+            'PilihanpekerA' => 'pekerjaan ayah',
+            'PilihanpenghasilanA' => 'penghasilan ayah',
+            'nohpayah' => 'nomor handphone ayah',
+            'PilihanstatA' => 'status ayah',
+            'NamaIbu' => 'nama ibu',
+            'NIKibu' => 'NIK ibu',
+            'Tempatlibu' => 'tempat lahir ibu',
+            'tgllibu' => 'tanggal lahir ibu',
+            'PilihanagamaI' => 'agama ibu',
+            'PilihanpendtI' => 'pendidikan ibu',
+            'PilihanpekerI' => 'pekerjaan ibu',
+            'PilihanpenghasilanI' => 'penghasilan ibu',
+            'nohpibu' => 'nomor handphone ibu',
+            'PilihanstatI' => 'status ibu',
+            'NamaWali' => 'nama wali',
+            'NIKWali' => 'NIK wali',
+            'Tempatlwali' => 'tempat lahir wali',
+            'PilihanagamaW' => 'agama wali',
+            'PilihanpendtW' => 'pendidikan wali',
+            'PilihanpekerW' => 'pekerjaan wali',
+            'PilihanpenghasilanW' => 'penghasilan wali',
+            'nohpwali' => 'nomor hp wali',
+            'tgllwali' => 'tanggal lahir wali',
+            'Alamatjalan' => 'alamat',
+            'rt-rwortu' => 'RT/RW',
+            'Kodepos-ortu' => 'kode pos',
+            'd-kelurahanortu' => 'desa/kelurahan',
+            'Kecamatan-ortu' => 'kecamatan',
+            'kabupatenortu' => 'kabupaten',
+            'Provinsiortu' => 'provinsi',
+            'nohportu' => 'nomor handphone ortu',
         ]);
 
-        $validatedData['pendaftaran_id'] = session('pendaftar_id');
+        $validator['pendaftaran_id'] = session('pendaftar_id');
+        
+        if($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
 
         // OrangTua::create($validatedData);
         OrangTua::updateOrCreate(
-            ['pendaftaran_id' => $validatedData['pendaftaran_id']],
-            $validatedData
+            ['pendaftaran_id' => $validator['pendaftaran_id']],
+            $validator
         );
 
         return redirect('/uploadberkas');
