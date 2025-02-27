@@ -22,8 +22,8 @@
                                 <label for="Pilkelas" class="select-label">Pilihan Kelas *</label>
                                 <select class="form-select mt-2 @error('Pilkelas') is-invalid @enderror" aria-label="Pilihan-Kelas" name="Pilihankelas">
                                     <option selected>Masukkan Pilihan Kelas</option>
-                                    <option value="1">Pagi (Offline)</option>
-                                    <option value="2">Malam (Online)</option>
+                                    <option value="Pagi (Offline)">Pagi (Offline)</option>
+                                    <option value="Malam (Online)">Malam (Online)</option>
                                 </select>
                             </div>
                         </div>
