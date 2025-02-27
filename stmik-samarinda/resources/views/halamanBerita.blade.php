@@ -12,7 +12,7 @@
                             <h2 class="p-2">{{ $berita['title'] }}</h2>
                         </div>
                         <img src="{{ asset('storage/images/'.$berita->foto) }}" class="img-fluid mb-3" alt="{{ $berita  ->title }}" style="width: 100%; height:500px; object-fit:cover;">
-                        <p>{{ $berita->description }}</p>
+                        <p>{!! nl2br(e($berita->description)) !!}</p>
                         <!-- <div class="text-right">
                             <a href="#" class="btn btn-primary">Daftar Sekarang</a>
                         </div> -->
