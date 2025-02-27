@@ -93,10 +93,11 @@ Route::middleware('auth')->group(function() {
     Route::get('/form-edit/{id}/edit', [BeritaController::class, 'edit']);
     Route::put('/form-edit/{id}', [BeritaController::class, 'update']);
     Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
-    Route::get('/berita/{id}', [BeritaController::class, 'show']);
 
     Route::get('/form-berita', [BeritaController::class, 'create']);
 });
+
+Route::get('/berita/{id}', [BeritaController::class, 'show']);
 
 Route::get('/download-pdf/{id}', [PDFDataMahasiswa::class, 'downloadPDF'])->name('mahasiswa.download');
 Route::get('/dashboard-berita/search', [BeritaController::class, 'search'])->name('berita.search');
