@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pendaftaran;
 use App\Models\SekolahAsal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class SekolahAsalController extends Controller
 {
@@ -20,7 +21,9 @@ class SekolahAsalController extends Controller
     }
 
     public function store(Request $request) {
-        $validatedData = $request->validate([
+        $input = $request->all();
+
+        $rules = [
             'Namasekolah' => 'required',
             'JurusanSekolah' => 'required',
             'Tahunlulus' => 'required',
@@ -28,14 +31,34 @@ class SekolahAsalController extends Controller
             'KabupatenKota' => 'required',
             'ProvinsiSekolah' => 'required',
             'NegaraSekolah' => 'required',
+        ];
+
+        $messages = [
+            'required' => 'Kolom :attribute wajib diisi'
+        ];
+
+        $validator = Validator::make($input, $rules, $messages, [
+            'Namasekolah' => 'nama sekolah',
+            'JurusanSekolah' => 'jurusan sekolah',
+            'Tahunlulus' => 'tahun lulus',
+            'AlamatSekolah' => 'alamat sekolah',
+            'KabupatenKota' => 'kabupaten/kota',
+            'ProvinsiSekolah' => 'provinsi sekolah',
+            'NegaraSekolah' => 'negara sekolah'
         ]);
 
-        $validatedData['pendaftaran_id'] = session('pendaftar_id');
+        if($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
+
+        $validator['pendaftaran_id'] = session('pendaftar_id');
 
         // SekolahAsal::create($validatedData);
         SekolahAsal::updateOrCreate(
-            ['pendaftaran_id' => $validatedData['pendaftaran_id']],
-            $validatedData
+            ['pendaftaran_id' => $validator['pendaftaran_id']],
+            $validator
         );
 
         return redirect('/pendaftaran3');

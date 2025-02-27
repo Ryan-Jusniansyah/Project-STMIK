@@ -114,28 +114,34 @@
         </div>
     </div>
 
-    <div class="container my-5">
-      <h2 class="title fw-bold ms auto mb-4" id="Berita">Berita STMIK</h2>
-        <div class="row g-4">
-            @foreach ($berita as $item)
-            <!-- berita section 1 -->
-            <div class="col-md-4">
-              <div class="berita shadow">
-                @if($item->foto)
+    <!-- Bagian Berita -->
+<div class="container my-5">
+  <h2 class="title fw-bold ms auto mb-4" id="Berita">Berita STMIK</h2>
+    <div class="row g-4">
+        @foreach ($berita as $item)
+        <!-- berita section -->
+        <div class="col-md-4">
+          <div class="berita shadow" style="height: 500px; overflow: hidden; display: flex; flex-direction: column;">
+            @if($item->foto)
+            <div style="height: 350px; overflow: hidden;">
                 <img src="{{ asset('storage/images/'.$item->foto) }}" 
-     alt="{{ $item->title }}" 
-     class="img-fluid my-3 rounded" 
-     style="width: 100%; height: 300px; object-fit: cover;">
-                @endif
-                  <a href="{{ url('/berita/'.$item->id) }}" style="text-decoration:none;"><h3 class="section-title" style="color: #740001;">{{ $item->title }}</h3>
-                  <h6 style="color: #f39c12;">{{ $item->created_at->format('d M Y') }}</h6>
-                    <p class="text-justify" style="color: black;">
-                        {{ Str::limit($item->description, 100) }}
-                    </p>
-                  </a>
-              </div>
+                alt="{{ $item->title }}" 
+                class="img-fluid rounded" 
+                style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            @endforeach
+            @endif
+            <div class="p-3 d-flex flex-column flex-grow-1">
+              <a href="{{ url('/berita/'.$item->id) }}" style="text-decoration:none;">
+                <h3 class="section-title" style="color: #740001; font-size: 1.2rem; margin-bottom: 5px;">{{ $item->title }}</h3>
+                <h6 style="color: #f39c12;">{{ $item->created_at->format('d M Y') }}</h6>
+                <p class="text-justify" style="color: black; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                    {{ Str::limit($item->description, 100) }}
+                </p>
+              </a>
+            </div>
+          </div>
         </div>
+        @endforeach
     </div>
+</div>
 </x-layout>

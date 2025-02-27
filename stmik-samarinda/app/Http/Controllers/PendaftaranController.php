@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\OrangTua;
-use Illuminate\Http\Request;
 use App\Models\Pendaftaran;
 use App\Models\SekolahAsal;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Validator;
 
 class PendaftaranController extends Controller{
 
@@ -16,23 +17,12 @@ class PendaftaranController extends Controller{
         return view('pendaftaran1', compact('title'));
     }
 
-    // public function uploadberkas(){
-    //     $title = 'Upload Berkas Pendaftaran';
-    //     return view('uploadberkas', compact('title'));
-    // }
-
-    // public function pendaftaran2(){
-    //     $title = 'Identitas SMA/SMK Sederajat';
-    //     return view('pendaftaran2', compact('title'));
-    // }
-
-    // public function pendaftaran3(){
-    //     $title = 'Identitas Orang Tua/Wali';
-    //     return view('pendaftaran3', compact('title'));
-    // }
-
     public function store1(Request $request) {
-        $validatedData = $request->validate([
+        $input = $request->all();
+
+        $input['Programstudi'] = 1;
+
+        $rules = [
             'Pilihankelas' => 'required',
             'Namalengkap' => 'required',
             'NIK' => 'required|unique:pendaftaran',
@@ -59,13 +49,46 @@ class PendaftaranController extends Controller{
             'Alamatperu' => 'nullable',
             'Telp-perusahaan' => 'nullable',
             'Jabatan' => 'nullable',
+        ];
+
+        $messages = [
+            'required' => 'Kolom :attribute wajib diisi',
+            'unique' => ':attribute sudah terdaftar',
+            'email' => 'Tolong masukkan alamat email yang valid'
+        ];
+
+        $validator = Validator::make($input, $rules, $messages, [
+            'Pilihankelas' => 'pilihan kelas',
+            'Namalengkap' => 'nama lengkap',
+            'NIK' => 'NIK',
+            'NPWP' => 'NPWP',
+            'NISN' => 'NISN',
+            'pilihanjk' => 'jenis kelamin',
+            'Tempatlahir' => 'tempat lahir',
+            'Tanggallahir' => 'tanggal lahir',
+            'berat-tinggibadan' => 'berat & tinggi badan',
+            'Pilihanagama' => 'agama',
+            'Pilihanpernikahan' => 'status pernikahan',
+            'tinggalbersama' => 'tinggal bersama',
+            'Alamat' => 'alamat',
+            'Kodepos' => 'kode pos',
+            'RT-RW' => 'RT-RW',
+            'd-kelurahan' => 'desa/kelurahan',
+            'Kecamatan' => 'kecamatan',
+            'Kabupaten' => 'kabupaten',
+            'Provinsi' => 'provinsi',
+            'Negara' => 'negara',
+            'notelp-hp' => 'nomor telepon/handphone',
+            'Email' => 'Alamat email',
         ]);
 
-        $validatedData['Programstudi'] = 1;
+        if($validator->fails()) {
+            return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+        }
 
-        // dd($validatedData);
-
-        $pendaftar = Pendaftaran::create($validatedData);
+        $pendaftar = Pendaftaran::create($validator);
 
         session(['pendaftar_id' => $pendaftar->id]);
         // dd(redirect('/pendaftaran2'));

@@ -26,13 +26,7 @@ Route::get('/home', function () {
     ]);
 });
 
-// Route::get('/home', [BeritaController::class, 'index1']);
-
 Route::get('/dashboard', [DashboardController::class, 'index']);
-
-// Route::get('/berita', function () {
-//     return view('halamanBerita', ['title' => 'Halaman Berita']);
-// });
 
 Route::get('/visimisi', function(){
     return view('visi_misi', ['title' => 'Visi Misi']);
@@ -44,10 +38,6 @@ Route::get('/Dosen_STMIK', function() {
 
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
-
-// Route::get('/form-berita', function () {
-//     return view('form-berita', ['title' => 'Form Berita']);
-// });
 
 Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
 Route::post('/pendaftaran1', [PendaftaranController::class, 'store1']);
@@ -66,23 +56,8 @@ Route::middleware('auth')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/dashboard-Data', [DashboardDataMahasiswaController::class, 'index']);
     Route::get('/dashboard-berita', [BeritaController::class, 'index']);
-    
-    // Route::get('/form-berita', function() {
-    //     abort(404);
-    // });
-
-    // Route::get('dashboard/{id}', function($id) {
-    //     $data = Pendaftaran::find($id);
-    //     // return view('dashboard', ['title' => 'Main', 'mhs' => $mhs]);
-    //     return response()->json($data);
-    // })->name('dashboard.show');
 
     Route::get('dashboard/{id}', [DashboardController::class, 'show'])->name('dashboard.show');
-    
-    // Route::post('/form-berita', [BeritaController::class, 'store']);
-    // Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
-    // Route::put('/form-berita/{id}', [BeritaController::class, 'update']);
-    // Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
     
     Route::post('/form-berita', [BeritaController::class, 'store']);
     Route::get('/dashboard-berita', [BeritaController::class, 'index']);
@@ -93,7 +68,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/form-edit/{id}/edit', [BeritaController::class, 'edit']);
     Route::put('/form-edit/{id}', [BeritaController::class, 'update']);
     Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
-
+    
     Route::get('/form-berita', [BeritaController::class, 'create']);
 });
 
