@@ -63,56 +63,59 @@ body {
     padding: 20px;
 }
 
+/* Original info-header from file 1 */
 .info-header {
     background-color: #fec538;
     color: #740001;
     font-weight: bold;
     text-align: center;
-    font-size: 1.8rem;
-    padding: 5px 15px;
-    max-width: 280px;
-    border-radius: 5px;
-    margin-top: -40px;
-    position: relative;
+    font-size: 30px;
+    margin-top: -54px;
+    margin-left: 440px;
+    margin-right: 440px;
+    padding: 2px;
+    font-size: 32px;
 }
 
+/* Original price-box from file 1 */
 .price-box {
     background-color: #800000;
     color: #fec538;
+    font-size: 26px;
     font-weight: bold;
     text-align: center;
-    padding: 8px 15px;
-    max-width: 200px;
+    padding: 5px;
+    margin: 0px 550px;
     border-radius: 5px;
-    font-size: 1.2rem;
-    margin: 10px auto;
 }
 
+/* Original class-box from file 1 */
 .class-box {
     background-color: #fec538;
     color: #740001;
+    font-size: 26px;
     font-weight: bold;
     text-align: center;
-    padding: 8px 15px;
-    max-width: 280px;
+    padding: 10px;
     border-radius: 5px;
-    margin: 15px auto 10px auto;
-    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-left: 450px;
+    margin-right: 450px;
+    margin-bottom: 10px;
 }
 
 .berita {
     border-radius: 10px;
-    padding: 0;
+    padding: 20px;
     height: 100%;
 }
 
 .fasilitas {
-    width: 100%;
+    margin-left: -20px;
+    width: 600px;
+    height: 50px;
     background: linear-gradient(to right, #f39c12 10%, transparent 90%);
-    padding: 8px 15px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
+    padding: 5px 5px 5px 20px;
 }
 
 .navbar {
@@ -120,7 +123,7 @@ body {
 }
 
 .carousel {
-    margin-top: 76px;
+    margin-top: 70px;
 }
 
 .footer {
@@ -139,20 +142,252 @@ body {
     text-align: justify;
 }
 
-/* Responsive styles */
+.line {
+    width: 11rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 10px auto;
+}
+
+.line2 {
+    width: 11rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin-left: 8rem;
+}
+
+.line3 {
+    width: 12.7rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin-left: 8rem;
+}
+
+.line4 {
+    width: 28.5rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin-left: 8rem;
+}
+
+.line5 {
+    width: 28.4rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin-left: 8rem;
+}
+
+.line6 {
+    width: 5rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 10px auto;
+}
+
+.borderLuar {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+    width: 70%;
+    height: 118rem;
+    border-radius: 10px;
+}
+
+.borderLuar1 {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+    width: 70%;
+    height: 42rem;
+    border-radius: 10px;
+}
+
+.borderLuar2 {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+    width: 70%;
+    height: 163rem;
+    border-radius: 10px;
+}
+
+.borderLuar3 {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border: 1px solid #000;
+    width: 70%;
+    height: 55rem;
+    border-radius: 10px;
+}
+
+.judul1 {
+    margin-top: 3rem;
+    margin-left: 8rem;
+}
+
+.ps {
+    margin-top: 1.5rem;
+    padding: 0 8rem;
+}
+
+.judul2 {
+    margin-top: 4rem;
+    margin-left: 8rem;
+}
+
+.idform {
+    margin-top: 1.5rem;
+    padding: 0 8rem;
+}
+
+.judul3 {
+    margin-top: 4rem;
+    margin-left: 8rem;
+}
+
+.idalamat {
+    margin-top: 1.5rem;
+    padding: 0 8rem;
+}
+
+.judul4 {
+    margin-top: 4rem;
+    margin-left: 8rem;
+}
+
+.formdetpekerjaan {
+    margin-top: 1.5rem;
+    padding: 0 8rem;
+}
+
+.ket {
+    margin-top: 1.5rem;
+    margin-left: 8rem;
+}
+
+.wajib {
+    margin-left: 9rem;
+}
+
+.judul5 {
+    margin-top: 3rem;
+}
+
+.uploadberkas {
+    margin-top: 1rem;
+    padding: 5rem;
+}
+
+.next {
+    text-decoration: none;
+    color: white;
+}
+
+/* Identitas Sekolah */
+.juduls1 {
+    margin-top: 3rem;
+    margin-left: 21.5rem;
+}
+
+.lines1 {
+    width: 11.5rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 0.7rem auto;
+}
+
+.idsekolah {
+    margin-top: 2rem;
+    padding: 0 8rem;
+}
+
+/* Identitas Orang tua */
+.idayah {
+    margin-top: 2rem;
+    padding: 0 8rem;
+}
+
+.idibu {
+    margin-top: 5rem;
+    padding: 0 8rem;
+}
+
+.alamatortu {
+    margin-top: 5rem;
+    padding: 0 8rem;
+}
+
+.idwali {
+    margin-top: 5rem;
+    padding: 0 8rem;
+}
+
+.juduls2 {
+    margin-top: 3rem;
+    margin-left: 23rem;
+}
+
+.juduls3 {
+    margin-top: 3rem;
+}
+
+.lines2 {
+    width: 8rem;
+    height: 2.5px;
+    background-color: #740001;
+    margin: 0.7rem auto;
+}
+
+.lines3 {
+    width: 11rem;
+    height: 2.5px;
+    background-color: #740001;
+}
+
+.lines4 {
+    width: 9.5rem;
+    height: 2.5px;
+    background-color: #740001;
+}
+
+.lines5 {
+    width: 9.5rem;
+    height: 2.5px;
+    background-color: #740001;
+}
+
+.lines6 {
+    width: 18rem;
+    height: 2.5px;
+    background-color: #740001;
+}
+
+.ket1 {
+    margin-top: 1.5rem;
+}
+
+.wajib1 {
+    margin-left: 1rem;
+}
+
+/* Responsive styles from file 2 */
 @media (max-width: 1199px) {
     .info-header {
         font-size: 1.6rem;
         max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .price-box {
         font-size: 1.1rem;
+        margin: 10px auto;
     }
     
     .class-box {
         font-size: 1.1rem;
         max-width: 250px;
+        margin: 15px auto 10px auto;
     }
 }
 
@@ -176,13 +411,26 @@ body {
     }
     
     .fasilitas {
+        width: 100%;
         padding: 5px 10px;
+        margin-left: 0;
     }
     
     .info-header {
         font-size: 1.4rem;
         max-width: 220px;
         margin-top: -30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .price-box {
+        margin: 10px auto;
+    }
+    
+    .class-box {
+        margin: 15px auto 10px auto;
+        max-width: 220px;
     }
 }
 
@@ -224,6 +472,28 @@ body {
     
     .footer .col-md-4 {
         margin-bottom: 20px;
+    }
+    
+    .borderLuar, .borderLuar1, .borderLuar2, .borderLuar3 {
+        width: 90%;
+    }
+    
+    .judul1, .judul2, .judul3, .judul4, .ket {
+        margin-left: 2rem;
+    }
+    
+    .ps, .idform, .idalamat, .formdetpekerjaan, .idsekolah, .idayah, .idibu, .alamatortu, .idwali {
+        padding: 0 2rem;
+    }
+    
+    .line2, .line3, .line4, .line5 {
+        margin-left: 2rem;
+    }
+    
+    .juduls1, .juduls2 {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 }
 
@@ -273,6 +543,11 @@ body {
     
     .berita p {
         font-size: 0.9rem;
+    }
+    
+    .borderLuar, .borderLuar1, .borderLuar2, .borderLuar3 {
+        width: 95%;
+        height: auto;
     }
 }
 
