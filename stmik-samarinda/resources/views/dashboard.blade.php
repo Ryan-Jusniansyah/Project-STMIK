@@ -98,90 +98,70 @@
                 <div class="col-4">
                   <strong>Nama Lengkap</strong>
                 </div>
-                <div id="nama" class="col-8">
-                  : Audrey Mckinney
-                </div>
+                <div id="nama" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>NIK</strong>
                 </div>
-                <div id="nik" class="col-8">
-                  : 00909099827878979827
-                </div>
+                <div id="nik" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>NPWP</strong>
                 </div>
-                <div id="npwp" class="col-8">
-                  : 081234567890
-                </div>
+                <div id="npwp" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>NISN</strong>
                 </div>
-                <div id="nisn" class="col-8">
-                  : 784783729037029379023
-                </div>
+                <div id="NISN" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Jenis Kelamin</strong>
                 </div>
-                <div id="jk" class="col-8">
-                  : Laki-Laki
-                </div>
+                <div id="pilihanjk" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Tempat Lahir</strong>
                 </div>
-                <div id="tempat" class="col-8">
-                  : Semarang
-                </div>
+                <div id="Tempatlahir" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Tanggal Lahir</strong>
                 </div>
-                <div id="tgl" class="col-8">
-                  : 12 Desember 2003
-                </div>
+                <div id="Tanggallahir" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Berat/Tinggi Badan</strong>
                 </div>
-                <div id="bbtb" class="col-8">
-                  : 80kg / 170cm
-                </div>
+                <div id="berat-tinggibadan" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Agama</strong>
                 </div>
-                <div id="agama" class="col-8">
-                  : Islam
-                </div>
+                <div id="Pilihanagama" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Status Pernikahan</strong>
                 </div>
-                <div class="col-8">
-                  : Belum Menikah
-                </div>
+                <div id="Pilihanpernikahan" class="col-8"></div>
               </div>
 
             </div>
@@ -212,99 +192,77 @@
                 <div class="col-4">
                   <strong>Tinggal Bersama</strong>
                 </div>
-                <div class="col-8">
-                  : Orang Tua
-                </div>
+                <div id="tinggalbersama" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Alamat</strong>
                 </div>
-                <div class="col-8">
-                  : Jalan Damai
-                </div>
+                <div id="Alamat" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Kode Pos</strong>
                 </div>
-                <div class="col-8">
-                  : 7110056
-                </div>
+                <div id="Kodepos" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>RT/RW</strong>
                 </div>
-                <div class="col-8">
-                  : 01/02
-                </div>
+                <div id="RT-RW" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Desa/Kelurahan</strong>
                 </div>
-                <div class="col-8">
-                  : Kelurahan Air Hitam
-                </div>
+                <div id="d-kelurahan" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Kecamatan</strong>
                 </div>
-                <div class="col-8">
-                  : Samarinda Ulu
-                </div>
+                <div id="Kecamatan" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Kabupaten</strong>
                 </div>
-                <div class="col-8">
-                  : Kutai Kartanegara
-                </div>
+                <div id="Kabupaten" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Provinsi</strong>
                 </div>
-                <div class="col-8">
-                  : Kalimantan Timur
-                </div>
+                <div id="Provinsi" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Negara</strong>
                 </div>
-                <div class="col-8">
-                  : Zimbabwe
-                </div>
+                <div id="Negara" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Handphone/Telp.Rumah</strong>
                 </div>
-                <div class="col-8">
-                  : 08990011690
-                </div>
+                <div id="notelp-hp" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Email</strong>
                 </div>
-                <div class="col-8">
-                  : joko@gmail.com
-                </div>
+                <div id="Email" class="col-8"></div>
               </div>
 
             </div>
@@ -337,36 +295,28 @@
                 <div class="col-4">
                   <strong>Nama Perusahaan</strong>
                 </div>
-                <div class="col-8">
-                  : PT. Pencari Cinta Sejati
-                </div>
+                <div id="Namaperu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Alamat Perusahaan</strong>
                 </div>
-                <div class="col-8">
-                  : Jalan Damai
-                </div>
+                <div id="Alamatperu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>No Telepon Perusahaan</strong>
                 </div>
-                <div class="col-8">
-                  : 082132328382738
-                </div>
+                <div id="Telp-perusahaan" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Jabatan Saat Ini</strong>
                 </div>
-                <div class="col-8">
-                  : Bos Besar
-                </div>
+                <div id="Jabatan" class="col-8"></div>
               </div>
 
             </div>
@@ -398,63 +348,49 @@
                 <div class="col-4">
                   <strong>Nama Sekolah</strong>
                 </div>
-                <div class="col-8">
-                  : SMKN 2 Pinrang
-                </div>
+                <div id="Namasekolah" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Jurusan Program</strong>
                 </div>
-                <div class="col-8">
-                  : TKJ
-                </div>
+                <div id="JurusanSekolah" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Tahun Lulus</strong>
                 </div>
-                <div class="col-8">
-                  : 2022
-                </div>
+                <div id="Tahunlulus" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Alamat Sekolah</strong>
                 </div>
-                <div class="col-8">
-                  : Jalan Jalan
-                </div>
+                <div id="AlamatSekolah" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Kabupaten</strong>
                 </div>
-                <div class="col-8">
-                  : Pinrang
-                </div>
+                <div id="KabupatenKota" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Provinsi</strong>
                 </div>
-                <div class="col-8">
-                  : Sulawesi Selatan
-                </div>
+                <div id="ProvinsiSekolah" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>negara</strong>
                 </div>
-                <div class="col-8">
-                  : Indonesia
-                </div>
+                <div id="NegaraSekolah" class="col-8"></div>
               </div>
 
             </div>
@@ -486,90 +422,70 @@
                 <div class="col-4">
                   <strong>Nama</strong>
                 </div>
-                <div class="col-8">
-                  : Levy Ackerman
-                </div>
+                <div id="NamaAyah" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>NIK</strong>
                 </div>
-                <div class="col-8">
-                  : 000008937837837873
-                </div>
+                <div id="NIKayah" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Tempat Lahir</strong>
                 </div>
-                <div class="col-8">
-                  : Samarinda
-                </div>
+                <div id="Tempatlayah" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Tanggal Lahir</strong>
                 </div>
-                <div class="col-8">
-                  : 17 Agustus 1945
-                </div>
+                <div id="tgllayah" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Agama</strong>
                 </div>
-                <div class="col-8">
-                  : Islam
-                </div>
+                <div id="PilihanagamaA" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Pendidikan Terakhir</strong>
                 </div>
-                <div class="col-8">
-                  : S1 Gamer Ganteng Idaman
-                </div>
+                <div id="PilihanpendtA" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Pekerjaan</strong>
                 </div>
-                <div class="col-8">
-                  : Kapal Tongkang
-                </div>
+                <div id="PilihanpekerA" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Penghasilan</strong>
                 </div>
-                <div class="col-8">
-                  : Rp 999.999.999,-
-                </div>
+                <div id="PilihanpenghasilanA" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>No Handphone</strong>
                 </div>
-                <div class="col-8">
-                  : 08990928738
-                </div>
+                <div id="nohpayah" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Status Kehidupan</strong>
                 </div>
-                <div class="col-8">
-                  : Meninggal
-                </div>
+                <div id="PilihanstatA" class="col-8"></div>
               </div>
 
             </div>
@@ -601,90 +517,70 @@
                 <div class="col-4">
                   <strong>Nama</strong>
                 </div>
-                <div class="col-8">
-                  : Mikasa Ackerman
-                </div>
+                <div id="NamaIbu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>NIK</strong>
                 </div>
-                <div class="col-8">
-                  : 000008937837837873
-                </div>
+                <div id="NIKibu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Tempat Lahir</strong>
                 </div>
-                <div class="col-8">
-                  : Samarinda
-                </div>
+                <div id="Tempatlibu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Tanggal Lahir</strong>
                 </div>
-                <div class="col-8">
-                  : 17 Agustus 1945
-                </div>
+                <div id="tgllibu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Agama</strong>
                 </div>
-                <div class="col-8">
-                  : Islam
-                </div>
+                <div id="PilihanagamaI" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Pendidikan Terakhir</strong>
                 </div>
-                <div class="col-8">
-                  : S1 Gamer Ganteng Idaman
-                </div>
+                <div id="PilihanpendtI" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Pekerjaan</strong>
                 </div>
-                <div class="col-8">
-                  : Kapal Tongkang
-                </div>
+                <div id="PilihanpekerI" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Penghasilan</strong>
                 </div>
-                <div class="col-8">
-                  : Rp 999.999.999,-
-                </div>
+                <div id="PilihanpenghasilanI" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>No Handphone</strong>
                 </div>
-                <div class="col-8">
-                  : 08990928738
-                </div>
+                <div id="nohpibu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Status Kehidupan</strong>
                 </div>
-                <div class="col-8">
-                  : Hidup
-                </div>
+                <div id="PilihanstatI" class="col-8"></div>
               </div>
 
             </div>
@@ -716,72 +612,56 @@
                 <div class="col-4">
                   <strong>Alamat Jalan</strong>
                 </div>
-                <div class="col-8">
-                  : Jalan in dhoe lu
-                </div>
+                <div id="Alamatjalan" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>RT/RW</strong>
                 </div>
-                <div class="col-8">
-                  : 01/02
-                </div>
+                <div id="rt-rwortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Kode Pos</strong>
                 </div>
-                <div class="col-8">
-                  : 0019199
-                </div>
+                <div id="Kodepos-ortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Desa/Kelurahan</strong>
                 </div>
-                <div class="col-8">
-                  : Karang Anyar
-                </div>
+                <div id="d-kelurahanortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Kecamatan/</strong>
                 </div>
-                <div class="col-8">
-                  : Konoha
-                </div>
+                <div id="Kecamatan-ortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Kabupaten/Kota</strong>
                 </div>
-                <div class="col-8">
-                  : Bandung
-                </div>
+                <div id="kabupatenortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Provinsi</strong>
                 </div>
-                <div class="col-8">
-                  : Jawir
-                </div>
+                <div id="Provinsiortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>No HP/Telp. Rumah</strong>
                 </div>
-                <div class="col-8">
-                  : 893903098309810
-                </div>
+                <div id="nohportu" class="col-8"></div>
               </div>
 
             </div>
@@ -817,7 +697,7 @@
               <td>{{ $mhs->Email }}</td>
               <td>{{ $mhs['notelp-hp'] }}</td>
               <td>
-                <a href="javascript:void(0)" data-url="{{ route('dashboard.show'), $mhs->id }}" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal">
+                <a href="javascript:void(0)" id="show-mhs" data-url="{{ route('dashboard.show', $mhs->id) }}" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
                     <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
                     <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
@@ -841,24 +721,6 @@
                   </svg>
                 </button>
               </td>
-              {{-- <td>
-                <button class="btn btn-outline-info btn-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
-                    <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z" />
-                    <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0" />
-                  </svg>
-                </button>
-                <button class="btn btn-outline-success btn-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                  </svg>
-                </button>
-                <button class="btn btn-outline-danger btn-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                  </svg>
-                </button>
-              </td> --}}
             </tr>
           @endforeach
           <!-- Tambahkan baris lainnya sesuai kebutuhan -->
@@ -869,19 +731,83 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
-    $(document).ready(function() {
-        $('.btn-detail').click(function() {
-            var id = $(this).data('id');
-            $.ajax({
-                url: '/dashboard/' + id,
-                type: 'GET',
-                success: function(data) {
-                    $('#nama').text(data.nama);
-                    // $('#detail-nama').text(data.nama);
-                    // $('#detail-email').text(data.email);
-                }
-            });
-        });
+    $(document).ready(function () {
+/* When click show user */
+      $('body').on('click', '#show-mhs', function () {
+          var userURL = $(this).data('url');
+          $.get(userURL, function (data) {
+              $('#detailModal').modal('show');
+              $('#nama').text(': ' + data['Namalengkap']);
+              $('#nik').text(': ' + data['NIK']);
+              $('#npwp').text(': ' + data['NPWP']);
+              $('#NISN').text(': ' + data['NISN']);
+              $('#pilihanjk').text(': ' + data['pilihanjk']);
+              $('#Tempatlahir').text(': ' + data['Tempatlahir']);
+              $('#Tanggallahir').text(': ' + data['Tanggallahir']);
+              $('#berat-tinggibadan').text(': ' + data['berat-tinggibadan']);
+              $('#Pilihanagama').text(': ' + data['Pilihanagama']);
+              $('#Pilihanpernikahan').text(': ' + data['Pilihanpernikahan']);
+              $('#tinggalbersama').text(': ' + data['tinggalbersama']);
+              $('#Alamat').text(': ' + data['Alamat']);
+              $('#Kodepos').text(': ' + data['Kodepos']);
+              $('#RT-RW').text(': ' + data['RT-RW']);
+              $('#d-kelurahan').text(': ' + data['d-kelurahan']);
+              $('#Kecamatan').text(': ' + data['Kecamatan']);
+              $('#Kabupaten').text(': ' + data['Kabupaten']);
+              $('#Provinsi').text(': ' + data['Provinsi']);
+              $('#Negara').text(': ' + data['Negara']);
+              $('#notelp-hp').text(': ' + data['notelp-hp']);
+              $('#Email').text(': ' + data['Email']);
+              $('#Namaperu').text(': ' + data['Namaperu']);
+              $('#Alamatperu').text(': ' + data['Alamatperu']);
+              $('#Telp-perusahaan').text(': ' + data['Telp-perusahaan']);
+              $('#Jabatan').text(': ' + data['Jabatan']);
+              $('#Namasekolah').text(': ' + data['Namasekolah']);
+              $('#JurusanSekolah').text(': ' + data['JurusanSekolah']);
+              $('#Tahunlulus').text(': ' + data['Tahunlulus']);
+              $('#AlamatSekolah').text(': ' + data['AlamatSekolah']);
+              $('#KabupatenKota').text(': ' + data['KabupatenKota']);
+              $('#ProvinsiSekolah').text(': ' + data['ProvinsiSekolah']);
+              $('#NegaraSekolah').text(': ' + data['NegaraSekolah']);
+              $('#NamaAyah').text(': ' + data['NamaAyah']);
+              $('#NIKayah').text(': ' + data['NIKayah']);
+              $('#Tempatlayah').text(': ' + data['Tempatlayah']);
+              $('#tgllayah').text(': ' + data['tgllayah']);
+              $('#PilihanagamaA').text(': ' + data['PilihanagamaA']);
+              $('#PilihanpendtA').text(': ' + data['PilihanpendtA']);
+              $('#PilihanpekerA').text(': ' + data['PilihanpekerA']);
+              $('#PilihanpenghasilanA').text(': ' + data['PilihanpenghasilanA']);
+              $('#nohpayah').text(': ' + data['nohpayah']);
+              $('#PilihanstatA').text(': ' + data['PilihanstatA']);
+              $('#NamaIbu').text(': ' + data['NamaIbu']);
+              $('#NIKibu').text(': ' + data['NIKibu']);
+              $('#Tempatlibu').text(': ' + data['Tempatlibu']);
+              $('#tgllibu').text(': ' + data['tgllibu']);
+              $('#PilihanagamaI').text(': ' + data['PilihanagamaI']);
+              $('#PilihanpendtI').text(': ' + data['PilihanpendtI']);
+              $('#PilihanpekerI').text(': ' + data['PilihanpekerI']);
+              $('#PilihanpenghasilanI').text(': ' + data['PilihanpenghasilanI']);
+              $('#nohpibu').text(': ' + data['nohpibu']);
+              $('#PilihanstatI').text(': ' + data['PilihanstatI']);
+              $('#NamaWali').text(': ' + data['NamaWali']);
+              $('#NIKWali').text(': ' + data['NIKWali']);
+              $('#Tempatlwali').text(': ' + data['Tempatlwali']);
+              $('#PilihanagamaW').text(': ' + data['PilihanagamaW']);
+              $('#PilihanpendtW').text(': ' + data['PilihanpendtW']);
+              $('#PilihanpekerW').text(': ' + data['PilihanpekerW']);
+              $('#PilihanpenghasilanW').text(': ' + data['PilihanpenghasilanW']);
+              $('#nohpwali').text(': ' + data['nohpwali']);
+              $('#tgllwali').text(': ' + data['tgllwali']);
+              $('#Alamatjalan').text(': ' + data['Alamatjalan']);
+              $('#rt-rwortu').text(': ' + data['rt-rwortu']);
+              $('#Kodepos-ortu').text(': ' + data['Kodepos-ortu']);
+              $('#d-kelurahanortu').text(': ' + data['d-kelurahanortu']);
+              $('#Kecamatan-ortu').text(': ' + data['Kecamatan-ortu']);
+              $('#kabupatenortu').text(': ' + data['kabupatenortu']);
+              $('#Provinsiortu').text(': ' + data['Provinsiortu']);
+              $('#nohportu').text(': ' + data['nohportu']);
+          })
+      });
     });
   </script>
 

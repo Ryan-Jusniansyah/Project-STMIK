@@ -63,7 +63,7 @@ Route::post('/pendaftaran3', [OrangTuaController::class, 'store']);
 
 // DASHBOARD
 Route::middleware('auth')->group(function() {
-    Route::get('/dashboard', [DashboardController::class, 'index']);
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/dashboard-Data', [DashboardDataMahasiswaController::class, 'index']);
     Route::get('/dashboard-berita', [BeritaController::class, 'index']);
     
@@ -71,11 +71,13 @@ Route::middleware('auth')->group(function() {
     //     abort(404);
     // });
 
-    Route::get('dashboard/{id}', function($id) {
-        $data = Pendaftaran::find($id);
-        // return view('dashboard', ['title' => 'Main', 'mhs' => $mhs]);
-        return response()->json($data);
-    })->name('dashboard.show');
+    // Route::get('dashboard/{id}', function($id) {
+    //     $data = Pendaftaran::find($id);
+    //     // return view('dashboard', ['title' => 'Main', 'mhs' => $mhs]);
+    //     return response()->json($data);
+    // })->name('dashboard.show');
+
+    Route::get('dashboard/{id}', [DashboardController::class, 'show'])->name('dashboard.show');
     
     // Route::post('/form-berita', [BeritaController::class, 'store']);
     // Route::get('/form-berita/{id}/edit', [BeritaController::class, 'edit']);
