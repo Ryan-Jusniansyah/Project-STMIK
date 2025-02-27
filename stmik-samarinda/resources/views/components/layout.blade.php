@@ -11,12 +11,14 @@
   <body>
     <nav class="navbar navbar-expand-lg fixed-top shadow">
         <div class="container-fluid">
-            <img src="img/logo.png" alt="STMIK Samarinda Logo" width="6%">
+            <a href="/" class="navbar-brand">
+                <img src="img/logo.png" alt="STMIK Samarinda Logo" class="img-fluid" style="max-width: 60px;">
+            </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse ms-auto justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
               <li class="nav-item fw-500 text-color">
                 <a class="nav-link" aria-current="page" href="#">Beranda</a>
               </li>
@@ -33,11 +35,10 @@
                 <a class="nav-link" href="#Berita">Berita</a>
               </li>
             </ul>
-        </div>
-        <form class="d-flex">
-            <!-- <button class="btn btn-primary border-0 text-color fw-bold" type="submit">Daftar Sekarang!</button> -->
+          </div>
+          <div class="d-flex">
             <a href="pendaftaran1" class="btn btn-primary border-0 text-color fw-bold">Daftar Sekarang!</a>
-          </form>
+          </div>
         </div>
       </nav>
 
@@ -46,16 +47,15 @@
       <footer class="footer text-white py-5">
         <div class="container">
           <div class="row">
-            <!-- Logo and Address -->
-            <div class="col-md-4 text-center text-md-end">
-                <img src="img/logo.png" alt="STMIK Samarinda Logo" width="100%">
-
+            <!-- Logo -->
+            <div class="col-md-4 mb-4 mb-md-0 text-center">
+                <img src="img/logo.png" alt="STMIK Samarinda Logo" class="img-fluid" style="max-width: 180px;">
             </div>
             
             <!-- Social Media Links -->
-            <div class="col-md-4 text-center mb-3 mt-3">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
               <p>Social Media</p>
-              <div>
+              <div class="mb-3">
                 <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
                 <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
                 <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
@@ -64,8 +64,8 @@
                 <a href="#" class="text-white me-3"><i class="bi bi-rss"></i></a>
               </div>
 
-              <div class="mt-3">
-                  <p>Jl. Banggeris No.75, RT.03, Kota Samarinda</p>
+              <div>
+                  <p class="mb-1">Jl. Banggeris No.75, RT.03, Kota Samarinda</p>
                   <p>
                     <i class="bi bi-telephone"></i> (123) 456-7890<br>
                     <i class="bi bi-printer"></i> (123) 456-7890
@@ -74,12 +74,11 @@
             </div>
       
             <!-- Map -->
-            <div class="col-md-4 text-center text-md-end">
+            <div class="col-md-4 text-center">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6702190504707!2d117.12024280804113!3d-0.4936757994993988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df67efcd0285307%3A0x74adc841c3c9adcc!2sSTMIK%20SAMARINDA!5e0!3m2!1sid!2sid!4v1737548439429!5m2!1sid!2sid" 
-                width="250" 
-                height="200" 
-                style="border:10px;" 
+                class="w-100"
+                style="border:0; height: 200px; max-width: 300px; margin: 0 auto;" 
                 allowfullscreen="" 
                 loading="lazy"></iframe>
             </div>
@@ -89,11 +88,13 @@
       
           <div class="row text-center">
             <div class="col">
-              <a href="#" class="text-white me-3">Beranda</a>
-              <a href="#" class="text-white me-3">Profile</a>
-              <a href="#" class="text-white me-3">Akademik</a>
-              <a href="#" class="text-white me-3">Fakultas</a>
-              <a href="#" class="text-white me-3">Biaya Pendaftaran</a>
+              <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="#" class="text-white">Beranda</a>
+                <a href="#" class="text-white">Profile</a>
+                <a href="#" class="text-white">Akademik</a>
+                <a href="#" class="text-white">Fakultas</a>
+                <a href="#" class="text-white">Biaya Pendaftaran</a>
+              </div>
             </div>
           </div>
       
