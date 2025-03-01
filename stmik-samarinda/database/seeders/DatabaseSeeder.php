@@ -37,7 +37,8 @@ class DatabaseSeeder extends Seeder
 
         Pendaftaran::create([
             'Namalengkap' => 'Salwa Arlinda Humairah',
-            'Programstudi' => 1,
+            'Programstudi' => 'Sistem Informasi (Sarjana)',
+            'Pilihankelas' => 'Pagi (Offline)',
             'NIK' => '123123123',
             'NPWP' => '9787878',
             'NISN' => '343453453',

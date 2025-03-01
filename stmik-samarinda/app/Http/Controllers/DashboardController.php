@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berkas;
 use App\Models\OrangTua;
 use App\Models\Pendaftaran;
 use App\Models\SekolahAsal;
-use Illuminate\Http\Request;
 
+use Illuminate\Http\Request;
 use function PHPUnit\Framework\isEmpty;
 
 class DashboardController extends Controller
@@ -29,10 +30,12 @@ class DashboardController extends Controller
         $pendaftaran = Pendaftaran::find($id);
         $sekolah = SekolahAsal::where('pendaftaran_id', $id)->first();
         $ortu = OrangTua::where('pendaftaran_id', $id)->first();
+        $berkas = Berkas::where('pendaftaran_id', $id)->first();
 
         $data = collect($pendaftaran)
             ->merge($sekolah ? $sekolah->toArray() : [])
-            ->merge($ortu ? $ortu->toArray() : []);
+            ->merge($ortu ? $ortu->toArray() : [])
+            ->merge($berkas ? $berkas->toArray() : []);
 
         // dd($data);
 

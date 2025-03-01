@@ -41,15 +41,15 @@ return new class extends Migration
             $table->string('nohpibu');
             $table->string('PilihanstatI');
             
-            $table->string('NamaWali');
-            $table->string('NIKWali');
-            $table->string('Tempatlwali');
-            $table->date('tgllwali');
-            $table->string('PilihanagamaW');
-            $table->string('PilihanpendtW');
-            $table->string('PilihanpekerW');
-            $table->string('PilihanpenghasilanW');
-            $table->string('nohpwali');
+            $table->string('NamaWali')->nullable();
+            $table->string('NIKWali')->nullable();
+            $table->string('Tempatlwali')->nullable();
+            $table->date('tgllwali')->nullable();
+            $table->string('PilihanagamaW')->nullable();
+            $table->string('PilihanpendtW')->nullable();
+            $table->string('PilihanpekerW')->nullable();
+            $table->string('PilihanpenghasilanW')->nullable();
+            $table->string('nohpwali')->nullable();
             
             $table->string('Alamatjalan');
             $table->string('rt-rwortu');

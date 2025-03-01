@@ -21,7 +21,7 @@
                             <div class="col">
                                 <label for="Pilkelas" class="select-label">Pilihan Kelas *</label>
                                 <select class="form-select mt-2 @error('Pilkelas') is-invalid @enderror" aria-label="Pilihan-Kelas" name="Pilihankelas">
-                                    <option selected>Masukkan Pilihan Kelas</option>
+                                    <option value="" disabled selected>Masukkan Pilihan Kelas</option>
                                     <option value="1">Pagi (Offline)</option>
                                     <option value="2">Malam (Online)</option>
                                 </select>
@@ -53,7 +53,7 @@
                                 @enderror --}}
                             </div>
                             <div class="col pt-3">
-                                <label for="NPWP" class="form-label">NPWP *</label>
+                                <label for="NPWP" class="form-label">NPWP</label>
                                 <input type="number" class="form-control @error('NPWP') is-invalid @enderror" name="NPWP" id="npwp" placeholder="Masukkan NPWP anda" value="{{ old('NPWP') }}">
                                 {{-- @error('NPWP')
                                     <div class="invalid-feedback">
@@ -73,7 +73,7 @@
                             <div class="col pt-3">
                                 <label for="Piljk" class="select-label">Jenis Kelamin *</label>
                                 <select class="form-select mt-2 @error('pilihanjk') is-invalid @enderror" aria-label="Pilihan-jk" name='pilihanjk'>
-                                    <option selected>Pilih Jenis Kelamin</option>
+                                    <option value="" disabled selected>Jenis Kelamin</option>
                                     <option value="Laki-laki">Laki-Laki</option>
                                     <option value="Perempuan">Perempuan</option>
                                 </select>
@@ -108,7 +108,7 @@
                             <div class="col pt-3">
                                 <label for="Pilagama" class="select-label">Agama *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-Agama" name="Pilihanagama">
-                                    <option selected>Pilih Agama Anda</option>
+                                    <option value="" disabled selected>Pilihan Agama</option>
                                     <option value="1">Islam</option>
                                     <option value="2">Kristen</option>
                                     <option value="3">Katolik</option>
@@ -120,7 +120,7 @@
                             <div class="col pt-3">
                                 <label for="Pilstatpernikahan" class="select-label">Status Pernikahan</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-pernikahan" name="Pilihanpernikahan">
-                                    <option selected>Status Pernikahan</option>
+                                    <option value="" disabled selected>Status Pernikahan</option>
                                     <option value="1">Belum Menikah</option>
                                     <option value="2">Sudah Menikah</option>
                                 </select>

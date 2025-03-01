@@ -84,7 +84,7 @@
 
               <div class="row mb-3">
                 <div class="col-4">
-                  <img src="img/fotoProfil.jpg" style="width: 150px" alt="">
+                  <img src="" id="pasfoto" style="width: 150px" alt="">
                 </div>
               </div>
 
@@ -735,8 +735,10 @@
 /* When click show user */
       $('body').on('click', '#show-mhs', function () {
           var userURL = $(this).data('url');
+          var FullURL = 'storage/pas-foto/' + userURL;
           $.get(userURL, function (data) {
               $('#detailModal').modal('show');
+              $('#pasfoto').attr('src', 'storage/pas-foto/' + data['PasFoto']);
               $('#nama').text(': ' + data['Namalengkap']);
               $('#nik').text(': ' + data['NIK']);
               $('#npwp').text(': ' + data['NPWP']);

@@ -16,14 +16,17 @@ return new class extends Migration
 
             $table->string('Namalengkap');
 
-            $table->foreignId('Programstudi')->constrained(
-                table: 'prodi',
-                indexName: 'mahasiswa_prodi_id'
-            );
+            // $table->foreignId('Programstudi')->constrained(
+            //     table: 'prodi',
+            //     indexName: 'mahasiswa_prodi_id'
+            // );
 
-            $table->string('NIK')->unique();
-            $table->string('NPWP')->unique();
-            $table->string('NISN')->unique();
+            $table->string('Programstudi');
+            $table->string('Pilihankelas');
+
+            $table->string('NIK');
+            $table->string('NPWP');
+            $table->string('NISN');
             $table->enum('pilihanjk', ['Perempuan', 'Laki-laki']);
             $table->string('Tempatlahir');
             $table->date('Tanggallahir');
@@ -43,14 +46,14 @@ return new class extends Migration
             $table->string('Provinsi');
             $table->string('Negara');
             $table->string('notelp-hp');
-            $table->string('Email')->unique();
+            $table->string('Email');
             
             $table->string('Namaperu')->nullable();
             $table->string('Alamatperu')->nullable();
             $table->string('Telp-perusahaan')->nullable();
             $table->string('Jabatan')->nullable();
 
-            $table->enum('status', ['draft', 'completed'])->default('draft');
+            $table->enum('status', ['draft', 'completed', 'accepted', 'rejected'])->default('draft');
 
 
             // $table->string('nama_lengkap');

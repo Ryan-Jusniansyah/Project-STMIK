@@ -44,15 +44,15 @@ class OrangTuaController extends Controller
             'PilihanpenghasilanI' => 'required',
             'nohpibu' => 'required',
             'PilihanstatI' => 'required',
-            'NamaWali' => 'required',
-            'NIKWali' => 'required',
-            'Tempatlwali' => 'required',
-            'PilihanagamaW' => 'required',
-            'PilihanpendtW' => 'required',
-            'PilihanpekerW' => 'required',
-            'PilihanpenghasilanW' => 'required',
-            'nohpwali' => 'required',
-            'tgllwali' => 'required',
+            'NamaWali' => 'nullable',
+            'NIKWali' => 'nullable',
+            'Tempatlwali' => 'nullable',
+            'PilihanagamaW' => 'nullable',
+            'PilihanpendtW' => 'nullable',
+            'PilihanpekerW' => 'nullable',
+            'PilihanpenghasilanW' => 'nullable',
+            'nohpwali' => 'nullable',
+            'tgllwali' => 'nullable',
             'Alamatjalan' => 'required',
             'rt-rwortu' => 'required',
             'Kodepos-ortu' => 'required',
@@ -107,13 +107,15 @@ class OrangTuaController extends Controller
             'nohportu' => 'nomor handphone ortu',
         ]);
 
-        $validator['pendaftaran_id'] = session('pendaftar_id');
         
         if($validator->fails()) {
             return redirect()->back()
-                ->withErrors($validator)
-                ->withInput();
+            ->withErrors($validator)
+            ->withInput();
         }
+        
+        $validator = $validator->validate();
+        $validator['pendaftaran_id'] = session('pendaftar_id');
 
         // OrangTua::create($validatedData);
         OrangTua::updateOrCreate(

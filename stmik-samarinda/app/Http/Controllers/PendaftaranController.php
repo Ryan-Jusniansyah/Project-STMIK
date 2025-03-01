@@ -20,14 +20,14 @@ class PendaftaranController extends Controller{
     public function store1(Request $request) {
         $input = $request->all();
 
-        $input['Programstudi'] = 1;
+        // $input['Programstudi'] = 1;
 
         $rules = [
             'Pilihankelas' => 'required',
             'Namalengkap' => 'required',
-            'NIK' => 'required|unique:pendaftaran',
-            'NPWP' => 'required|unique:pendaftaran',
-            'NISN' => 'required|unique:pendaftaran',
+            'NIK' => 'required',
+            'NPWP' => 'nullable',
+            'NISN' => 'required',
             'pilihanjk' => 'required',
             'Tempatlahir' => 'required',
             'Tanggallahir' => 'required',
@@ -44,7 +44,7 @@ class PendaftaranController extends Controller{
             'Provinsi' => 'required',
             'Negara' => 'required',
             'notelp-hp' => 'required',
-            'Email' => 'required|email:dns|unique:pendaftaran',
+            'Email' => 'required|email:dns',
             'Namaperu' => 'nullable',
             'Alamatperu' => 'nullable',
             'Telp-perusahaan' => 'nullable',
@@ -87,6 +87,9 @@ class PendaftaranController extends Controller{
                 ->withErrors($validator)
                 ->withInput();
         }
+
+        $validator = $validator->validate();
+        $validator['Programstudi'] = 'Sistem Informasi (Sarjana)';
 
         $pendaftar = Pendaftaran::create($validator);
 

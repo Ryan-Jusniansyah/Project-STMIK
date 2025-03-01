@@ -53,8 +53,9 @@ class SekolahAsalController extends Controller
                 ->withInput();
         }
 
+        $validator = $validator->validate();
+        
         $validator['pendaftaran_id'] = session('pendaftar_id');
-
         // SekolahAsal::create($validatedData);
         SekolahAsal::updateOrCreate(
             ['pendaftaran_id' => $validator['pendaftaran_id']],
