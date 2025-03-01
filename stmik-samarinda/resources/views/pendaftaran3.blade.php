@@ -12,80 +12,80 @@
                         <div class="lines3"></div>
                         <div class="row row-cols-2 mt-3">
                             <div class="col">
-                                <label for="NamaA" class="form-label">Nama *</label>
+                                <label for="NamaA" class="form-label">Nama Ayah *</label>
                                 <input type="text" class="form-control  @error('NamaAyah') is-invalid @enderror" name="NamaAyah" value="{{ old('NamaAyah') }}" id="NamaAyah" placeholder="Masukkan Nama Lengkap">
                             </div>
                             <div class="col">
-                                <label for="nikA" class="form-label">NIK *</label>
+                                <label for="nikA" class="form-label">NIK Ayah *</label>
                                 <input type="number" class="form-control @error('NIKayah') is-invalid @enderror" name="NIKayah" value="{{ old('NIKayah') }}" id="NIKayah" placeholder="Contoh : 64XXXXXXXXXXXXXX">
                             </div>
                             <div class="col pt-3">
-                                <label for="TempatA" class="form-label">Tempat Lahir *</label>
+                                <label for="TempatA" class="form-label">Tempat Lahir Ayah *</label>
                                 <input type="text" value="{{ old('Tempatlayah') }}" class="form-control @error('Tempatlayah') is-invalid @enderror" name="Tempatlayah" id="Tempatlayah" placeholder="Kota Asal">
                             </div>
                             <div class="col pt-3">
-                                <label for="tgllA" class="form-label">Tanggal Lahir *</label>
+                                <label for="tgllA" class="form-label">Tanggal Lahir Ayah *</label>
                                 <input type="date" class="form-control @error('tgllayah') is-invalid @enderror" name="tgllayah" value="{{ old('tgllayah') }}" id="tgllayah" placeholder="DD/MM/YYYY">
                             </div>
                             <div class="col pt-3">
-                                <label for="agamaA" class="select-label">Agama *</label>
+                                <label for="agamaA" class="select-label">Agama Ayah *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-agamaA" name="PilihanagamaA">
-                                    <option selected>Pilih Agama Anda</option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Kristen">Kristen</option>
-                                    <option value="Katolik">Katolik</option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Buddha">Buddha</option>
-                                    <option value="Konghucu">Khonghucu</option>
+                                    <option selected disabled>Pilih Agama Ayah</option>
+                                    <option @if(old('PilihanagamaA') == 'Islam') selected @endif value="Islam">Islam</option>
+                                    <option @if(old('PilihanagamaA') == 'Kristen') selected @endif value="Kristen">Kristen</option>
+                                    <option @if(old('PilihanagamaA') == 'Katolik') selected @endif value="Katolik">Katolik</option>
+                                    <option @if(old('PilihanagamaA') == 'Hindu') selected @endif value="Hindu">Hindu</option>
+                                    <option @if(old('PilihanagamaA') == 'Buddha') selected @endif value="Buddha">Buddha</option>
+                                    <option @if(old('PilihanagamaA') == 'Konghucu') selected @endif value="Konghucu">Khonghucu</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
-                                <label for="pendtA" class="select-label">Pendidikan Terakhir *</label>
+                                <label for="pendtA" class="select-label">Pendidikan Terakhir Ayah *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-pendtA" name="PilihanpendtA">
-                                    <option selected>Pilih Pendidikan Terakhir</option>
-                                    <option value="Pascasarjana (S2/S3)">Pascasarjana (S2/S3)</option>
-                                    <option value="Sarjana (S1)">Sarjana (S1)</option>
-                                    <option value="Diploma (D1/D2/D3/D4)">Diploma (D1/D2/D3/D4)</option>
-                                    <option value="SMA/SMK Sederajat">SMA/SMK Sederajat</option>
-                                    <option value="SMP atau sederajat">SMP atau sederajat</option>
-                                    <option value="SD atau sederajat">SD atau sederajat</option>
+                                    <option selected disabled>Pilih Pendidikan Terakhir</option>
+                                    <option @if(old('PilihanpendtA') == 'Pascasarjana (S2/S3)') selected @endif value="Pascasarjana (S2/S3)">Pascasarjana (S2/S3)</option>
+                                    <option @if(old('PilihanpendtA') == 'Sarjana (S1)') selected @endif value="Sarjana (S1)">Sarjana (S1)</option>
+                                    <option @if(old('PilihanpendtA') == 'Diploma (D1/D2/D3/D4)') selected @endif value="Diploma (D1/D2/D3/D4)">Diploma (D1/D2/D3/D4)</option>
+                                    <option @if(old('PilihanpendtA') == 'SMA/SMK Sederajat') selected @endif value="SMA/SMK Sederajat">SMA/SMK Sederajat</option>
+                                    <option @if(old('PilihanpendtA') == 'SMP atau sederajat') selected @endif value="SMP atau sederajat">SMP atau sederajat</option>
+                                    <option @if(old('PilihanpendtA') == 'SD atau sederajat') selected @endif value="SD atau sederajat">SD atau sederajat</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
-                                <label for="pekerA" class="select-label">Pekerjaan *</label>
+                                <label for="pekerA" class="select-label">Pekerjaan Ayah *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-pekerA" name="PilihanpekerA">
-                                    <option selected>Pilih Pekerjaan Orang Tua</option>
-                                    <option value="PNS">PNS</option>
-                                    <option value="Karyawan Swasta">Karyawan Swasta</option>
-                                    <option value="Wiraswasta">Wiraswasta</option>
-                                    <option value="Petani/peternak/nelayan">Petani/peternak/nelayan</option>
-                                    <option value="Pensiunan">Pensiunan</option>
-                                    <option value="Tidak Bekerja">Tidak Bekerja</option>
+                                    <option selected disabled>Pilih Pekerjaan Ayah</option>
+                                    <option @if(old('PilihanpekerA') == 'PNS') selected @endif value="PNS">PNS</option>
+                                    <option @if(old('PilihanpekerA') == 'Karyawan Swasta') selected @endif value="Karyawan Swasta">Karyawan Swasta</option>
+                                    <option @if(old('PilihanpekerA') == 'Wiraswasta') selected @endif value="Wiraswasta">Wiraswasta</option>
+                                    <option @if(old('PilihanpekerA') == 'Petani/peternak/nelayan') selected @endif value="Petani/peternak/nelayan">Petani/peternak/nelayan</option>
+                                    <option @if(old('PilihanpekerA') == 'Pensiunan') selected @endif value="Pensiunan">Pensiunan</option>
+                                    <option @if(old('PilihanpekerA') == 'Tidak Bekerja') selected @endif value="Tidak Bekerja">Tidak Bekerja</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
-                                <label for="penghasilanA" class="select-label">Penghasilan *</label>
+                                <label for="penghasilanA" class="select-label">Penghasilan Ayah *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-penghasilanA" name="PilihanpenghasilanA">
-                                    <option selected>Pilih Penghasilan</option>
-                                    <option value="Kurang dari Rp1.000.000">Kurang dari Rp1.000.000</option>
-                                    <option value="Rp1.000.000 - Rp3.000.000">Rp1.000.000 - Rp3.000.000</option>
-                                    <option value="Rp3.000.000 - Rp5.000.000">Rp3.000.000 - Rp5.000.000</option>
-                                    <option value="Rp.5.000.000 - Rp10.000.000">Rp.5.000.000 - Rp10.000.000</option>
-                                    <option value="Rp10.000.000 - Rp20.000.000">Rp10.000.000 - Rp20.000.000</option>
-                                    <option value="Lebih dari Rp20.000.000">Lebih dari Rp20.000.000</option>
-                                    <option value="Tidak berpenghasilan">Tidak berpenghasilan</option>
+                                    <option selected disabled>Pilih Penghasilan Ayah</option>
+                                    <option @if(old('PilihanpenghasilanA') == 'Kurang dari Rp1.000.000') selected @endif value="Kurang dari Rp1.000.000">Kurang dari Rp1.000.000</option>
+                                    <option @if(old('PilihanpenghasilanA') == 'Rp1.000.000 - Rp3.000.000') selected @endif value="Rp1.000.000 - Rp3.000.000">Rp1.000.000 - Rp3.000.000</option>
+                                    <option @if(old('PilihanpenghasilanA') == 'Rp3.000.000 - Rp5.000.000') selected @endif value="Rp3.000.000 - Rp5.000.000">Rp3.000.000 - Rp5.000.000</option>
+                                    <option @if(old('PilihanpenghasilanA') == 'Rp.5.000.000 - Rp10.000.000') selected @endif value="Rp.5.000.000 - Rp10.000.000">Rp.5.000.000 - Rp10.000.000</option>
+                                    <option @if(old('PilihanpenghasilanA') == 'Rp10.000.000 - Rp20.000.000') selected @endif value="Rp10.000.000 - Rp20.000.000">Rp10.000.000 - Rp20.000.000</option>
+                                    <option @if(old('PilihanpenghasilanA') == 'Lebih dari Rp20.000.000') selected @endif value="Lebih dari Rp20.000.000">Lebih dari Rp20.000.000</option>
+                                    <option @if(old('PilihanpenghasilanA') == 'Tidak berpenghasilan') selected @endif value="Tidak berpenghasilan">Tidak berpenghasilan</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
-                                <label for="nohpA" class="form-label">Handphone/Telp.Rumah *</label>
+                                <label for="nohpA" class="form-label">Handphone/Telp.Rumah Ayah *</label>
                                 <input type="number" class="form-control @error('nohpayah') is-invalid @enderror" value="{{ old('nohpayah') }}" name="nohpayah" id="nohpayah" placeholder="Contoh : +6280000000000">
                             </div>
                             <div class="col pt-3">
-                                <label for="statA" class="select-label">Status Kehidupan *</label>
+                                <label for="statA" class="select-label">Status Kehidupan Ayah *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-statA" name="PilihanstatA">
-                                    <option selected>Pilih Status Kehidupan</option>
-                                    <option value="Hidup">Hidup</option>
-                                    <option value="Meninggal">Meninggal</option>
+                                    <option selected disabled>Pilih Status Kehidupan</option>
+                                    <option @if(old('PilihanstatA') == 'Hidup') selected @endif value="Hidup">Hidup</option>
+                                    <option @if(old('PilihanstatA') == 'Meninggal') selected @endif value="Meninggal">Meninggal</option>
                                 </select>
                             </div>
                         </div>
@@ -95,80 +95,80 @@
                         <div class="lines4"></div>
                         <div class="row row-cols-2 mt-3">
                             <div class="col">
-                                <label for="NamaI" class="form-label">Nama *</label>
+                                <label for="NamaI" class="form-label">Nama Ibu *</label>
                                 <input type="text" class="form-control @error('NamaIbu') is-invalid @enderror" name="NamaIbu" value="{{ old('NamaIbu') }}" id="NamaIbu" placeholder="Masukkan Nama Lengkap">
                             </div>
                             <div class="col">
-                                <label for="nikI" class="form-label">NIK *</label>
+                                <label for="nikI" class="form-label">NIK Ibu *</label>
                                 <input type="number" class="form-control @error('NIKibu') is-invalid @enderror" value="{{ old('NIKibu') }}" name="NIKibu" id="NIKibu" placeholder="Contoh : 64XXXXXXXXXXXXXX">
                             </div>
                             <div class="col pt-3">
-                                <label for="TempatI" class="form-label">Tempat Lahir *</label>
+                                <label for="TempatI" class="form-label">Tempat Lahir Ibu *</label>
                                 <input type="text" class="form-control @error('Tempatlibu') is-invalid @enderror" name="Tempatlibu" value="{{ old('Tempatlibu') }}" id="Tempatlibu" placeholder="Kota Asal">
                             </div>
                             <div class="col pt-3">
-                                <label for="tgllI" class="form-label">Tanggal Lahir *</label>
+                                <label for="tgllI" class="form-label">Tanggal Lahir Ibu *</label>
                                 <input type="date" class="form-control @error('tgllibu') is-invalid @enderror" value="{{ old('tgllibu') }}" name="tgllibu" id="tgllibu" placeholder="DD/MM/YYYY">
                             </div>
                             <div class="col pt-3">
-                                <label for="agamaI" class="select-label">Agama *</label>
+                                <label for="agamaI" class="select-label">Agama Ibu *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-agamaI" name="PilihanagamaI">
-                                    <option selected>Pilih Agama Anda</option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Kristen">Kristen</option>
-                                    <option value="Katolik">Katolik</option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Buddha">Buddha</option>
-                                    <option value="Khonghucu">Khonghucu</option>
+                                    <option selected disabled>Pilih Agama Ibu</option>
+                                    <option @if(old('PilihanagamaI') == 'Islam') selected @endif value="Islam">Islam</option>
+                                    <option @if(old('PilihanagamaI') == 'Kristen') selected @endif value="Kristen">Kristen</option>
+                                    <option @if(old('PilihanagamaI') == 'Katolik') selected @endif value="Katolik">Katolik</option>
+                                    <option @if(old('PilihanagamaI') == 'Hindu') selected @endif value="Hindu">Hindu</option>
+                                    <option @if(old('PilihanagamaI') == 'Buddha') selected @endif value="Buddha">Buddha</option>
+                                    <option @if(old('PilihanagamaI') == 'Konghucu') selected @endif value="Konghucu">Khonghucu</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
-                                <label for="pendtI" class="select-label">Pendidikan Terakhir *</label>
+                                <label for="pendtI" class="select-label">Pendidikan Terakhir Ibu *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-pendtI" name="PilihanpendtI">
-                                    <option selected>Pilih Pendidikan Terakhir</option>
-                                    <option value="Pascasarjana (S2/S3)">Pascasarjana (S2/S3)</option>
-                                    <option value="Sarjana (S1)">Sarjana (S1)</option>
-                                    <option value="Diploma (D1/D2/D3/D4)">Diploma (D1/D2/D3/D4)</option>
-                                    <option value="SMA/SMK Sederajat">SMA/SMK Sederajat</option>
-                                    <option value="SMP atau sederajat">SMP atau sederajat</option>
-                                    <option value="SD atau sederajat">SD atau sederajat</option>
+                                    <option selected disabled>Pilih Pendidikan Terakhir</option>
+                                    <option @if(old('PilihanpendtI') == 'Pascasarjana (S2/S3)') selected @endif value="Pascasarjana (S2/S3)">Pascasarjana (S2/S3)</option>
+                                    <option @if(old('PilihanpendtI') == 'Sarjana (S1)') selected @endif value="Sarjana (S1)">Sarjana (S1)</option>
+                                    <option @if(old('PilihanpendtI') == 'Diploma (D1/D2/D3/D4)') selected @endif value="Diploma (D1/D2/D3/D4)">Diploma (D1/D2/D3/D4)</option>
+                                    <option @if(old('PilihanpendtI') == 'SMA/SMK Sederajat') selected @endif value="SMA/SMK Sederajat">SMA/SMK Sederajat</option>
+                                    <option @if(old('PilihanpendtI') == 'SMP atau sederajat') selected @endif value="SMP atau sederajat">SMP atau sederajat</option>
+                                    <option @if(old('PilihanpendtI') == 'SD atau sederajat') selected @endif value="SD atau sederajat">SD atau sederajat</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
-                                <label for="pekerI" class="select-label">Pekerjaan *</label>
+                                <label for="pekerI" class="select-label">Pekerjaan Ibu *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-pekerI" name="PilihanpekerI">
-                                    <option selected>Pilih Pekerjaan Orang Tua</option>
-                                    <option value="PNS">PNS</option>
-                                    <option value="Karyawan Swasta">Karyawan Swasta</option>
-                                    <option value="Wiraswasta">Wiraswasta</option>
-                                    <option value="Petani/peternak/nelayan">Petani/peternak/nelayan</option>
-                                    <option value="Pensiunan">Pensiunan</option>
-                                    <option value="Tidak Bekerja">Tidak Bekerja</option>
+                                    <option selected disabled>Pilih Pekerjaan Ibu</option>
+                                    <option @if(old('PilihanpekerI') == 'PNS') selected @endif value="PNS">PNS</option>
+                                    <option @if(old('PilihanpekerI') == 'Karyawan Swasta') selected @endif value="Karyawan Swasta">Karyawan Swasta</option>
+                                    <option @if(old('PilihanpekerI') == 'Wiraswasta') selected @endif value="Wiraswasta">Wiraswasta</option>
+                                    <option @if(old('PilihanpekerI') == 'Petani/peternak/nelayan') selected @endif value="Petani/peternak/nelayan">Petani/peternak/nelayan</option>
+                                    <option @if(old('PilihanpekerI') == 'Pensiunan') selected @endif value="Pensiunan">Pensiunan</option>
+                                    <option @if(old('PilihanpekerI') == 'Tidak Bekerja') selected @endif value="Tidak Bekerja">Tidak Bekerja</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
-                                <label for="penghasilanI" class="select-label">Penghasilan *</label>
+                                <label for="penghasilanI" class="select-label">Penghasilan Ibu *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-penghasilanI" name="PilihanpenghasilanI">
-                                    <option selected>Pilih Penghasilan</option>
-                                    <option value="Kurang dari Rp1.000.000">Kurang dari Rp1.000.000</option>
-                                    <option value="Rp1.000.000 - Rp3.000.000">Rp1.000.000 - Rp3.000.000</option>
-                                    <option value="Rp3.000.000 - Rp5.000.000">Rp3.000.000 - Rp5.000.000</option>
-                                    <option value="Rp.5.000.000 - Rp10.000.000">Rp.5.000.000 - Rp10.000.000</option>
-                                    <option value="Rp10.000.000 - Rp20.000.000">Rp10.000.000 - Rp20.000.000</option>
-                                    <option value="Lebih dari Rp20.000.000">Lebih dari Rp20.000.000</option>
-                                    <option value="Tidak berpenghasilan">Tidak berpenghasilan</option>
+                                    <option selected disabled>Pilih Penghasilan Ibu</option>
+                                    <option @if(old('PilihanpenghasilanI') == 'Kurang dari Rp1.000.000') selected @endif value="Kurang dari Rp1.000.000">Kurang dari Rp1.000.000</option>
+                                    <option @if(old('PilihanpenghasilanI') == 'Rp1.000.000 - Rp3.000.000') selected @endif value="Rp1.000.000 - Rp3.000.000">Rp1.000.000 - Rp3.000.000</option>
+                                    <option @if(old('PilihanpenghasilanI') == 'Rp3.000.000 - Rp5.000.000') selected @endif value="Rp3.000.000 - Rp5.000.000">Rp3.000.000 - Rp5.000.000</option>
+                                    <option @if(old('PilihanpenghasilanI') == 'Rp.5.000.000 - Rp10.000.000') selected @endif value="Rp.5.000.000 - Rp10.000.000">Rp.5.000.000 - Rp10.000.000</option>
+                                    <option @if(old('PilihanpenghasilanI') == 'Rp10.000.000 - Rp20.000.000') selected @endif value="Rp10.000.000 - Rp20.000.000">Rp10.000.000 - Rp20.000.000</option>
+                                    <option @if(old('PilihanpenghasilanI') == 'Lebih dari Rp20.000.000') selected @endif value="Lebih dari Rp20.000.000">Lebih dari Rp20.000.000</option>
+                                    <option @if(old('PilihanpenghasilanI') == 'Tidak berpenghasilan') selected @endif value="Tidak berpenghasilan">Tidak berpenghasilan</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
-                                <label for="nohpI" class="form-label">Handphone/Telp.Rumah</label>
+                                <label for="nohpI" class="form-label">Handphone/Telp.Rumah Ibu</label>
                                 <input type="number" class="form-control @error('nohpibu') is-invalid @enderror" name="nohpibu" value="{{ old('nohpibu') }}" id="nohpibu" placeholder="Contoh : +6280000000000">
                             </div>
                             <div class="col pt-3">
-                                <label for="statI" class="select-label">Status Kehidupan *</label>
+                                <label for="statI" class="select-label">Status Kehidupan Ibu *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-statI" name="PilihanstatI">
-                                    <option selected>Pilih Status Kehidupan</option>
-                                    <option value="Hidup">Hidup</option>
-                                    <option value="Meninggal">Meninggal</option>
+                                    <option selected disabled>Pilih Status Kehidupan</option>
+                                    <option @if(old('PilihanstatI') == 'Hidup') selected @endif value="Hidup">Hidup</option>
+                                    <option @if(old('PilihanstatI') == 'Meninggal') selected @endif value="Meninggal">Meninggal</option>
                                 </select>
                             </div>
                         </div>
@@ -196,50 +196,50 @@
                             <div class="col pt-3">
                                 <label for="agamaI" class="select-label">Agama</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-agamaI" name="PilihanagamaW">
-                                    <option selected>Pilih Agama Anda</option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Kristen">Kristen</option>
-                                    <option value="Katolik">Katolik</option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Buddha">Buddha</option>
-                                    <option value="Khonghucu">Khonghucu</option>
+                                    <option selected disabled>Pilih Agama</option>
+                                    <option @if(old('PilihanagamaW') == 'Islam') selected @endif value="Islam">Islam</option>
+                                    <option @if(old('PilihanagamaW') == 'Kristen') selected @endif value="Kristen">Kristen</option>
+                                    <option @if(old('PilihanagamaW') == 'Katolik') selected @endif value="Katolik">Katolik</option>
+                                    <option @if(old('PilihanagamaW') == 'Hindu') selected @endif value="Hindu">Hindu</option>
+                                    <option @if(old('PilihanagamaW') == 'Buddha') selected @endif value="Buddha">Buddha</option>
+                                    <option @if(old('PilihanagamaW') == 'Konghucu') selected @endif value="Konghucu">Khonghucu</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
                                 <label for="pendtI" class="select-label">Pendidikan Terakhir</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-pendtI" name="PilihanpendtW">
-                                    <option selected>Pilih Pendidikan Terakhir</option>
-                                    <option value="Pascasarjana (S2/S3)">Pascasarjana (S2/S3)</option>
-                                    <option value="Sarjana (S1)">Sarjana (S1)</option>
-                                    <option value="Diploma (D1/D2/D3/D4)">Diploma (D1/D2/D3/D4)</option>
-                                    <option value="SMA/SMK Sederajat">SMA/SMK Sederajat</option>
-                                    <option value="SMP atau sederajat">SMP atau sederajat</option>
-                                    <option value="SD atau sederajat">SD atau sederajat</option>
+                                    <option selected disabled>Pilih Pendidikan Terakhir</option>
+                                    <option @if(old('PilihanpendtW') == 'Pascasarjana (S2/S3)') selected @endif value="Pascasarjana (S2/S3)">Pascasarjana (S2/S3)</option>
+                                    <option @if(old('PilihanpendtW') == 'Sarjana (S1)') selected @endif value="Sarjana (S1)">Sarjana (S1)</option>
+                                    <option @if(old('PilihanpendtW') == 'Diploma (D1/D2/D3/D4)') selected @endif value="Diploma (D1/D2/D3/D4)">Diploma (D1/D2/D3/D4)</option>
+                                    <option @if(old('PilihanpendtW') == 'SMA/SMK Sederajat') selected @endif value="SMA/SMK Sederajat">SMA/SMK Sederajat</option>
+                                    <option @if(old('PilihanpendtW') == 'SMP atau sederajat') selected @endif value="SMP atau sederajat">SMP atau sederajat</option>
+                                    <option @if(old('PilihanpendtW') == 'SD atau sederajat') selected @endif value="SD atau sederajat">SD atau sederajat</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
                                 <label for="pekerI" class="select-label">Pekerjaan</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-pekerI" name="PilihanpekerW">
-                                    <option selected>Pilih Pekerjaan Orang Tua</option>
-                                    <option value="PNS">PNS</option>
-                                    <option value="Karyawan Swasta">Karyawan Swasta</option>
-                                    <option value="Wiraswasta">Wiraswasta</option>
-                                    <option value="Petani/peternak/nelayan">Petani/peternak/nelayan</option>
-                                    <option value="Pensiunan">Pensiunan</option>
-                                    <option value="Tidak Bekerja">Tidak Bekerja</option>
+                                    <option selected disabled>Pilih Pekerjaan</option>
+                                    <option @if(old('PilihanpekerW') == 'PNS') selected @endif value="PNS">PNS</option>
+                                    <option @if(old('PilihanpekerW') == 'Karyawan Swasta') selected @endif value="Karyawan Swasta">Karyawan Swasta</option>
+                                    <option @if(old('PilihanpekerW') == 'Wiraswasta') selected @endif value="Wiraswasta">Wiraswasta</option>
+                                    <option @if(old('PilihanpekerW') == 'Petani/peternak/nelayan') selected @endif value="Petani/peternak/nelayan">Petani/peternak/nelayan</option>
+                                    <option @if(old('PilihanpekerW') == 'Pensiunan') selected @endif value="Pensiunan">Pensiunan</option>
+                                    <option @if(old('PilihanpekerW') == 'Tidak Bekerja') selected @endif value="Tidak Bekerja">Tidak Bekerja</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
                                 <label for="penghasilanI" class="select-label">Penghasilan</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-penghasilanI" name="PilihanpenghasilanW">
-                                    <option selected>Pilih Penghasilan</option>
-                                    <option value="Kurang dari Rp1.000.000">Kurang dari Rp1.000.000</option>
-                                    <option value="Rp1.000.000 - Rp3.000.000">Rp1.000.000 - Rp3.000.000</option>
-                                    <option value="Rp3.000.000 - Rp5.000.000">Rp3.000.000 - Rp5.000.000</option>
-                                    <option value="Rp.5.000.000 - Rp10.000.000">Rp.5.000.000 - Rp10.000.000</option>
-                                    <option value="Rp10.000.000 - Rp20.000.000">Rp10.000.000 - Rp20.000.000</option>
-                                    <option value="Lebih dari Rp20.000.000">Lebih dari Rp20.000.000</option>
-                                    <option value="Tidak berpenghasilan">Tidak berpenghasilan</option>
+                                    <option selected disabled>Pilih Penghasilan</option>
+                                    <option @if(old('PilihanpenghasilanW') == 'Kurang dari Rp1.000.000') selected @endif value="Kurang dari Rp1.000.000">Kurang dari Rp1.000.000</option>
+                                    <option @if(old('PilihanpenghasilanW') == 'Rp1.000.000 - Rp3.000.000') selected @endif value="Rp1.000.000 - Rp3.000.000">Rp1.000.000 - Rp3.000.000</option>
+                                    <option @if(old('PilihanpenghasilanW') == 'Rp3.000.000 - Rp5.000.000') selected @endif value="Rp3.000.000 - Rp5.000.000">Rp3.000.000 - Rp5.000.000</option>
+                                    <option @if(old('PilihanpenghasilanW') == 'Rp.5.000.000 - Rp10.000.000') selected @endif value="Rp.5.000.000 - Rp10.000.000">Rp.5.000.000 - Rp10.000.000</option>
+                                    <option @if(old('PilihanpenghasilanW') == 'Rp10.000.000 - Rp20.000.000') selected @endif value="Rp10.000.000 - Rp20.000.000">Rp10.000.000 - Rp20.000.000</option>
+                                    <option @if(old('PilihanpenghasilanW') == 'Lebih dari Rp20.000.000') selected @endif value="Lebih dari Rp20.000.000">Lebih dari Rp20.000.000</option>
+                                    <option @if(old('PilihanpenghasilanW') == 'Tidak berpenghasilan') selected @endif value="Tidak berpenghasilan">Tidak berpenghasilan</option>
                                 </select>
                             </div>
                             <div class="col-md pt-3">
@@ -258,7 +258,7 @@
                             </div>
                             <div class="col">
                                 <label for="rt-rw-ortu" class="form-label">RT/RW *</label>
-                                <input type="text" class="form-control @error('rt-rwortu') is-invalid @enderror" value="{{ old('rt-rwortu') }}" name="rt-rwortu" id="rt-rwortu" placeholder="Contoh : 12/2">
+                                <input type="text" onkeyup="oneSlash(this)" class="form-control @error('rt-rwortu') is-invalid @enderror" value="{{ old('rt-rwortu') }}" name="rt-rwortu" id="rt-rwortu" placeholder="Contoh : 12/2">
                             </div>
                             <div class="col pt-3">
                                 <label for="kodepos-ortu" class="form-label">Kode Pos *</label>
@@ -325,4 +325,17 @@
             </form>
         </div>
     </div>
+
+    <script>
+        function oneSlash(input) {
+            var value = input.value,
+                value = value.split('/').join('');
+            
+            if (value.length > 2) {
+                value = value.substring(0, value.length - 2) + '/' + value.substring(value.length - 2, value.length);
+            }
+
+            input.value = value;
+        }
+    </script>
 </x-layoutform>

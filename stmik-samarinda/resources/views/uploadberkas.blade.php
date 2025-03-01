@@ -53,11 +53,6 @@
                             <div class="col">
                                 <label for="berkas8" class="form-label">Surat Keterangan Bebas Narkoba</label>
                                 <input class="form-control @error('SuratKetBebasNarkoba') is-invalid @enderror" type="file" name="SuratKetBebasNarkoba" id="berkas8" title="File harus berformat PDF">
-                                {{-- @error('SuratKetBebasNarkoba')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                                @enderror --}}
                             </div>
                             <div class="mt-5"></div>
                             <div class="col align-self-start">

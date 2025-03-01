@@ -20,12 +20,12 @@
                             <div class="col pt-3">
                                 <label for="tahunlulus" class="select-label">Tahun Lulus *</label>
                                 <select class="form-select mt-2" aria-label="Tahun-Lulus" name="Tahunlulus">
-                                    <option selected>Pilih Tahun Lulus</option>
-                                    <option value="2025">2025</option>
-                                    <option value="2024">2024</option>
-                                    <option value="2023">2023</option>
-                                    <option value="2022">2022</option>
-                                    <option value="2021">2021</option>
+                                    <option selected disabled>Pilih Tahun Lulus</option>
+                                    <option @if(old('Tahunlulus') == '2025') selected @endif value="2025">2025</option>
+                                    <option @if(old('Tahunlulus') == '2024') selected @endif value="2024">2024</option>
+                                    <option @if(old('Tahunlulus') == '2023') selected @endif value="2023">2023</option>
+                                    <option @if(old('Tahunlulus') == '2022') selected @endif value="2022">2022</option>
+                                    <option @if(old('Tahunlulus') == '2021') selected @endif value="2021">2021</option>
                                 </select>
                             </div>
                             <div class="col pt-3">

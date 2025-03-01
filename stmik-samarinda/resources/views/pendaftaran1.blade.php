@@ -12,18 +12,13 @@
                             <div class="col">
                                 <label for="Ps" class="form-label">Program Studi *</label>
                                 <input type="text" class="form-control @error('Programstudi') is-invalid @enderror" name="Programstudi" id="Ps" placeholder="Sistem Informasi (Sarjana)" value="Sistem Informasi (Sarjana)" readonly>
-                                {{-- @error('Programstudi')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col">
                                 <label for="Pilkelas" class="select-label">Pilihan Kelas *</label>
                                 <select class="form-select mt-2 @error('Pilkelas') is-invalid @enderror" aria-label="Pilihan-Kelas" name="Pilihankelas">
-                                    <option selected>Masukkan Pilihan Kelas</option>
-                                    <option value="Pagi (Offline)">Pagi (Offline)</option>
-                                    <option value="Malam (Online)">Malam (Online)</option>
+                                    <option selected disabled>Masukkan Pilihan Kelas</option>
+                                    <option @if(old('Pilihankelas') == 'Pagi (Offline)') selected @endif value="Pagi (Offline)">Pagi (Offline)</option>
+                                    <option @if(old('Pilihankelas') == 'Malam (Online)') selected @endif value="Malam (Online)">Malam (Online)</option>
                                 </select>
                             </div>
                         </div>
@@ -37,92 +32,57 @@
                             <div class="col">
                                 <label for="Nama" class="form-label">Nama Lengkap *</label>
                                 <input type="text" class="form-control @error('Namalengkap') is-invalid @enderror" name="Namalengkap" id="NamaLengkap" placeholder="Masukkan Nama Lengkap" value="{{ old('Namalengkap') }}">
-                                {{-- @error('Namalengkap')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col">
                                 <label for="NIK" class="form-label">NIK *</label>
                                 <input type="number" class="form-control @error('NIK') is-invalid @enderror" name="NIK" id="nik" placeholder="Masukkan NIK anda" value="{{ old('NIK') }}">
-                                {{-- @error('NIK')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="NPWP" class="form-label">NPWP</label>
                                 <input type="number" class="form-control @error('NPWP') is-invalid @enderror" name="NPWP" id="npwp" placeholder="Masukkan NPWP anda" value="{{ old('NPWP') }}">
-                                {{-- @error('NPWP')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="NISN" class="form-label">NISN *</label>
                                 <input type="text" class="form-control @error('NISN') is-invalid @enderror" name="NISN" id="nisn" placeholder="Masukkan NISN anda" value="{{ old('NISN') }}">
-                                {{-- @error('NISN')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="Piljk" class="select-label">Jenis Kelamin *</label>
                                 <select class="form-select mt-2 @error('pilihanjk') is-invalid @enderror" aria-label="Pilihan-jk" name='pilihanjk'>
                                     <option value="" disabled selected>Jenis Kelamin</option>
-                                    <option value="Laki-laki">Laki-Laki</option>
-                                    <option value="Perempuan">Perempuan</option>
+                                    <option @if(old('pilihanjk') == 'Laki-laki') selected @endif value="Laki-laki">Laki-Laki</option>
+                                    <option @if(old('pilihanjk') == 'Perempuan') selected @endif value="Perempuan">Perempuan</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
                                 <label for="Tl" class="form-label">Tempat Lahir *</label>
                                 <input type="text" class="form-control @error('Tempatlahir') is-invalid @enderror" name="Tempatlahir" id="tempatlahir" placeholder="Kota Asal" value="{{ old('Tempatlahir') }}">
-                                {{-- @error('Tempatlahir')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="tglahir" class="form-label">Tanggal Lahir *</label>
                                 <input type="date" class="form-control @error('Tanggallahir') is-invalid @enderror" name="Tanggallahir" id="tanggallahir" placeholder="DD/MM/YYYY" value="{{ old('Tanggallahir') }}">
-                                {{-- @error('Tanggallahir')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="bb-tb" class="form-label">Berat/Tinggi Badan *</label>
                                 <input type="text" class="form-control @error('berat-tinggibadan') is-invalid @enderror" name="berat-tinggibadan" id="b-tb" placeholder="Contoh: 70kg/170cm" value="{{ old('berat-tinggibadan') }}">
-                                {{-- @error('berat-tinggibadan')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="Pilagama" class="select-label">Agama *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-Agama" name="Pilihanagama">
-                                    <option selected>Pilih Agama Anda</option>
-                                    <option value="Islam">Islam</option>
-                                    <option value="Kristen">Kristen</option>
-                                    <option value="Katolik">Katolik</option>
-                                    <option value="Hindu">Hindu</option>
-                                    <option value="Buddha">Buddha</option>
-                                    <option value="Konghucu">Khonghucu</option>
+                                    <option selected disabled>Pilih Agama Anda</option>
+                                    <option @if(old('Pilihanagama') == 'Islam') selected @endif value="Islam">Islam</option>
+                                    <option @if(old('Pilihanagama') == 'Kristen') selected @endif value="Kristen">Kristen</option>
+                                    <option @if(old('Pilihanagama') == 'Katolik') selected @endif value="Katolik">Katolik</option>
+                                    <option @if(old('Pilihanagama') == 'Hindu') selected @endif value="Hindu">Hindu</option>
+                                    <option @if(old('Pilihanagama') == 'Buddha') selected @endif value="Buddha">Buddha</option>
+                                    <option @if(old('Pilihanagama') == 'Konghucu') selected @endif value="Konghucu">Khonghucu</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
                                 <label for="Pilstatpernikahan" class="select-label">Status Pernikahan</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-pernikahan" name="Pilihanpernikahan">
-                                    <option selected>Status Pernikahan</option>
-                                    <option value="Belum Menikah">Belum Menikah</option>
-                                    <option value="Sudah Menikah">Sudah Menikah</option>
+                                    <option selected disabled>Status Pernikahan</option>
+                                    <option @if(old('Pilihanpernikahan') == 'Belum Menikah') selected @endif value="Belum Menikah">Belum Menikah</option>
+                                    <option @if(old('Pilihanpernikahan') == 'Sudah Menikah') selected @endif value="Sudah Menikah">Sudah Menikah</option>
                                 </select>
                             </div>
                         </div>
@@ -136,101 +96,46 @@
                             <div class="col">
                                 <label for="tinggalbersama" class="form-label">Tinggal Bersama *</label>
                                 <input type="text" class="form-control @error('tinggalbersama') is-invalid @enderror" name="tinggalbersama" id="tglbersama" placeholder="Contoh: Orang Tua" value="{{ old('tinggalbersama') }}">
-                                {{-- @error('tinggalbersama')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col">
                                 <label for="alamat1" class="form-label">Alamat *</label>
                                 <input type="text" class="form-control @error('Alamat') is-invalid @enderror" name="Alamat" id="alamat1" placeholder="Contoh: Jalan Piano" value="{{ old('Alamat') }}">
-                                {{-- @error('Alamat')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="codepos" class="form-label">Kode Pos *</label>
                                 <input type="number" class="form-control @error('Kodepos') is-invalid @enderror" name="Kodepos" id="Kodepos" placeholder="Contoh: 75100" value="{{ old('Kodepos') }}">
-                                {{-- @error('Kodepos')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="rt-rw" class="form-label">RT/RW *</label>
-                                <input type="text" class="form-control @error('RT-RW') is-invalid @enderror" name="RT-RW" id="rt-rw1" placeholder="Contoh: 1/10" value="{{ old('RT-RW') }}">
-                                {{-- @error('RT-RW')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
+                                <input type="text" onkeyup="oneSlash(this)" class="form-control @error('RT-RW') is-invalid @enderror" name="RT-RW" id="rt-rw1" placeholder="Contoh: 1/10" value="{{ old('RT-RW') }}">
                             </div>
                             <div class="col pt-3">
                                 <label for="desa-k" class="form-label">Desa/Kelurahan *</label>
                                 <input type="text" class="form-control @error('d-kelurahan') is-invalid @enderror" name="d-kelurahan" id="d-keluharan" placeholder="Contoh: Kelurahan Air Hitam" value="{{ old('d-kelurahan') }}">
-                                {{-- @error('d-kelurahan')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="kec" class="form-label">Kecamatan *</label>
                                 <input type="text" class="form-control @error('Kecamatan') is-invalid @enderror" name="Kecamatan" id="Kecamatan" placeholder="Contoh: Kecamatan Samarinda Ulu" value="{{ old('Kecamatan') }}">
-                                {{-- @error('Kecamatan')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="kab" class="form-label">Kabupaten *</label>
                                 <input type="text" class="form-control @error('Kabupaten') is-invalid @enderror" name="Kabupaten" id="Kabupaten" placeholder="Contoh: Kabupaten Kurtai Kartanegara" value="{{ old('Kabupaten') }}">
-                                {{-- @error('Kabupaten')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="prov" class="form-label">Provinsi *</label>
                                 <input type="text" class="form-control @error('Provinsi') is-invalid @enderror" name="Provinsi" id="Provinsi" placeholder="Contoh: Kalimantan Timur" value="{{ old('Provinsi') }}">
-                                {{-- @error('Provinsi')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="neg" class="form-label">Negara *</label>
                                 <input type="text" class="form-control @error('Negara') is-invalid @enderror" name="Negara" id="Negara" placeholder="Contoh: Indonesia" value="{{ old('Negara') }}">
-                                {{-- @error('Negara')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="notelp" class="form-label">Handphone/Telp.Rumah *</label>
                                 <input type="number" class="form-control @error('notelp-hp') is-invalid @enderror" name="notelp-hp" id="notelp-hp" placeholder="Contoh: 08XXXXXXXXXX" value="{{ old('notelp-hp') }}">
-                                {{-- @error('notelp-hp')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                             <div class="col pt-3">
                                 <label for="email" class="form-label">Email *</label>
                                 <input type="email" class="form-control @error('Email') is-invalid @enderror" name="Email" id="Email" placeholder="Contoh: user@gmail.com (aktif)" value="{{ old('Email') }}">
-                                {{-- @error('Email')
-                                    <div class="invalid-feedback">
-                                        {{ $message }}
-                                    </div>
-                                @enderror --}}
                             </div>
                         </div>
                     </div>
@@ -273,4 +178,17 @@
             </form>
         </div>
     </div>
+
+    <script>
+        function oneSlash(input) {
+            var value = input.value,
+                value = value.split('/').join('');
+            
+            if (value.length > 2) {
+                value = value.substring(0, value.length - 2) + '/' + value.substring(value.length - 2, value.length);
+            }
+
+            input.value = value;
+        }
+    </script>
 </x-layoutform>
