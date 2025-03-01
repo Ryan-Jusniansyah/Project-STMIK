@@ -69,7 +69,6 @@ Route::middleware('auth')->group(function() {
     Route::put('/form-edit/{id}', [BeritaController::class, 'update']);
     Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
     
-
     Route::get('/form-berita', [BeritaController::class, 'create']);
 });
 

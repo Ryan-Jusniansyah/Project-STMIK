@@ -42,7 +42,7 @@
             <tr>
                 <td>Program Studi</td>
                 <td>:</td>
-                <td></td>
+                <td>{{ $pendaftaran->Programstudi }}</td>
             </tr>
             <tr>
                 <td>Pilihan Kelas</td>

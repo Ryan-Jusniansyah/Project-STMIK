@@ -21,9 +21,9 @@
                             <div class="col">
                                 <label for="Pilkelas" class="select-label">Pilihan Kelas *</label>
                                 <select class="form-select mt-2 @error('Pilkelas') is-invalid @enderror" aria-label="Pilihan-Kelas" name="Pilihankelas">
-                                    <option value="" disabled selected>Masukkan Pilihan Kelas</option>
-                                    <option value="1">Pagi (Offline)</option>
-                                    <option value="2">Malam (Online)</option>
+                                    <option selected>Masukkan Pilihan Kelas</option>
+                                    <option value="Pagi (Offline)">Pagi (Offline)</option>
+                                    <option value="Malam (Online)">Malam (Online)</option>
                                 </select>
                             </div>
                         </div>
@@ -108,21 +108,21 @@
                             <div class="col pt-3">
                                 <label for="Pilagama" class="select-label">Agama *</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-Agama" name="Pilihanagama">
-                                    <option value="" disabled selected>Pilihan Agama</option>
-                                    <option value="1">Islam</option>
-                                    <option value="2">Kristen</option>
-                                    <option value="3">Katolik</option>
-                                    <option value="4">Hindu</option>
-                                    <option value="5">Buddha</option>
-                                    <option value="6">Khonghucu</option>
+                                    <option selected>Pilih Agama Anda</option>
+                                    <option value="Islam">Islam</option>
+                                    <option value="Kristen">Kristen</option>
+                                    <option value="Katolik">Katolik</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Buddha">Buddha</option>
+                                    <option value="Konghucu">Khonghucu</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
                                 <label for="Pilstatpernikahan" class="select-label">Status Pernikahan</label>
                                 <select class="form-select mt-2" aria-label="Pilihan-pernikahan" name="Pilihanpernikahan">
-                                    <option value="" disabled selected>Status Pernikahan</option>
-                                    <option value="1">Belum Menikah</option>
-                                    <option value="2">Sudah Menikah</option>
+                                    <option selected>Status Pernikahan</option>
+                                    <option value="Belum Menikah">Belum Menikah</option>
+                                    <option value="Sudah Menikah">Sudah Menikah</option>
                                 </select>
                             </div>
                         </div>
@@ -265,7 +265,7 @@
                     <div class="row justify-content-end me-5 mt-5">
                         <div class="col-3">
                             <a href="home" class="btn btn-secondary">Previous</a>
-                            {{-- <button type="submit" class="btn btn-warning"><a href="/pendaftaran2" class="next">Next</a></button> --}}
+                            <!-- {{-- <button type="submit" class="btn btn-warning"><a href="/pendaftaran2" class="next">Next</a></button> --}} -->
                             <button type="submit" class="btn btn-warning text-white">Next</button>
                         </div>
                     </div>

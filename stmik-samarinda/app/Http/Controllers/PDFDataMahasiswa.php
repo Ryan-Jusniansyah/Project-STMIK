@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Pendaftaran;
 use App\Models\OrangTua;
-use App\Models\Prodi;
 use App\Models\SekolahAsal;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -18,10 +17,8 @@ class PDFDataMahasiswa extends Controller
 
         $asal_sekolah = SekolahAsal::where('pendaftaran_id', $id)->get();
 
-        $Prodi = Prodi::where('pendaftaran_id', $id)->get();
+        $pdf = Pdf::loadView('Biodata_mahasiswa_baru', compact('pendaftaran', 'orangtua', 'asal_sekolah'));
 
-        $pdf = Pdf::loadView('Biodata_mahasiswa_baru', compact('pendaftaran', 'orangtua', 'asal_sekolah', 'Prodi'));
-
-        return $pdf->download('Biodata_mahasiswa_baru_' . $pendaftaran->id . '.pdf');
+        return $pdf->download('Biodata_mahasiswa_baru_'.$id.'.pdf');
     }
 }
