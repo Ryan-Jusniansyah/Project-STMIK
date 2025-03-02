@@ -738,7 +738,7 @@
           var FullURL = 'storage/pas-foto/' + userURL;
           $.get(userURL, function (data) {
               $('#detailModal').modal('show');
-              $('#pasfoto').attr('src', 'storage/pas-foto/' + data['PasFoto']);
+              $('#pasfoto').attr('src', 'storage/' + data['PasFoto']);
               $('#nama').text(': ' + data['Namalengkap']);
               $('#nik').text(': ' + data['NIK']);
               $('#npwp').text(': ' + data['NPWP']);

@@ -15,12 +15,6 @@ return new class extends Migration
             $table->id();
 
             $table->string('Namalengkap');
-
-            // $table->foreignId('Programstudi')->constrained(
-            //     table: 'prodi',
-            //     indexName: 'mahasiswa_prodi_id'
-            // );
-
             $table->string('Programstudi');
             $table->string('Pilihankelas');
 
@@ -31,61 +25,92 @@ return new class extends Migration
             $table->string('Tempatlahir');
             $table->date('Tanggallahir');
             $table->string('berat-tinggibadan');
-            // $table->float('tinggi_badan');
             $table->string('Pilihanagama');
             $table->string('Pilihanpernikahan');
 
-            $table->string('tinggalbersama');
-            $table->string('Alamat');
-            $table->string('Kodepos');
-            $table->string('RT-RW');
-            // $table->string('rw');
-            $table->string('d-kelurahan');
-            $table->string('Kecamatan');
-            $table->string('Kabupaten');
-            $table->string('Provinsi');
-            $table->string('Negara');
+            $table->text('tinggalbersama');
+            $table->text('Alamat');
+            $table->text('Kodepos');
+            $table->text('RT-RW');
+            $table->text('d-kelurahan');
+            $table->text('Kecamatan');
+            $table->text('Kabupaten');
+            $table->text('Provinsi');
+            $table->text('Negara');
             $table->string('notelp-hp');
             $table->string('Email');
             
-            $table->string('Namaperu')->nullable();
-            $table->string('Alamatperu')->nullable();
-            $table->string('Telp-perusahaan')->nullable();
-            $table->string('Jabatan')->nullable();
+            $table->text('Namaperu')->nullable();
+            $table->text('Alamatperu')->nullable();
+            $table->text('Telp-perusahaan')->nullable();
+            $table->text('Jabatan')->nullable();
+
+            // SEKOLAH
+
+            $table->string('Namasekolah');
+            $table->string('JurusanSekolah');
+            $table->integer('Tahunlulus');
+            $table->text('AlamatSekolah');
+            $table->text('KabupatenKota');
+            $table->text('ProvinsiSekolah');
+            $table->text('NegaraSekolah');
+
+            // ORANG TUA
+
+            $table->string('NamaAyah');
+            $table->string('NIKayah');
+            $table->string('Tempatlayah');
+            $table->date('tgllayah');
+            $table->string('PilihanagamaA');
+            $table->string('PilihanpendtA');
+            $table->string('PilihanpekerA');
+            $table->string('PilihanpenghasilanA');
+            $table->string('nohpayah');
+            $table->string('PilihanstatA');
+
+            $table->string('NamaIbu');
+            $table->string('NIKibu');
+            $table->string('Tempatlibu');
+            $table->date('tgllibu');
+            $table->string('PilihanagamaI');
+            $table->string('PilihanpendtI');
+            $table->string('PilihanpekerI');
+            $table->string('PilihanpenghasilanI');
+            $table->string('nohpibu');
+            $table->string('PilihanstatI');
+            
+            $table->string('NamaWali')->nullable();
+            $table->string('NIKWali')->nullable();
+            $table->string('Tempatlwali')->nullable();
+            $table->date('tgllwali')->nullable();
+            $table->string('PilihanagamaW')->nullable();
+            $table->string('PilihanpendtW')->nullable();
+            $table->string('PilihanpekerW')->nullable();
+            $table->string('PilihanpenghasilanW')->nullable();
+            $table->string('nohpwali')->nullable();
+            
+            $table->text('Alamatjalan');
+            $table->text('rt-rwortu');
+            $table->text('Kodepos-ortu');
+            $table->text('d-kelurahanortu');
+            $table->text('Kecamatan-ortu');
+            $table->text('kabupatenortu');
+            $table->text('Provinsiortu');
+            $table->text('nohportu');
+
+            // BERKAS
+
+            $table->string('IjazahSMA');
+            $table->string('SKHU');
+            $table->string('FotocopyKK');
+            $table->string('FotocopyKTP');
+            $table->string('PasFoto');
+            $table->string('BuktiPembayaran');
+            $table->string('SuratKetSehat');
+            $table->string('SuratKetBebasNarkoba');
+            $table->string('SuratPernyataan');
 
             $table->enum('status', ['draft', 'completed', 'accepted', 'rejected'])->default('draft');
-
-
-            // $table->string('nama_lengkap');
-
-            // $table->foreignId('prodi_id')->constrained(
-            //     table: 'prodi',
-            //     indexName: 'mahasiswa_prodi_id'
-            // );
-
-            // $table->string('nik')->unique();
-            // $table->string('npwp')->unique();
-            // $table->string('nisn')->unique();
-            // $table->enum('jenis_kelamin', ['Perempuan', 'Laki-laki']);
-            // $table->string('tempat_lahir');
-            // $table->date('tanggal_lahir');
-            // $table->float('berat_badan');
-            // $table->float('tinggi_badan');
-            // $table->string('agama');
-            // $table->boolean('menikah');
-
-            // $table->string('tinggal_bersama');
-            // $table->string('alamat');
-            // $table->string('kode_pos');
-            // $table->string('rt');
-            // $table->string('rw');
-            // $table->string('kelurahan');
-            // $table->string('kecamatan');
-            // $table->string('kabupaten');
-            // $table->string('provinsi');
-            // $table->string('negara');
-            // $table->string('nomor_telepon');
-            // $table->string('email')->unique();
             
             $table->timestamps();
         });

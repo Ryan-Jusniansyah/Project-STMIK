@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('prodi', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama_prodi');
+        Schema::create('temporary_forms', function(Blueprint $table) {
+            $table->uuid('id')->primary();
+            $table->json('data');
             $table->timestamps();
         });
     }
@@ -23,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('prodi');
+        //
     }
 };

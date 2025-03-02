@@ -17,24 +17,4 @@ class Pendaftaran extends Model
     protected $guarded = [
         'id'
     ];
-
-    public function prodi(): BelongsTo
-    {
-        return $this->belongsTo(Prodi::class);
-    }
-
-    public function sekolahasal(): HasOne
-    {
-        return $this->hasOne(SekolahAsal::class);
-    }
-
-    public function orangtua(): HasOne
-    {
-        return $this->hasOne(OrangTua::class);
-    }
-
-    public function berkas(): HasOne
-    {
-        return $this->hasOne(Berkas::class);
-    }
 }

@@ -24,9 +24,9 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Prodi::create([
-            'nama_prodi' => 'Sistem Informasi'
-        ]);
+        // Prodi::create([
+        //     'nama_prodi' => 'Sistem Informasi'
+        // ]);
 
         User::create([
             'name' => 'superadmin',
@@ -60,10 +60,7 @@ class DatabaseSeeder extends Seeder
             'Negara' => 'Indonesia',
             'notelp-hp' => '0812312312',
             'Email' => 'salwa@gmail.com',
-        ]);
 
-        SekolahAsal::create([
-            'pendaftaran_id' => 1,
             'Namasekolah' => 'SMKN 7',
             'JurusanSekolah' => 'RPL',
             'Tahunlulus' => 2001,
@@ -71,10 +68,7 @@ class DatabaseSeeder extends Seeder
             'KabupatenKota' => 'Kota Samarinda',
             'ProvinsiSekolah' => 'Kalimantan Timur',
             'NegaraSekolah' => 'Indonesia',
-        ]);
 
-        OrangTua::create([
-            'pendaftaran_id' => 1,
             'NamaAyah' => 'Masrullah',
             'NIKayah' => '23123123',
             'Tempatlayah' => 'Samarinda',
@@ -115,6 +109,73 @@ class DatabaseSeeder extends Seeder
             'kabupatenortu' =>  'Tidak Ada',
             'Provinsiortu' =>  'Tidak Ada',
             'nohportu' =>  'Tidak Ada',
+
+            'IjazahSMA' => 'reiive.jpg',
+            'SKHU' => 'reiive.jpg',
+            'FotocopyKK' => 'reiive.jpg',
+            'FotocopyKTP' => 'reiive.jpg',
+            'PasFoto' => 'pas-foto/reiive.jpg',
+            'BuktiPembayaran' => 'reiive.jpg',
+            'SuratKetSehat' => 'reiive.jpg',
+            'SuratKetBebasNarkoba' => 'reiive.jpg',
+            'SuratPernyataan' => 'reiive.jpg',
+
+            'status' => 'completed',
         ]);
+
+        // SekolahAsal::create([
+        //     'pendaftaran_id' => 1,
+        //     'Namasekolah' => 'SMKN 7',
+        //     'JurusanSekolah' => 'RPL',
+        //     'Tahunlulus' => 2001,
+        //     'AlamatSekolah' => 'Jalan Damanhuri',
+        //     'KabupatenKota' => 'Kota Samarinda',
+        //     'ProvinsiSekolah' => 'Kalimantan Timur',
+        //     'NegaraSekolah' => 'Indonesia',
+        // ]);
+
+        // OrangTua::create([
+        //     'pendaftaran_id' => 1,
+        //     'NamaAyah' => 'Masrullah',
+        //     'NIKayah' => '23123123',
+        //     'Tempatlayah' => 'Samarinda',
+        //     'tgllayah' => now(),
+        //     'PilihanagamaA' => 'Islam',
+        //     'PilihanpendtA' => 'S2',
+        //     'PilihanpekerA' => 'PNS',
+        //     'PilihanpenghasilanA' => '100.000.000',
+        //     'nohpayah' => '0981283102',
+        //     'PilihanstatA' => 'Hidup',
+
+        //     'NamaIbu' => 'Barbie',
+        //     'NIKibu' => '123123123',
+        //     'Tempatlibu' => 'Samarinda',
+        //     'tgllibu' => now(),
+        //     'PilihanagamaI' => 'Islam',
+        //     'PilihanpendtI' => 'S1',
+        //     'PilihanpekerI' => 'PNS',
+        //     'PilihanpenghasilanI' => '200.000.000',
+        //     'nohpibu' => '08123123123',
+        //     'PilihanstatI' => 'Hidup',
+
+        //     'NamaWali' => 'Tidak Ada',
+        //     'NIKWali' => 'Tidak Ada',
+        //     'Tempatlwali' => 'Tidak Ada',
+        //     'tgllwali' => now(),
+        //     'PilihanagamaW' =>  'Tidak Ada',
+        //     'PilihanpendtW' =>  'Tidak Ada',
+        //     'PilihanpekerW' =>  'Tidak Ada',
+        //     'PilihanpenghasilanW' =>  'Tidak Ada',
+        //     'nohpwali' =>  'Tidak Ada',
+            
+        //     'Alamatjalan' =>  'Tidak Ada',
+        //     'rt-rwortu' =>  'Tidak Ada',
+        //     'Kodepos-ortu' =>  'Tidak Ada',
+        //     'd-kelurahanortu' =>  'Tidak Ada',
+        //     'Kecamatan-ortu' =>  'Tidak Ada',
+        //     'kabupatenortu' =>  'Tidak Ada',
+        //     'Provinsiortu' =>  'Tidak Ada',
+        //     'nohportu' =>  'Tidak Ada',
+        // ]);
     }
 }

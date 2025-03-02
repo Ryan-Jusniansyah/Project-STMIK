@@ -11,38 +11,38 @@
                         <div class="row row-cols-2">
                             <div class="col">
                                 <label for="NamaS" class="form-label">Nama Sekolah *</label>
-                                <input type="text" value="{{ old('Namasekolah') }}" class="form-control  @error('Namasekolah') is-invalid @enderror" name="Namasekolah" id="Namasekolah" placeholder="Contoh : SMA Negeri 1 Samarinda">
+                                <input type="text" value="{{ old('Namasekolah', $form->data['step2']['Namasekolah'] ?? '') }}" class="form-control  @error('Namasekolah') is-invalid @enderror" name="Namasekolah" id="Namasekolah" placeholder="Contoh : SMA Negeri 1 Samarinda">
                             </div>
                             <div class="col">
                                 <label for="jupro" class="form-label">Jurusan Sekolah *</label>
-                                <input type="text" value="{{ old('JurusanSekolah') }}" class="form-control  @error('JurusanSekolah') is-invalid @enderror" name="JurusanSekolah" id="JurusanSekolah" placeholder="Contoh : IPA">
+                                <input type="text" value="{{ old('JurusanSekolah', $form->data['step2']['JurusanSekolah'] ?? '') }}" class="form-control  @error('JurusanSekolah') is-invalid @enderror" name="JurusanSekolah" id="JurusanSekolah" placeholder="Contoh : IPA">
                             </div>
                             <div class="col pt-3">
                                 <label for="tahunlulus" class="select-label">Tahun Lulus *</label>
-                                <select class="form-select mt-2" aria-label="Tahun-Lulus" name="Tahunlulus">
+                                <select class="form-select mt-2 @error('Tahunlulus') is-invalid @enderror" aria-label="Tahun-Lulus" name="Tahunlulus">
                                     <option selected disabled>Pilih Tahun Lulus</option>
-                                    <option @if(old('Tahunlulus') == '2025') selected @endif value="2025">2025</option>
-                                    <option @if(old('Tahunlulus') == '2024') selected @endif value="2024">2024</option>
-                                    <option @if(old('Tahunlulus') == '2023') selected @endif value="2023">2023</option>
-                                    <option @if(old('Tahunlulus') == '2022') selected @endif value="2022">2022</option>
-                                    <option @if(old('Tahunlulus') == '2021') selected @endif value="2021">2021</option>
+                                    <option {{ old('Tahunlulus', $form->data['step2']['Tahunlulus'] ?? '') == '2025' ? 'selected' : '' }} value="2025">2025</option>
+                                    <option {{ old('Tahunlulus', $form->data['step2']['Tahunlulus'] ?? '') == '2024' ? 'selected' : '' }} value="2024">2024</option>
+                                    <option {{ old('Tahunlulus', $form->data['step2']['Tahunlulus'] ?? '') == '2023' ? 'selected' : '' }} value="2023">2023</option>
+                                    <option {{ old('Tahunlulus', $form->data['step2']['Tahunlulus'] ?? '') == '2022' ? 'selected' : '' }} value="2022">2022</option>
+                                    <option {{ old('Tahunlulus', $form->data['step2']['Tahunlulus'] ?? '') == '2021' ? 'selected' : '' }} value="2021">2021</option>
                                 </select>
                             </div>
                             <div class="col pt-3">
                                 <label for="alamatS" class="form-label">Alamat Sekolah *</label>
-                                <input type="text" value="{{ old('AlamatSekolah') }}" class="form-control  @error('AlamatSekolah') is-invalid @enderror" name="AlamatSekolah" id="AlamatSekolah" placeholder="Contoh : Jalan Piano">
+                                <input type="text" value="{{ old('AlamatSekolah', $form->data['step2']['AlamatSekolah'] ?? '') }}" class="form-control  @error('AlamatSekolah') is-invalid @enderror" name="AlamatSekolah" id="AlamatSekolah" placeholder="Contoh : Jalan Piano">
                             </div>
                             <div class="col pt-3">
                                 <label for="KabupatenKota" class="form-label">Kabupaten/Kota *</label>
-                                <input type="text" value="{{ old('KabupatenKota') }}" class="form-control  @error('KabupatenKota') is-invalid @enderror" name="KabupatenKota" id="KabupatenKota" placeholder="Contoh : Kabupaten Kutai Kartanegara">
+                                <input type="text" value="{{ old('KabupatenKota', $form->data['step2']['KabupatenKota'] ?? '') }}" class="form-control  @error('KabupatenKota') is-invalid @enderror" name="KabupatenKota" id="KabupatenKota" placeholder="Contoh : Kabupaten Kutai Kartanegara">
                             </div>
                             <div class="col pt-3">
                                 <label for="ProvinsiS" class="form-label">Provinsi *</label>
-                                <input type="text" value="{{ old('ProvinsiSekolah') }}" class="form-control  @error('ProvinsiSekolah') is-invalid @enderror" name="ProvinsiSekolah" id="ProvinsiSekolah" placeholder="Contoh : Kalimantan Timur">
+                                <input type="text" value="{{ old('ProvinsiSekolah', $form->data['step2']['ProvinsiSekolah'] ?? '') }}" class="form-control  @error('ProvinsiSekolah') is-invalid @enderror" name="ProvinsiSekolah" id="ProvinsiSekolah" placeholder="Contoh : Kalimantan Timur">
                             </div>
                             <div class="col pt-3">
                                 <label for="NegaraS" class="form-label">Negara *</label>
-                                <input type="text" value="{{ old('NegaraSekolah') }}" class="form-control  @error('NegaraSekolah') is-invalid @enderror" name="NegaraSekolah" id="NegaraSekolah" placeholder="Contoh : Indonesia">
+                                <input type="text" value="{{ old('NegaraSekolah', $form->data['step2']['NegaraSekolah'] ?? '') }}" class="form-control  @error('NegaraSekolah') is-invalid @enderror" name="NegaraSekolah" id="NegaraSekolah" placeholder="Contoh : Indonesia">
                             </div>
                         </div>
                     </div>

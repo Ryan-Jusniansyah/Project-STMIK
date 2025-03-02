@@ -39,17 +39,18 @@ Route::get('/Dosen_STMIK', function() {
 Route::get('/login', [LoginController::class, 'index'])->middleware('guest')->name('login');
 Route::post('/login', [LoginController::class, 'authenticate']);
 
-Route::get('/pendaftaran1', [PendaftaranController::class, 'pendaftaran1']);
+Route::get('/pendaftaran', [PendaftaranController::class, 'start'])->name('form.start');
+Route::get('/pendaftaran1', [PendaftaranController::class, 'create1'])->name('form.step1');
 Route::post('/pendaftaran1', [PendaftaranController::class, 'store1']);
 
-Route::get('/uploadberkas', [UploadBerkasController::class, 'create']);
-Route::post('/uploadberkas', [UploadBerkasController::class, 'store']);
+Route::get('/uploadberkas', [PendaftaranController::class, 'create4']);
+Route::post('/uploadberkas', [PendaftaranController::class, 'store4']);
 
-Route::get('/pendaftaran2', [SekolahAsalController::class, 'create']);
-Route::post('/pendaftaran2', [SekolahAsalController::class, 'store']);
+Route::get('/pendaftaran2', [PendaftaranController::class, 'create2']);
+Route::post('/pendaftaran2', [PendaftaranController::class, 'store2']);
 
-Route::get('/pendaftaran3', [OrangTuaController::class, 'create']);
-Route::post('/pendaftaran3', [OrangTuaController::class, 'store']);
+Route::get('/pendaftaran3', [PendaftaranController::class, 'create3']);
+Route::post('/pendaftaran3', [PendaftaranController::class, 'store3']);
 
 // DASHBOARD
 Route::middleware('auth')->group(function() {

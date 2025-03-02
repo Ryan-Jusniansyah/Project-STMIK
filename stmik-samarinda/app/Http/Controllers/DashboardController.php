@@ -27,15 +27,15 @@ class DashboardController extends Controller
             return redirect()->route('dashboard.index');
         }
         
-        $pendaftaran = Pendaftaran::find($id);
-        $sekolah = SekolahAsal::where('pendaftaran_id', $id)->first();
-        $ortu = OrangTua::where('pendaftaran_id', $id)->first();
-        $berkas = Berkas::where('pendaftaran_id', $id)->first();
+        $data = Pendaftaran::find($id);
+        // $sekolah = SekolahAsal::where('pendaftaran_id', $id)->first();
+        // $ortu = OrangTua::where('pendaftaran_id', $id)->first();
+        // $berkas = Berkas::where('pendaftaran_id', $id)->first();
 
-        $data = collect($pendaftaran)
-            ->merge($sekolah ? $sekolah->toArray() : [])
-            ->merge($ortu ? $ortu->toArray() : [])
-            ->merge($berkas ? $berkas->toArray() : []);
+        // $data = collect($pendaftaran)
+        //     ->merge($sekolah ? $sekolah->toArray() : [])
+        //     ->merge($ortu ? $ortu->toArray() : [])
+        //     ->merge($berkas ? $berkas->toArray() : []);
 
         // dd($data);
 
