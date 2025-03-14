@@ -13,6 +13,7 @@ use App\Http\Controllers\SekolahAsalController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\UploadBerkasController;
 use App\Http\Controllers\DashboardDataMahasiswaController;
+use App\Http\Controllers\DashboardDataAdminController;
 use App\Http\Controllers\PDFDataMahasiswa;
 
 Route::get('/', function () {
@@ -57,6 +58,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/dashboard-Data', [DashboardDataMahasiswaController::class, 'index']);
     Route::get('/dashboard-berita', [BeritaController::class, 'index']);
+    Route::get('/dashboard-DataAdmin', [DashboardDataAdminController::class, 'index']);
 
     Route::get('dashboard/{id}', [DashboardController::class, 'show'])->name('dashboard.show');
     
