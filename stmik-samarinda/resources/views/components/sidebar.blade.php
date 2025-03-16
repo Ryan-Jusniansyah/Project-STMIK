@@ -10,8 +10,30 @@
     <link rel="stylesheet" href="{{  asset('css/sidebars.css') }}">
     <link rel="stylesheet" href="css/DaftarPendaftar.css">
     <link rel="stylesheet" href="css/dashboard_berita.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+  
+  @if (session()->has('success'))
+    <script>
+        Swal.fire({
+            title: "Success",
+            text: "{{ session('success') }}",
+            icon: "success"
+        });
+    </script>
+  @endif
+
+  @if ($errors->any())
+      <script>
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "{{ $errors->first() }}",
+        });
+      </script>
+    @endif
+
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="bootstrap" viewBox="0 0 118 94">
           <title>Bootstrap</title>
@@ -34,6 +56,9 @@
         <symbol id="grid" viewBox="0 0 16 16">
           <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
         </symbol>
+        <symbol id="shield-outline" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24c.304-.143.662-.352 1.048-.625a11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm0 1c.57 0 1.645.25 2.662.524l.243.066c.771.207 1.764.477 2.311.621.402.105.685.433.784.812.542 4.066-.64 6.83-2.085 8.75a10.775 10.775 0 0 1-2.297 2.228c-.322.228-.637.413-.89.533-.254.12-.469.185-.728.185s-.474-.065-.728-.185a6.18 6.18 0 0 1-.89-.533 10.775 10.775 0 0 1-2.297-2.228c-1.445-1.92-2.627-4.684-2.085-8.75a.998.998 0 0 1 .784-.812c.547-.144 1.54-.414 2.312-.621l.242-.066C6.355 1.25 7.43 1 8 1z"/>
+        </symbol>
       </svg>
     
     <main class="d-flex">
@@ -51,18 +76,30 @@
                   Dashboard
                 </a>
               </li>
-              <li>
-                <a href="/dashboard-Data" class="nav-link {{ ($title == 'Data Mahasiswa') ? 'active-custom' : 'text-white' }} fw-bold">
-                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                  Data Pendaftar
-                </a>
-              </li>
-              <li>
-                <a href="/dashboard-berita" class="nav-link {{ ($title == 'Berita') ? 'active-custom' : 'text-white' }} fw-bold">
-                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-                  Berita
-                </a>
-              </li>
+              @can('lihat-pendaftar')
+                <li>
+                  <a href="/dashboard-Data" class="nav-link {{ ($title == 'Data Mahasiswa') ? 'active-custom' : 'text-white' }} fw-bold">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                    Data Pendaftar
+                  </a>
+                </li>
+              @endcan
+              @can('lihat-berita')
+                <li>
+                  <a href="/dashboard-berita" class="nav-link {{ ($title == 'Berita') ? 'active-custom' : 'text-white' }} fw-bold">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                    Berita
+                  </a>
+                </li>
+              @endcan
+              @can('manage-users')
+                <li>
+                  <a href="/users" class="nav-link {{ ($title == 'Users') ? 'active-custom' : 'text-white' }} fw-bold">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#shield-outline"/></svg>
+                    Data User
+                  </a>
+                </li>
+              @endcan
             </ul>
             <hr>
             <form action="/logout" method="POST">
@@ -82,6 +119,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/sidebars.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

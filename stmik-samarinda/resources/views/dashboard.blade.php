@@ -7,6 +7,7 @@
   <div class="container mt-3">
     <div class="row row-cols-1 row-cols-md-3 g-3 justify-content-between align-items-stretch">
       <!-- Card Pendaftar -->
+      {{-- <a href="/dashboard-Data" class="text-decoration-none h-100 col d-flex"> --}}
       <div class="col">
         <div class="bg-sidebar p-4 rounded shadow h-100">
           <div class="d-flex">
@@ -15,13 +16,16 @@
                 <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4" />
               </svg>
             </div>
-            <div class="col text-center">
-              <p class="jumlah fw-bold">150</p>
-              <p class="second-text text-white fw-bold">Pendaftar</p>
-            </div>
+            {{-- <a href="/dashboard-Data" class="col text-center text-decoration-none"> --}}
+              <div class="col text-center">
+                <p class="jumlah fw-bold">{{ $countpendaftar }}</p>
+                <p class="second-text text-white fw-bold">Pendaftar</p>
+              </div>
+            {{-- </a> --}}
           </div>
         </div>
       </div>
+      {{-- </a> --}}
 
       <!-- Card Cancel Request -->
       <div class="col">
@@ -34,7 +38,7 @@
               </svg>
             </div>
             <div class="col text-center">
-              <p class="jumlah fw-bold">50</p>
+              <p class="jumlah fw-bold">{{ $countrejected }}</p>
               <p class="second-text text-white fw-bold">Cancel Request</p>
             </div>
           </div>
@@ -58,7 +62,7 @@
         </div>
       </div>
     </div>
-    
+    @can('lihat-surat-masuk')
     <!-- Tabel Data -->
     <div class="container mt-3">
       <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
@@ -667,6 +671,47 @@
             </div>
             <div class="modal-footer">
               <button class="btn btn-secondary" data-bs-target="#detailModal6" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
+              <button class="btn btn-primary" data-bs-target="#detailModal8" data-bs-toggle="modal" data-bs-dismiss="modal">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{-- Modal 8 --}}
+      <div class="modal fade" id="detailModal8" tabindex="-1" aria-labelledby="detailModalLabel8" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="detailModalLabel8">Dokumen PDF</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="row mb-3">
+                <div class="col-4">
+                  <label for="pdfSelector" class="form-label"><strong>Pilih Dokumen</strong></label>
+                </div>
+                <div class="col-8">
+                  <select class="form-select" id="fileSelector" onchange="downloadFile()">
+                    <option value="" selected disabled>Pilih Dokumen</option>
+                    <option value="doc1.pdf">Fotocopy Legalisir Ijazah SMA / Surat Keterangan Lulus</option>
+                    <option value="fotoProfil.jpg">Fotocopy Legalisir SKHU / Nilai UN</option>
+                    <option value="dokumen3.pdf">Fotocopy KK (Kartu Keluarga)</option>
+                    <option value="dokumen3.pdf">Fotocopy KTP (Kartu Tanda Penduduk)</option>
+                    <option value="dokumen3.pdf">Pas Foto Warna latar merah (3x4)</option>
+                    <option value="dokumen3.pdf">Bukti Pembayaran Pendaftaran</option>
+                    <option value="dokumen3.pdf">Surat Keterangan Kesehatan</option>
+                    <option value="dokumen3.pdf">Surat Keterangan Bebas Narkoba</option>
+                </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <iframe id="pdfViewer" src="" width="100%" height="500px" style="border: none; display: none;"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary" data-bs-target="#detailModal7" data-bs-toggle="modal" data-bs-dismiss="modal">Previous</button>
             </div>
           </div>
         </div>
@@ -710,16 +755,20 @@
                     <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
                   </svg>
                 </button> --}}
-                <button class="btn btn-outline-success btn-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
-                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
-                  </svg>
-                </button>
-                <button class="btn btn-outline-danger btn-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
-                  </svg>
-                </button>
+                @can('accept-surat-masuk')
+                  <a class="btn btn-outline-success btn-sm" href="{{ route('dashboard.accept', $mhs->id) }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
+                      <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0" />
+                    </svg>
+                  </a>
+                @endcan
+                @can('reject-surat-masuk')
+                  <a class="btn btn-outline-danger btn-sm" href="{{ route('dashboard.reject', $mhs->id) }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                      <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                    </svg>
+                  </a>
+                @endcan
               </td>
             </tr>
           @endforeach
@@ -727,9 +776,22 @@
         </tbody>
       </table>
     </div>
+    @endcan
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.8/pdfobject.min.js"></script>
+
+<div id="pdf-container"></div>
+
+<script>
+  function downloadFile() {
+      var selectedFile = document.getElementById("fileSelector").value;
+      if (selectedFile) {
+          window.location.href = "/download/" + selectedFile;
+      }
+  }
+  </script>
   <script>
     $(document).ready(function () {
 /* When click show user */

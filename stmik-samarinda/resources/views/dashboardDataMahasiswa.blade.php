@@ -45,8 +45,8 @@
                                         <path d="M15.0001 23.27C18.5301 23.27 21.8201 21.19 24.1101 17.59C25.0101 16.18 25.0101 13.81 24.1101 12.4C21.8201 8.8 18.5301 6.72 15.0001 6.72C11.4701 6.72 8.18009 8.8 5.89009 12.4C4.99009 13.81 4.99009 16.18 5.89009 17.59C8.18009 21.19 11.4701 23.27 15.0001 23.27Z" stroke="#09A0D5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                                     </svg>
                                 </button>
-                                <form action="{{ url('/download-pdf/' . $mhs->id) }}" method="GET">
-                                    @csrf
+                                @can('print-data-pendaftar')
+                                <form action="{{ url('/download-pdf/' . $mhs->id }}" method="GET">
                                     <button class="action-button" type="submit" title="Download PDF">
                                         <svg class="action-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="0.5" y="0.5" width="29" height="29" rx="3.5" fill="white" stroke="#CE0002" />
@@ -57,6 +57,7 @@
                                         </svg>
                                     </button>
                                 </form>
+                                @endcan
                             </div>
                         </td>
                     </tr>

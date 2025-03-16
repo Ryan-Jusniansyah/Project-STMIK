@@ -1,19 +1,22 @@
 <?php
 
-use App\Http\Controllers\DashboardBeritaController;
 use App\Models\Berita;
 use App\Models\Pendaftaran;
 use App\Models\SekolahAsal;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\PDFDataMahasiswa;
 use App\Http\Controllers\OrangTuaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\SekolahAsalController;
-use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\UploadBerkasController;
+use App\Http\Controllers\DashboardBeritaController;
+use App\Http\Controllers\DashboardDataAdminController;
 use App\Http\Controllers\DashboardDataMahasiswaController;
-use App\Http\Controllers\PDFDataMahasiswa;
 
 Route::get('/', function () {
     return view('welcome');
@@ -53,10 +56,13 @@ Route::get('/pendaftaran3', [PendaftaranController::class, 'create3']);
 Route::post('/pendaftaran3', [PendaftaranController::class, 'store3']);
 
 // DASHBOARD
-Route::middleware('auth')->group(function() {
+Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/dashboard-Data', [DashboardDataMahasiswaController::class, 'index']);
     Route::get('/dashboard-berita', [BeritaController::class, 'index']);
+    
+    Route::get('/dashboard/{id}/accept', [DashboardController::class, 'accept'])->name('dashboard.accept');
+    Route::get('/dashboard/{id}/reject', [DashboardController::class, 'reject'])->name('dashboard.reject');
 
     Route::get('dashboard/{id}', [DashboardController::class, 'show'])->name('dashboard.show');
     
@@ -71,6 +77,9 @@ Route::middleware('auth')->group(function() {
     Route::delete('/form-berita/{id}', [BeritaController::class, 'destroy']);
     
     Route::get('/form-berita', [BeritaController::class, 'create']);
+
+    Route::resource('roles', RoleController::class);
+    Route::resource('users', UserController::class);
 });
 
 Route::get('/berita/{id}', [BeritaController::class, 'show']);
@@ -89,3 +98,7 @@ Route::get('/download/{filename}', function ($filename) {
 })->name('download.file');
 
 Route::post('/logout', [LoginController::class, 'logout']);
+
+// Route::get('/admin', function() {
+//     return 'hi admin';
+// })->middleware(['auth', 'verified', 'role:admin']);
