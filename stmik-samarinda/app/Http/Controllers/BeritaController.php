@@ -4,10 +4,22 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Routing\Controllers\HasMiddleware;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-class BeritaController extends Controller
+class BeritaController extends Controller implements HasMiddleware
 {
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('permission:lihat-berita|tambah-berita|edit-berita|hapus-berita', only: ['index', 'show', 'search']),
+            new Middleware('permission:tambah-berita', only: ['store', 'create']),
+            new Middleware('permission:edit-berita', only: ['edit', 'update']),
+            new Middleware('permission:hapus-berita', only: ['destroy']),
+        ];
+    }
+    
     public function store(Request $request)
     {
         $validatedData = $request->validate([

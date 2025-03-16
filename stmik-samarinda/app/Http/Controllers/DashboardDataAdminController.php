@@ -6,7 +6,7 @@ use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 
 class DashboardDataAdminController extends Controller
-{
+{    
     public function index()
     {
         // return Pendaftaran::all();

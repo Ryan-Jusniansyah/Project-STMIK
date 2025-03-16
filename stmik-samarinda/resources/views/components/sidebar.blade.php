@@ -10,8 +10,30 @@
     <link rel="stylesheet" href="{{  asset('css/sidebars.css') }}">
     <link rel="stylesheet" href="css/DaftarPendaftar.css">
     <link rel="stylesheet" href="css/dashboard_berita.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+  
+  @if (session()->has('success'))
+    <script>
+        Swal.fire({
+            title: "Success",
+            text: "{{ session('success') }}",
+            icon: "success"
+        });
+    </script>
+  @endif
+
+  @if ($errors->any())
+      <script>
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "{{ $errors->first() }}",
+        });
+      </script>
+    @endif
+
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
         <symbol id="bootstrap" viewBox="0 0 118 94">
           <title>Bootstrap</title>
@@ -54,24 +76,30 @@
                   Dashboard
                 </a>
               </li>
-              <li>
-                <a href="/dashboard-Data" class="nav-link {{ ($title == 'Data Mahasiswa') ? 'active-custom' : 'text-white' }} fw-bold">
-                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
-                  Data Pendaftar
-                </a>
-              </li>
-              <li>
-                <a href="/dashboard-berita" class="nav-link {{ ($title == 'Berita') ? 'active-custom' : 'text-white' }} fw-bold">
-                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-                  Berita
-                </a>
-              </li>
-              <li>
-                <a href="/dashboard-DataAdmin" class="nav-link {{ ($title == 'Data Admin') ? 'active-custom' : 'text-white' }} fw-bold">
-                  <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#shield-outline"/></svg>
-                  Data Admin
-                </a>
-              </li>
+              @can('lihat-pendaftar')
+                <li>
+                  <a href="/dashboard-Data" class="nav-link {{ ($title == 'Data Mahasiswa') ? 'active-custom' : 'text-white' }} fw-bold">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                    Data Pendaftar
+                  </a>
+                </li>
+              @endcan
+              @can('lihat-berita')
+                <li>
+                  <a href="/dashboard-berita" class="nav-link {{ ($title == 'Berita') ? 'active-custom' : 'text-white' }} fw-bold">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                    Berita
+                  </a>
+                </li>
+              @endcan
+              @can('manage-users')
+                <li>
+                  <a href="/users" class="nav-link {{ ($title == 'Users') ? 'active-custom' : 'text-white' }} fw-bold">
+                    <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#shield-outline"/></svg>
+                    Data User
+                  </a>
+                </li>
+              @endcan
             </ul>
             <hr>
             <form action="/logout" method="POST">
@@ -91,6 +119,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/sidebars.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
