@@ -62,8 +62,16 @@
                                 <input type="date" max="{{ date('Y-m-d') }}" class="form-control @error('Tanggallahir') is-invalid @enderror" name="Tanggallahir" id="tanggallahir" placeholder="DD/MM/YYYY" value="{{ old('Tanggallahir', $form->data['step1']['Tanggallahir'] ?? '') }}">
                             </div>
                             <div class="col pt-3">
-                                <label for="bb-tb" class="form-label">Berat/Tinggi Badan *</label>
-                                <input type="text" class="form-control @error('berat-tinggibadan') is-invalid @enderror" name="berat-tinggibadan" id="b-tb" placeholder="Contoh: 70kg/170cm" value="{{ old('berat-tinggibadan', $form->data['step1']['berat-tinggibadan'] ?? '') }}">
+                                <label for="Pilbaju" class="select-label">Ukuran Baju *</label>
+                                <select class="form-select mt-2 @error('Ukuranbaju') is-invalid @enderror" aria-label="Ukuran-Baju" name="Ukuranbaju">
+                                    <option selected disabled>Pilih ukuran baju anda</option>
+                                    <option {{ old('Ukuranbaju', $form->data['step1']['Ukuranbaju'] ?? '') == 'S' ? 'selected' : '' }} value="S">S</option>
+                                    <option {{ old('Ukuranbaju', $form->data['step1']['Ukuranbaju'] ?? '') == 'M' ? 'selected' : '' }} value="M">M</option>
+                                    <option {{ old('Ukuranbaju', $form->data['step1']['Ukuranbaju'] ?? '') == 'L' ? 'selected' : '' }} value="L">L</option>
+                                    <option {{ old('Ukuranbaju', $form->data['step1']['Ukuranbaju'] ?? '') == 'XL' ? 'selected' : '' }} value="XL">XL</option>
+                                    <option {{ old('Ukuranbaju', $form->data['step1']['Ukuranbaju'] ?? '') == 'XXL' ? 'selected' : '' }} value="XXL">XXL</option>
+                                    <option {{ old('Ukuranbaju', $form->data['step1']['Ukuranbaju'] ?? '') == 'XXXL' ? 'selected' : '' }} value="XXXL">XXXL</option>
+                                </select>
                             </div>
                             <div class="col pt-3">
                                 <label for="Pilagama" class="select-label">Agama *</label>
@@ -107,18 +115,18 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="rt-rw" class="form-label">RT/RW *</label>
-                                <input type="text" onkeyup="oneSlash(this)" class="form-control @error('RT-RW') is-invalid @enderror" name="RT-RW" id="rt-rw1" placeholder="Contoh: 1/10" value="{{ old('RT-RW', $form->data['step1']['RT-RW'] ?? '') }}">
+                                <input type="text" onkeyup="oneSlash(this)" class="form-control @error('RT_RW') is-invalid @enderror" name="RT_RW" id="rt_rw1" placeholder="Contoh: 1/10" value="{{ old('RT-RW', $form->data['step1']['RT-RW'] ?? '') }}">
                             </div>
                             <div class="col pt-3">
                                 <label for="desa-k" class="form-label">Desa/Kelurahan *</label>
-                                <input type="text" class="form-control @error('d-kelurahan') is-invalid @enderror" name="d-kelurahan" id="d-keluharan" placeholder="Contoh: Kelurahan Air Hitam" value="{{ old('d-kelurahan', $form->data['step1']['d-kelurahan'] ?? '') }}">
+                                <input type="text" class="form-control @error('d_kelurahan') is-invalid @enderror" name="d_kelurahan" id="d_keluharan" placeholder="Contoh: Kelurahan Air Hitam" value="{{ old('d-kelurahan', $form->data['step1']['d-kelurahan'] ?? '') }}">
                             </div>
                             <div class="col pt-3">
                                 <label for="kec" class="form-label">Kecamatan *</label>
                                 <input type="text" class="form-control @error('Kecamatan') is-invalid @enderror" name="Kecamatan" id="Kecamatan" placeholder="Contoh: Kecamatan Samarinda Ulu" value="{{ old('Kecamatan', $form->data['step1']['Kecamatan'] ?? '') }}">
                             </div>
                             <div class="col pt-3">
-                                <label for="kab" class="form-label">Kabupaten *</label>
+                                <label for="kab" class="form-label">Kabupaten/Kota *</label>
                                 <input type="text" class="form-control @error('Kabupaten') is-invalid @enderror" name="Kabupaten" id="Kabupaten" placeholder="Contoh: Kabupaten Kurtai Kartanegara" value="{{ old('Kabupaten', $form->data['step1']['Kabupaten'] ?? '') }}">
                             </div>
                             <div class="col pt-3">
@@ -131,7 +139,7 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="notelp" class="form-label">Handphone/Telp.Rumah *</label>
-                                <input type="number" class="form-control @error('notelp-hp') is-invalid @enderror" name="notelp-hp" id="notelp-hp" placeholder="Contoh: 08XXXXXXXXXX" value="{{ old('notelp-hp', $form->data['step1']['notelp-hp'] ?? '') }}">
+                                <input type="number" class="form-control @error('notelp_hp') is-invalid @enderror" name="notelp_hp" id="notelp_hp" placeholder="Contoh: 08XXXXXXXXXX" value="{{ old('notelp-hp', $form->data['step1']['notelp-hp'] ?? '') }}">
                             </div>
                             <div class="col pt-3">
                                 <label for="email" class="form-label">Email *</label>
@@ -155,7 +163,7 @@
                             </div>
                             <div class="col pt-3">
                                 <label for="telp-perusahaan" class="form-label">No. Telpon Perusahaan</label>
-                                <input type="number" class="form-control @error('Telp-perusahaan') is-invalid @enderror" name="Telp-perusahaan" id="Telp-perusahaan" placeholder="Contoh: 08XXXXXXXXXX" value="{{ old('Telp-perusahaan', $form->data['step1']['Telp-perusahaan'] ?? '') }}">
+                                <input type="number" class="form-control @error('Telp_perusahaan') is-invalid @enderror" name="Telp_perusahaan" id="Telp_perusahaan" placeholder="Contoh: 08XXXXXXXXXX" value="{{ old('Telp-perusahaan', $form->data['step1']['Telp-perusahaan'] ?? '') }}">
                             </div>
                             <div class="col pt-3">
                                 <label for="jabatan" class="form-label">Jabatan Saat Ini</label>

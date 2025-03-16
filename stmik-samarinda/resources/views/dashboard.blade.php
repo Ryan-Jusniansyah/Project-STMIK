@@ -145,9 +145,9 @@
 
               <div class="row mb-3">
                 <div class="col-4">
-                  <strong>Berat/Tinggi Badan</strong>
+                  <strong>Ukuran Baju</strong>
                 </div>
-                <div id="berat-tinggibadan" class="col-8"></div>
+                <div id="Ukuranbaju" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
@@ -213,14 +213,14 @@
                 <div class="col-4">
                   <strong>RT/RW</strong>
                 </div>
-                <div id="RT-RW" class="col-8"></div>
+                <div id="RT_RW" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Desa/Kelurahan</strong>
                 </div>
-                <div id="d-kelurahan" class="col-8"></div>
+                <div id="d_kelurahan" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
@@ -255,7 +255,7 @@
                 <div class="col-4">
                   <strong>Handphone/Telp.Rumah</strong>
                 </div>
-                <div id="notelp-hp" class="col-8"></div>
+                <div id="notelp_hp" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
@@ -309,7 +309,7 @@
                 <div class="col-4">
                   <strong>No Telepon Perusahaan</strong>
                 </div>
-                <div id="Telp-perusahaan" class="col-8"></div>
+                <div id="Telp_perusahaan" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
@@ -619,28 +619,28 @@
                 <div class="col-4">
                   <strong>RT/RW</strong>
                 </div>
-                <div id="rt-rwortu" class="col-8"></div>
+                <div id="rt_rwortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Kode Pos</strong>
                 </div>
-                <div id="Kodepos-ortu" class="col-8"></div>
+                <div id="Kodepos_ortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Desa/Kelurahan</strong>
                 </div>
-                <div id="d-kelurahanortu" class="col-8"></div>
+                <div id="d_kelurahanortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
                 <div class="col-4">
                   <strong>Kecamatan/</strong>
                 </div>
-                <div id="Kecamatan-ortu" class="col-8"></div>
+                <div id="Kecamatan_ortu" class="col-8"></div>
               </div>
 
               <div class="row mb-3">
@@ -695,7 +695,7 @@
               <td>{{ $loop->iteration }}</td>
               <td>{{ $mhs->Namalengkap }}</td>
               <td>{{ $mhs->Email }}</td>
-              <td>{{ $mhs['notelp-hp'] }}</td>
+              <td>{{ $mhs['notelp_hp'] }}</td>
               <td>
                 <a href="javascript:void(0)" id="show-mhs" data-url="{{ route('dashboard.show', $mhs->id) }}" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
@@ -746,23 +746,23 @@
               $('#pilihanjk').text(': ' + data['pilihanjk']);
               $('#Tempatlahir').text(': ' + data['Tempatlahir']);
               $('#Tanggallahir').text(': ' + data['Tanggallahir']);
-              $('#berat-tinggibadan').text(': ' + data['berat-tinggibadan']);
+              $('#Ukuranbaju').text(': ' + data['Ukuranbaju']);
               $('#Pilihanagama').text(': ' + data['Pilihanagama']);
               $('#Pilihanpernikahan').text(': ' + data['Pilihanpernikahan']);
               $('#tinggalbersama').text(': ' + data['tinggalbersama']);
               $('#Alamat').text(': ' + data['Alamat']);
               $('#Kodepos').text(': ' + data['Kodepos']);
-              $('#RT-RW').text(': ' + data['RT-RW']);
-              $('#d-kelurahan').text(': ' + data['d-kelurahan']);
+              $('#RT_RW').text(': ' + data['RT_RW']);
+              $('#d_kelurahan').text(': ' + data['d_kelurahan']);
               $('#Kecamatan').text(': ' + data['Kecamatan']);
               $('#Kabupaten').text(': ' + data['Kabupaten']);
               $('#Provinsi').text(': ' + data['Provinsi']);
               $('#Negara').text(': ' + data['Negara']);
-              $('#notelp-hp').text(': ' + data['notelp-hp']);
+              $('#notelp_hp').text(': ' + data['notelp_hp']);
               $('#Email').text(': ' + data['Email']);
               $('#Namaperu').text(': ' + data['Namaperu']);
               $('#Alamatperu').text(': ' + data['Alamatperu']);
-              $('#Telp-perusahaan').text(': ' + data['Telp-perusahaan']);
+              $('#Telp_perusahaan').text(': ' + data['Telp_perusahaan']);
               $('#Jabatan').text(': ' + data['Jabatan']);
               $('#Namasekolah').text(': ' + data['Namasekolah']);
               $('#JurusanSekolah').text(': ' + data['JurusanSekolah']);
@@ -801,10 +801,10 @@
               $('#nohpwali').text(': ' + data['nohpwali']);
               $('#tgllwali').text(': ' + data['tgllwali']);
               $('#Alamatjalan').text(': ' + data['Alamatjalan']);
-              $('#rt-rwortu').text(': ' + data['rt-rwortu']);
-              $('#Kodepos-ortu').text(': ' + data['Kodepos-ortu']);
-              $('#d-kelurahanortu').text(': ' + data['d-kelurahanortu']);
-              $('#Kecamatan-ortu').text(': ' + data['Kecamatan-ortu']);
+              $('#rt_rwortu').text(': ' + data['rt_rwortu']);
+              $('#Kodepos_ortu').text(': ' + data['Kodepos_ortu']);
+              $('#d_kelurahanortu').text(': ' + data['d_kelurahanortu']);
+              $('#Kecamatan_ortu').text(': ' + data['Kecamatan_ortu']);
               $('#kabupatenortu').text(': ' + data['kabupatenortu']);
               $('#Provinsiortu').text(': ' + data['Provinsiortu']);
               $('#nohportu').text(': ' + data['nohportu']);

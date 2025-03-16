@@ -19,30 +19,30 @@ return new class extends Migration
             $table->string('Pilihankelas');
 
             $table->string('NIK');
-            $table->string('NPWP');
+            $table->string('NPWP')->nullable();
             $table->string('NISN');
             $table->enum('pilihanjk', ['Perempuan', 'Laki-laki']);
             $table->string('Tempatlahir');
             $table->date('Tanggallahir');
-            $table->string('berat-tinggibadan');
+            $table->string('Ukuranbaju');
             $table->string('Pilihanagama');
             $table->string('Pilihanpernikahan');
 
             $table->text('tinggalbersama');
             $table->text('Alamat');
             $table->text('Kodepos');
-            $table->text('RT-RW');
-            $table->text('d-kelurahan');
+            $table->text('RT_RW');
+            $table->text('d_kelurahan');
             $table->text('Kecamatan');
             $table->text('Kabupaten');
             $table->text('Provinsi');
             $table->text('Negara');
-            $table->string('notelp-hp');
+            $table->string('notelp_hp');
             $table->string('Email');
             
             $table->text('Namaperu')->nullable();
             $table->text('Alamatperu')->nullable();
-            $table->text('Telp-perusahaan')->nullable();
+            $table->text('Telp_perusahaan')->nullable();
             $table->text('Jabatan')->nullable();
 
             // SEKOLAH
@@ -90,10 +90,10 @@ return new class extends Migration
             $table->string('nohpwali')->nullable();
             
             $table->text('Alamatjalan');
-            $table->text('rt-rwortu');
-            $table->text('Kodepos-ortu');
-            $table->text('d-kelurahanortu');
-            $table->text('Kecamatan-ortu');
+            $table->text('rt_rwortu');
+            $table->text('Kodepos_ortu');
+            $table->text('d_kelurahanortu');
+            $table->text('Kecamatan_ortu');
             $table->text('kabupatenortu');
             $table->text('Provinsiortu');
             $table->text('nohportu');

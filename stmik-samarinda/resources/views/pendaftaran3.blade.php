@@ -258,19 +258,19 @@
                             </div>
                             <div class="col">
                                 <label for="rt-rw-ortu" class="form-label">RT/RW *</label>
-                                <input type="text" onkeyup="oneSlash(this)" class="form-control @error('rt-rwortu') is-invalid @enderror" value="{{ old('rt-rwortu', $form->data['step3']['rt-rwortu'] ?? '') }}" name="rt-rwortu" id="rt-rwortu" placeholder="Contoh : 12/2">
+                                <input type="text" onkeyup="oneSlash(this)" class="form-control @error('rt_rwortu') is-invalid @enderror" value="{{ old('rt_rwortu', $form->data['step3']['rt_rwortu'] ?? '') }}" name="rt_rwortu" id="rt_rwortu" placeholder="Contoh : 12/2">
                             </div>
                             <div class="col pt-3">
                                 <label for="kodepos-ortu" class="form-label">Kode Pos *</label>
-                                <input type="number" class="form-control @error('Kodepos-ortu') is-invalid @enderror" name="Kodepos-ortu" value="{{ old('Kodepos-ortu', $form->data['step3']['Kodepos-ortu'] ?? '') }}" id="Kodepos-ortu" placeholder="Contoh : 75117">
+                                <input type="number" class="form-control @error('Kodepos_ortu') is-invalid @enderror" name="Kodepos_ortu" value="{{ old('Kodepos_ortu', $form->data['step3']['Kodepos_ortu'] ?? '') }}" id="Kodepos_ortu" placeholder="Contoh : 75117">
                             </div>
                             <div class="col pt-3">
                                 <label for="d-kelurahanortu" class="form-label">Desa/Kelurahan *</label>
-                                <input type="text" class="form-control @error('d-kelurahanortu') is-invalid @enderror" value="{{ old('d-kelurahanortu', $form->data['step3']['d-kelurahanortu'] ?? '') }}" name="d-kelurahanortu" id="d-kelurahanortu" placeholder="Contoh : Karang Anyar">
+                                <input type="text" class="form-control @error('d_kelurahanortu') is-invalid @enderror" value="{{ old('d_kelurahanortu', $form->data['step3']['d_kelurahanortu'] ?? '') }}" name="d_kelurahanortu" id="d_kelurahanortu" placeholder="Contoh : Karang Anyar">
                             </div>
                             <div class="col pt-3">
                                 <label for="kecamatan-ortu" class="form-label">Kecamatan *</label>
-                                <input type="text" class="form-control @error('Kecamatan-ortu') is-invalid @enderror" name="Kecamatan-ortu" value="{{ old('Kecamatan-ortu', $form->data['step3']['Kecamatan-ortu'] ?? '') }}" id="Kecamatan-ortu" placeholder="Contoh : Sungai Pinang">
+                                <input type="text" class="form-control @error('Kecamatan_ortu') is-invalid @enderror" name="Kecamatan_ortu" value="{{ old('Kecamatan_ortu', $form->data['step3']['Kecamatan_ortu'] ?? '') }}" id="Kecamatan_ortu" placeholder="Contoh : Sungai Pinang">
                             </div>
                             <div class="col pt-3">
                                 <label for="kabortu" class="form-label">Kabupaten/Kota *</label>

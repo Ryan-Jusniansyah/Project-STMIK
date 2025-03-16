@@ -49,7 +49,7 @@
           <div class="row">
             <!-- Logo -->
             <div class="col-md-4 mb-4 mb-md-0 text-center">
-                <img src="img/logo.png" alt="STMIK Samarinda Logo" class="img-fluid" style="max-width: 180px;">
+                <img src="{{ asset('img/logo.png') }}" alt="STMIK Samarinda Logo" class="img-fluid" width="100%"">
             </div>
             
             <!-- Social Media Links -->
