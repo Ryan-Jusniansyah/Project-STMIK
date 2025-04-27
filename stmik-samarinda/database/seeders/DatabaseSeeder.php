@@ -104,5 +104,10 @@ class DatabaseSeeder extends Seeder
 
             'status' => 'completed',
         ]);
+
+        $this->call([
+            RolePermissionSeeder::class,
+            UserSeeder::class
+        ]);
     }
 }

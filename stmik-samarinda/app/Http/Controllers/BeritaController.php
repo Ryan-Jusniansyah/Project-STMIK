@@ -47,7 +47,7 @@ class BeritaController extends Controller implements HasMiddleware
     {
         return view('dashboard_berita', [
             'title' => 'Berita',
-            'berita' => Berita::all()
+            'berita' => Berita::all(),
         ]);
     }
 

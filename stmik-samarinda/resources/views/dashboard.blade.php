@@ -55,7 +55,7 @@
               </svg>
             </div>
             <div class="col text-center">
-              <p class="jumlah fw-bold">3</p>
+              <p class="jumlah fw-bold">{{ $countberita }}</p>
               <p class="second-text text-white fw-bold">Berita</p>
             </div>
           </div>

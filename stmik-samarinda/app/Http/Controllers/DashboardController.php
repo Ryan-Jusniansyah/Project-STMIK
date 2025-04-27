@@ -6,6 +6,7 @@ use App\Models\Berkas;
 use App\Models\OrangTua;
 use App\Models\Pendaftaran;
 use App\Models\SekolahAsal;
+use App\Models\Berita;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
@@ -30,6 +31,7 @@ class DashboardController extends Controller implements HasMiddleware
             'mahasiswa' => Pendaftaran::where('status', 'completed')->get(),
             'countpendaftar' => Pendaftaran::where('status', 'accepted')->count(),
             'countrejected' => Pendaftaran::where('status', 'rejected')->count(),
+            'countberita' => Berita::count()
         ]);
     }
 

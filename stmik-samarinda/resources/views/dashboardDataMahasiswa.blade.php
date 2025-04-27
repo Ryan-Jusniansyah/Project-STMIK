@@ -46,7 +46,7 @@
                                     </svg>
                                 </button>
                                 @can('print-data-pendaftar')
-                                <form action="{{ url('/download-pdf/' . $mhs->id }}" method="GET">
+                                <form action="{{ url('/download-pdf/' . $mhs->id) }}" method="GET">
                                     <button class="action-button" type="submit" title="Download PDF">
                                         <svg class="action-icon" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <rect x="0.5" y="0.5" width="29" height="29" rx="3.5" fill="white" stroke="#CE0002" />
