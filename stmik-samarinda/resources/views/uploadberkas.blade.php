@@ -58,7 +58,7 @@
                             <div class="col align-self-start">
                                 <label for="berkas9" class="form-label">Surat pernyataan</label>
                                 <input class="form-control @error('SuratPernyataan') is-invalid @enderror" type="file" name="SuratPernyataan" id="berkas7" title="File harus berformat PDF" accept="application/pdf">
-                                <a href="#">Klik di sini untuk mengunduh surat pernyataan</a>
+                                <a href="https://docs.google.com/document/d/1ORfPR6xtVeKjaOxyTIC_723aB710BKn5/edit?usp=sharing&ouid=101954172151456179245&rtpof=true&sd=true" target="_blank">Klik di sini untuk mengunduh surat pernyataan</a>
                             </div>
     
                             <div class="col">
